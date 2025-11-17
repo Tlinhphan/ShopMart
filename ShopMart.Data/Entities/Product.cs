@@ -57,7 +57,7 @@ namespace ShopMart.Data.Entities
         public DateTime DateCreated {get;set; }
 
 
-        public DateTime DateModifiled {get;set; }
+        public DateTime DateModified {get;set; }
 
         public Status Status {get;set; }
 
@@ -68,7 +68,7 @@ namespace ShopMart.Data.Entities
         public string SeoAlias {get;set; }
 
         [StringLength(255)]
-        public string SeoKeyWords {get;set; }
+        public string SeoKeywords {get;set; }
 
         [StringLength(255)]
         public string SeoDescription {get;set; }

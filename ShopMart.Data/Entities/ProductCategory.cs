@@ -30,7 +30,7 @@ namespace ShopMart.Data.Entities
 
         public string SeoAlias { get; set; }
 
-        public string SeoKeyWords { get; set ; }
+        public string SeoKeywords { get; set ; }
 
         public string SeoDescription { get; set; }
 
@@ -40,7 +40,7 @@ namespace ShopMart.Data.Entities
 
         public DateTime DateCreated { get ; set ; }
 
-        public DateTime DateModifiled { get; set ; }
+        public DateTime DateModified { get; set ; }
 
         public virtual ICollection<Product> Products { get; set; }
     }

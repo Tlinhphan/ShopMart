@@ -8,6 +8,6 @@ namespace ShopMart.Data.Interfaces
     {
         DateTime DateCreated { set; get; }
 
-        DateTime DateModifiled { set; get; }
+        DateTime DateModified { set; get; }
     }
 }
