@@ -87,15 +87,15 @@ namespace ShopMart.Data.EF
         public override int SaveChanges()
         {
             var modifile = ChangeTracker.Entries()
-                                        .Where(e => e.State == EntityState.Modified 
+                                        .Where(e => e.State == EntityState.Modified
                                                             || e.State == EntityState.Added);
 
-            foreach(EntityEntry item in modifile)
+            foreach (EntityEntry item in modifile)
             {
                 var changedOrAddedItem = item.Entity as IDateTracking;
-                if(changedOrAddedItem != null)
+                if (changedOrAddedItem != null)
                 {
-                    if(item.State == EntityState.Added)
+                    if (item.State == EntityState.Added)
                     {
                         changedOrAddedItem.DateCreated = DateTime.Now;
 
