@@ -48,6 +48,7 @@ namespace ShopMart.Data.EF
         public DbSet<SystemConfig> SystemConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<WholePrice> WholePrices { set; get; }
+        public DbSet<Slide> Slides { set; get; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

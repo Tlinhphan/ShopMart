@@ -13,6 +13,13 @@ using ShopMart.Models;
 using ShopMart.Services;
 using ShopMart.Data.EF;
 using ShopMart.Data.Entities;
+using ShopMart.Infrastructure.Interfaces;
+using AutoMapper;
+using IConfigurationProvider = AutoMapper.IConfigurationProvider;
+using ShopMart.Data.IRepositores;
+using ShopMart.Data.EF.Repositiores;
+using ShopMart.Application.Interfaces;
+using ShopMart.Application.Implementations;
 
 namespace ShopMart
 {
@@ -37,12 +44,21 @@ namespace ShopMart
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
+
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
+            services.AddSingleton(Mapper.Configuration);
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetServices));
+
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
+
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddMvc();
         }
 

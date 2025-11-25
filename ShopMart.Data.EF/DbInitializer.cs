@@ -50,6 +50,7 @@ namespace ShopMart.Data.EF
                     Description = "Customer"
                 });
             }
+
             if (!_userManager.Users.Any())
             {
                 await _userManager.CreateAsync(new AppUser()
@@ -65,21 +66,23 @@ namespace ShopMart.Data.EF
                 var user = await _userManager.FindByNameAsync("admin");
                 await _userManager.AddToRoleAsync(user, "Admin");
             }
-            if (!_context.Contacts.Any())
-            {
-                _context.Contacts.Add(new Contact()
-                {
-                    Id = CommonConstants.DefaultContactId,
-                    Address = "No 36 Lane 133 Nguyen Phong Sac Cau Giay",
-                    Email = "pandashop@gmail.com",
-                    Name = "Panda Shop",
-                    Phone = "0942 324 543",
-                    Status = Status.Active,
-                    Website = "http://pandashop.com",
-                    Lat = 21.0435009,
-                    Lng = 105.7894758
-                });
-            }
+
+            //if (!_context.Contacts.Any())
+            //{
+            //    _context.Contacts.Add(new Contact()
+            //    {
+            //        Id = CommonConstants.DefaultContactId,
+            //        Address = "No 36 Lane 133 Nguyen Phong Sac Cau Giay",
+            //        Email = "pandashop@gmail.com",
+            //        Name = "Panda Shop",
+            //        Phone = "0942 324 543",
+            //        Status = Status.Active,
+            //        Website = "http://pandashop.com",
+            //        Lat = 21.0435009,
+            //        Lng = 105.7894758
+            //    });
+            //}
+
             if (_context.Functions.Count() == 0)
             {
                 _context.Functions.AddRange(new List<Function>()
@@ -137,6 +140,7 @@ namespace ShopMart.Data.EF
                 };
                 _context.Colors.AddRange(listColor);
             }
+
             if (_context.AdvertistmentPages.Count() == 0)
             {
                 List<AdvertistmentPage> pages = new List<AdvertistmentPage>()
@@ -251,6 +255,7 @@ namespace ShopMart.Data.EF
                     Status = Status.Active
                 });
             }
+
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaKeyword"))
             {
                 _context.SystemConfigs.Add(new SystemConfig()
@@ -261,6 +266,7 @@ namespace ShopMart.Data.EF
                     Status = Status.Active
                 });
             }
+
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaDescription"))
             {
                 _context.SystemConfigs.Add(new SystemConfig()
@@ -271,6 +277,7 @@ namespace ShopMart.Data.EF
                     Status = Status.Active
                 });
             }
+
             await _context.SaveChangesAsync();
 
         }
