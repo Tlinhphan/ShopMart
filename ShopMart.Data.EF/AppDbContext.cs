@@ -2,12 +2,15 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 using ShopMart.Data.EF.Configurations;
 using ShopMart.Data.EF.Extentions;
 using ShopMart.Data.Entities;
 using ShopMart.Data.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -54,19 +57,19 @@ namespace ShopMart.Data.EF
         {
             #region Identity Config
 
-            builder.Entity<IdentityUserClaim<string>>()
+            builder.Entity<IdentityUserClaim<Guid>>()
                 .ToTable("AppUserClaims").HasKey(x => x.Id);
 
-            builder.Entity<IdentityRoleClaim<string>>()
+            builder.Entity<IdentityRoleClaim<Guid>>()
                 .ToTable("AppRoleClaims").HasKey(x => x.Id);
 
-            builder.Entity<IdentityUserLogin<string>>()
+            builder.Entity<IdentityUserLogin<Guid>>()
                 .ToTable("AppUserLogins").HasKey(x => x.UserId);
 
-            builder.Entity<IdentityUserRole<string>>()
+            builder.Entity<IdentityUserRole<Guid>>()
                 .ToTable("AppUserRoles").HasKey(x => new { x.RoleId, x.UserId });
 
-            builder.Entity<IdentityUserToken<string>>()
+            builder.Entity<IdentityUserToken<Guid>>()
                 .ToTable("AppUserTokens").HasKey(x => new { x.UserId });
 
 
@@ -82,7 +85,7 @@ namespace ShopMart.Data.EF
             builder.AddConfiguration(new SystemConfigConfiguration());
             builder.AddConfiguration(new AdvertistmentPositionConfiguration());
 
-            base.OnModelCreating(builder);
+            //base.OnModelCreating(builder);
         }
 
         public override int SaveChanges()
@@ -107,6 +110,23 @@ namespace ShopMart.Data.EF
             }
 
             return base.SaveChanges();
+        }
+    }
+
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    {
+        public AppDbContext CreateDbContext(string[] args)
+        {
+            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Directory
+                .GetCurrentDirectory())
+                .AddJsonFile("appsettings.json").Build();
+
+            var builder = new DbContextOptionsBuilder<AppDbContext>();
+
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            builder.UseSqlServer(connectionString);
+            return new AppDbContext(builder.Options);
+                
         }
     }
 }
