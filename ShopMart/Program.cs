@@ -16,7 +16,7 @@ namespace ShopMart
         {
             BuildWebHost(args).Run();
         }
-
+        //ARC
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
