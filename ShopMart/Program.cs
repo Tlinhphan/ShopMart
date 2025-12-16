@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ShopMart.Data.EF;
+using Serilog;
+using Serilog.Events;
 
 namespace ShopMart
 {
@@ -16,27 +18,40 @@ namespace ShopMart
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
+            // ✅ 1. Cấu hình Serilog TRƯỚC
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("Logs/shopmart-.txt",
+                              rollingInterval: RollingInterval.Day)
+                .CreateLogger();
 
-           using(var scope = host.Services.CreateScope())
+            try
             {
-                var services = scope.ServiceProvider;
-                try
+                var host = BuildWebHost(args);
+
+                // ✅ 2. Seed database
+                using (var scope = host.Services.CreateScope())
                 {
-                    var dbInitializer = services.GetService<DbInitializer>();
+                    var services = scope.ServiceProvider;
+                    var dbInitializer = services.GetRequiredService<DbInitializer>();
                     dbInitializer.Seed().Wait();
                 }
-                catch(Exception ex)
-                {
-                    var logger = services.GetService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database");
-                }
+
+                // ✅ 3. Run app
+                host.Run();
             }
-            host.Run();
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Application start-up failed");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
         }
-        //AVC
-        public static IWebHost BuildWebHost(string[] args) =>
+            //AVC
+            public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseSerilog()
                 .UseStartup<Startup>()
                 .Build();
     }

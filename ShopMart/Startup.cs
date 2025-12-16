@@ -20,6 +20,9 @@ using ShopMart.Data.IRepositores;
 using ShopMart.Data.EF.Repositiores;
 using ShopMart.Application.Interfaces;
 using ShopMart.Application.Implementations;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using Newtonsoft.Json.Serialization;
 
 namespace ShopMart
 {
@@ -81,12 +84,13 @@ namespace ShopMart
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+           
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
