@@ -6,12 +6,32 @@
     }
 
     var registerEvents = function () {
+
+        $('#frmLogin').validate({
+            errorClass: 'red',
+            ignore: [],
+            lang: 'vi',
+            rules: {
+                userName: {
+                    required:true
+                },
+
+                password: {
+                    required:true
+                }
+            }
+
+        });
+
         $('#btnLogin').on('click', function (e) {
             debugger;
-            e.preventDefault();
-            var user = $('#txtUserName').val();
-            var password = $('#txtPassword').val();
-            login(user, password);
+            if ($('#frmLogin').valid()) {
+                e.preventDefault();
+                var user = $('#txtUserName').val();
+                var password = $('#txtPassword').val();
+                login(user, password);
+            }
+          
         });
     }
 
@@ -31,7 +51,7 @@
                     window.location.href = "/Admin/Home/Index";
                 }
                 else {
-                    shopmart.notify('Đăng nhập không đúng', 'eror');
+                    shopmart.notify('Đăng nhập không đúng', 'error');
                 }
             }
         })
