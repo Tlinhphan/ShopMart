@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using ShopMart.Data.EF;
 using Serilog;
 using Serilog.Events;
+using TeduCoreApp.Data.EF;
 
 namespace ShopMart
 {

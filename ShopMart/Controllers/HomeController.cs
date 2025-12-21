@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ShopMart.Extensions;
 using ShopMart.Models;
 
 namespace ShopMart.Controllers
@@ -14,6 +15,7 @@ namespace ShopMart.Controllers
     {
         public IActionResult Index()
         {
+            var email = User.GetSpecificClaim("Email");
             return View();
         }
 

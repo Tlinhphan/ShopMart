@@ -10,7 +10,7 @@
         $('#frmLogin').validate({
             errorClass: 'red',
             ignore: [],
-            lang: 'vi',
+            lang: 'en',
             rules: {
                 userName: {
                     required:true
@@ -51,7 +51,7 @@
                     window.location.href = "/Admin/Home/Index";
                 }
                 else {
-                    shopmart.notify('Đăng nhập không đúng', 'error');
+                    shopmart.notify('Login failed', 'error');
                 }
             }
         })
