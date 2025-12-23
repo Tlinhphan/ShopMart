@@ -28,7 +28,9 @@ namespace ShopMart.Areas.Admin.Components
             {
                 functions = await _functionService.GetAll();
             }
+
             else
+
             {
                 //TODO: Get by permission
                 functions = new List<FunctionViewModel>();
