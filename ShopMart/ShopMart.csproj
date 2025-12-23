@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-ShopMart-F9673CF3-F646-4D94-83A4-E44E85AD99C6</UserSecretsId>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.0\ShopMart.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.0\ShopMart.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.0\ShopMart.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.0\ShopMart.runtimeconfig.json" />
+    <Content Include="obj\Debug\netcoreapp2.0\ShopMart.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Application.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Application.pdb" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Data.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Data.EF.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Data.EF.pdb" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Data.pdb" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.pdb" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.pdb" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Utilities.dll" />
+    <None Include="bin\Debug\netcoreapp2.0\ShopMart.Utilities.pdb" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.csproj.CopyComplete" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.dll" />
+    <None Include="obj\Debug\netcoreapp2.0\ShopMart.pdb" />
+    <None Include="obj\ShopMart.csproj.nuget.cache" />
+    <None Include="obj\ShopMart.csproj.nuget.g.props" />
+    <None Include="obj\ShopMart.csproj.nuget.g.targets" />
+    <None Include="wwwroot\admin-side\js\custom.js" />
+    <None Include="wwwroot\admin-side\js\custom.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopMart.Application\ShopMart.Application.csproj" />
+    <ProjectReference Include="..\ShopMart.Data.EF\ShopMart.Data.EF.csproj" />
+    <ProjectReference Include="..\ShopMart.Data\ShopMart.Data.csproj" />
+    <ProjectReference Include="..\ShopMart.Infrastructure\ShopMart.Infrastructure.csproj" />
+    <ProjectReference Include="..\ShopMart.Utilities\ShopMart.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

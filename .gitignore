@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ShopMart/bin
+/ShopMart/obj
+/.vs/ShopMart/v15/Server/sqlite3/db.lock
+/.vs/ShopMart/v15/Server/sqlite3/storage.ide-wal
+/.vs/ShopMart/v15/Server/sqlite3/storage.ide-shm
+/.vs/ShopMart/v15/Server/sqlite3/storage.ide
+/ShopMart.Application/bin/Debug
+/ShopMart.Application/obj
+/ShopMart.Data/bin/Debug
+/ShopMart.Data/obj
+/ShopMart.Data.EF/bin/Debug
+/ShopMart.Data.EF/obj
+/ShopMart.Infrastructure/bin/Debug
+/ShopMart.Infrastructure/obj
+/ShopMart.Utilities/bin/Debug
+/ShopMart.Utilities/obj
