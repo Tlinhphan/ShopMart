@@ -23,7 +23,9 @@ namespace ShopMart.Areas.Admin.Components
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var roles = ((ClaimsPrincipal)User).GetSpecificClaim("Roles");
+
             List<FunctionViewModel> functions; 
+
             if (roles.Split(";").Contains(CommonConstants.AdminRole))
             {
                 functions = await _functionService.GetAll();
