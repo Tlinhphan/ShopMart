@@ -25,6 +25,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json.Serialization;
 using TeduCoreApp.Data.EF;
 using ShopMart.Helpers;
+using ShopMart.Application.Implementation;
 
 namespace ShopMart
 {
@@ -79,16 +80,24 @@ namespace ShopMart
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
             services.AddSingleton(Mapper.Configuration);
+
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetServices));
              
             services.AddTransient<IEmailSender, EmailSender>();
+
             services.AddTransient<DbInitializer>();
 
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
-            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
-            services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+
+            //Repository
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+            //Service
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IFunctionService, FunctionService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -109,7 +118,7 @@ namespace ShopMart
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+        
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -119,8 +128,9 @@ namespace ShopMart
 
                 routes.MapRoute(name: "areaRoute",
                     template: "{area:exists}/{controller=Login}/{action=Index}/{id?}");
+            
             });
-
+    
            
         }
     }

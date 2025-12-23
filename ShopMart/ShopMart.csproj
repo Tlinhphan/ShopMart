@@ -4,9 +4,13 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-ShopMart-F9673CF3-F646-4D94-83A4-E44E85AD99C6</UserSecretsId>
     <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\ShopMart.Application\Implementation\FunctionService.cs" Link="FunctionService.cs" />
     <Compile Include="obj\Debug\netcoreapp2.0\ShopMart.AssemblyInfo.cs" />
     <Compile Include="obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs" />
   </ItemGroup>

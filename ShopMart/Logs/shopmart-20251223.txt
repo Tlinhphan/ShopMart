@@ -1,0 +1,322 @@
+2025-12-23 23:29:43.937 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:29:48.946 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:29:55.585 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:30:00.437 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:30:14.796 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.<>c__DisplayClass0_0.<LoadMethods>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.ConfigureServices(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:30:34.087 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:30:38.884 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:32:14.910 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:32:19.695 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:34:15.177 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:34:20.061 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:39:03.186 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:39:08.110 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:41:43.509 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:41:48.381 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:43:58.648 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:44:03.606 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:44:28.218 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:44:33.086 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:46:26.811 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:47:56.536 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:48:01.684 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:50:46.346 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:53:23.041 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:53:27.970 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:54:44.513 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:54:49.320 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:57:46.838 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
+2025-12-23 23:57:51.661 +07:00 [FTL] Application start-up failed
+System.ArgumentException: Cannot instantiate implementation type 'ShopMart.Application.Interfaces.IFunctionService' for service type 'ShopMart.Application.Interfaces.IFunctionService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at ShopMart.Program.BuildWebHost(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 54
+   at ShopMart.Program.Main(String[] args) in C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\Program.cs:line 30
