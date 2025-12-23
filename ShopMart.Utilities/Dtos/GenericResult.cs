@@ -8,6 +8,7 @@ namespace ShopMart.Utilities.Dtos
     {
         public GenericResult()
         {
+
         }
 
         public GenericResult(bool success)
