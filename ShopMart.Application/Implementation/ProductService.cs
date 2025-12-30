@@ -12,9 +12,11 @@ using System.Text;
 
 namespace ShopMart.Application.Implementation
 {
-   public class ProductService :IProductService
+    public class ProductService : IProductService
+
     {
         IProductRepository _productRepository;
+
         public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
@@ -26,13 +28,17 @@ namespace ShopMart.Application.Implementation
         }
 
         public List<ProductViewModel> GetAll()
+
         {
-            return _productRepository.FindAll(x=>x.ProductCategory).ProjectTo<ProductViewModel>().ToList();
+            return _productRepository.FindAll(x => x.ProductCategory).ProjectTo<ProductViewModel>().ToList();
         }
 
         public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
+
+
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
+
             if (!string.IsNullOrEmpty(keyword))
                 query = query.Where(x => x.Name.Contains(keyword));
 
@@ -53,6 +59,7 @@ namespace ShopMart.Application.Implementation
                 CurrentPage = page,
                 RowCount = totalRow,
                 PageSize = pageSize
+
             };
 
             return paginationSet;
