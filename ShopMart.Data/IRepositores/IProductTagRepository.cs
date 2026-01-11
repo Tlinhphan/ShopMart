@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ShopMart.Data.IRepositores
 {
-    public interface IProductRepository : IRepository<Product, int>
+   public interface IProductTagRepository : IRepository<ProductTag, int>
     {
 
     }

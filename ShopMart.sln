@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.36324.19
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart", "ShopMart\ShopMart.csproj", "{2231AAD1-8A23-4EA9-B2A2-EACFEE1FB799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Infrastructure", "ShopMart.Infrastructure\ShopMart.Infrastructure.csproj", "{BE263CED-42B1-4813-946F-F245E2A5CBD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart.Infrastructure", "ShopMart.Infrastructure\ShopMart.Infrastructure.csproj", "{BE263CED-42B1-4813-946F-F245E2A5CBD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Utilities", "ShopMart.Utilities\ShopMart.Utilities.csproj", "{4DF6C451-C0B3-4A98-815C-446A334FF789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart.Utilities", "ShopMart.Utilities\ShopMart.Utilities.csproj", "{4DF6C451-C0B3-4A98-815C-446A334FF789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Data", "ShopMart.Data\ShopMart.Data.csproj", "{8214AA61-96DE-42B6-AC3D-6C59FE2A5785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart.Data", "ShopMart.Data\ShopMart.Data.csproj", "{8214AA61-96DE-42B6-AC3D-6C59FE2A5785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Data.EF", "ShopMart.Data.EF\ShopMart.Data.EF.csproj", "{0F85EF39-DA83-4C89-95FC-925E493DE41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart.Data.EF", "ShopMart.Data.EF\ShopMart.Data.EF.csproj", "{0F85EF39-DA83-4C89-95FC-925E493DE41B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Application", "ShopMart.Application\ShopMart.Application.csproj", "{66475074-12C3-4342-82C3-8F506BCE7CB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMart.Application", "ShopMart.Application\ShopMart.Application.csproj", "{66475074-12C3-4342-82C3-8F506BCE7CB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation", "1-Presentation", "{63DCCB8B-DEF1-4580-A7BC-D7D9C7B72902}"
 EndProject
