@@ -21,6 +21,7 @@
                 }
             }
         });
+
         //todo: binding events to controls
         $('#ddlShowPage').on('change', function () {
             shopmart.configs.pageSize = $(this).val();
@@ -30,17 +31,48 @@
         $('#btnSearch').on('click', function () {
             loadData();
         });
+
         $('#txtKeyword').on('keypress', function (e) {
             if (e.which === 13) {
                 loadData();
             }
         });
+
         $("#btnCreate").on('click', function () {
             resetFormMaintainance();
             initTreeDropDownCategory();
             $('#modal-add-edit').modal('show');
 
         });
+
+        $('#btnSelectImg').on('click', function () {
+            $('#fileInputImage').click();
+        });
+
+        $("#fileInputImage").on('change', function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Upload/UploadImage",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (path) {
+                    $('#txtImage').val(path);
+                    shopmart.notify('Upload image succesful!', 'success');
+
+                },
+                error: function () {
+                    shopmart.notify('There was error uploading files!', 'error');
+                }
+            });
+        });
+
         $('body').on('click', '.btn-edit', function (e) {
             e.preventDefault();
             var that = $(this).data('id');
