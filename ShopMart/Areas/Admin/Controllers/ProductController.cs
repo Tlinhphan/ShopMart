@@ -12,12 +12,16 @@ namespace ShopMart.Areas.Admin.Controllers
 {
     public class ProductController : BaseController
     {
+
         private IProductService _productService;
+
         private IProductCategoryService _productCategoryService;
+
 
         public ProductController(IProductService productService, IProductCategoryService productCategoryService)
         {
             _productService = productService;
+
             _productCategoryService = productCategoryService;
         }
 
@@ -32,6 +36,7 @@ namespace ShopMart.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             var model = _productService.GetAll();
+
             return new OkObjectResult(model);
         }
 
@@ -39,13 +44,16 @@ namespace ShopMart.Areas.Admin.Controllers
         public IActionResult GetAllCategories()
         {
             var model = _productCategoryService.GetAll();
+
             return new OkObjectResult(model);
         }
 
         [HttpGet]
+
         public IActionResult GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
         {
             var model = _productService.GetAllPaging(categoryId, keyword, page, pageSize);
+
             return new OkObjectResult(model);
         }
 
@@ -63,6 +71,7 @@ namespace ShopMart.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
+
                 return new BadRequestObjectResult(allErrors);
             }
             else
@@ -77,6 +86,7 @@ namespace ShopMart.Areas.Admin.Controllers
                     _productService.Update(productVm);
                 }
                 _productService.Save();
+
                 return new OkObjectResult(productVm);
             }
         }
@@ -91,6 +101,7 @@ namespace ShopMart.Areas.Admin.Controllers
             else
             {
                 _productService.Delete(id);
+
                 _productService.Save();
 
                 return new OkObjectResult(id);
