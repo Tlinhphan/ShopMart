@@ -28,7 +28,7 @@ namespace ShopMart.Areas.Admin.Components
 
             if (roles.Split(";").Contains(CommonConstants.AdminRole))
             {
-                functions = await _functionService.GetAll();
+                functions = await _functionService.GetAll(string.Empty);
             }
 
             else

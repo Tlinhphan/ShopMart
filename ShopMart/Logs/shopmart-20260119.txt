@@ -1,0 +1,632 @@
+2026-01-19 22:22:51.627 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-19 22:22:52.330 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:22:52.544 +07:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 22:22:52.575 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 22:22:52.586 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-01-19 22:22:52.602 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-01-19 22:22:52.606 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-01-19 22:22:52.609 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-01-19 22:22:52.612 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-01-19 22:22:52.617 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-01-19 22:22:52.620 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-01-19 22:22:52.627 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 22:22:52.631 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 22:22:52.634 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 22:22:53.053 +07:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:59008/  0
+2026-01-19 22:22:53.053 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/  
+2026-01-19 22:22:53.053 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/login  
+2026-01-19 22:22:53.069 +07:00 [INF] Request finished in 13.0484ms 200 
+2026-01-19 22:22:53.345 +07:00 [INF] Authorization failed for user: null.
+2026-01-19 22:22:53.347 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 22:22:53.347 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-01-19 22:22:53.349 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-01-19 22:22:53.352 +07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-01-19 22:22:53.353 +07:00 [INF] Executed action ShopMart.Controllers.HomeController.Index (ShopMart) in 15.116100000000001ms
+2026-01-19 22:22:53.355 +07:00 [INF] Request finished in 303.5509ms 302 
+2026-01-19 22:22:53.359 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/Account/Login?ReturnUrl=%2F  
+2026-01-19 22:22:53.394 +07:00 [INF] Executing action method ShopMart.Controllers.AccountController.Login (ShopMart) with arguments (["/"]) - ModelState is "Valid"
+2026-01-19 22:22:53.398 +07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-01-19 22:22:55.883 +07:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2026-01-19 22:22:55.883 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Login/Index.cshtml.
+2026-01-19 22:22:55.925 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) in 2588.3177ms
+2026-01-19 22:22:55.926 +07:00 [INF] Request finished in 2874.8169ms 200 text/html; charset=utf-8
+2026-01-19 22:22:55.944 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootstrap/dist/css/bootstrap.css  
+2026-01-19 22:22:55.944 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/nprogress/nprogress.css  
+2026-01-19 22:22:55.946 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/font-awesome/css/font-awesome.css  
+2026-01-19 22:22:55.947 +07:00 [INF] Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\font-awesome\css\font-awesome.css'
+2026-01-19 22:22:55.947 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2026-01-19 22:22:55.947 +07:00 [INF] Sending file. Request path: '/lib/nprogress/nprogress.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\nprogress\nprogress.css'
+2026-01-19 22:22:55.951 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/notifyjs/dist/styles/metro/notify-metro.js  
+2026-01-19 22:22:55.951 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2026-01-19 22:22:55.951 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-validation/dist/jquery.validate.js  
+2026-01-19 22:22:55.952 +07:00 [INF] Sending file. Request path: '/lib/notifyjs/dist/styles/metro/notify-metro.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js'
+2026-01-19 22:22:55.952 +07:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+2026-01-19 22:22:55.952 +07:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2026-01-19 22:22:55.948 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/animate.css/animate.css  
+2026-01-19 22:22:55.953 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin-side/css/custom.css  
+2026-01-19 22:22:55.954 +07:00 [INF] The file /lib/animate.css/animate.css was not modified
+2026-01-19 22:22:55.955 +07:00 [INF] Request finished in 6.9719ms 304 text/css
+2026-01-19 22:22:55.956 +07:00 [INF] Sending file. Request path: '/admin-side/css/custom.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\admin-side\css\custom.css'
+2026-01-19 22:22:55.957 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/notifyjs/dist/styles/metro/notify-metro.css  
+2026-01-19 22:22:55.957 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/app/shared/shopmart.js  
+2026-01-19 22:22:55.957 +07:00 [INF] Sending file. Request path: '/app/shared/shopmart.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\app\shared\shopmart.js'
+2026-01-19 22:22:55.957 +07:00 [INF] Sending file. Request path: '/lib/notifyjs/dist/styles/metro/notify-metro.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css'
+2026-01-19 22:22:55.959 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/app/controllers/login/index.js  
+2026-01-19 22:22:55.959 +07:00 [INF] The file /app/controllers/login/index.js was not modified
+2026-01-19 22:22:55.960 +07:00 [INF] Request finished in 0.575ms 304 application/javascript
+2026-01-19 22:22:55.960 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-validation/dist/additional-methods.js  
+2026-01-19 22:22:55.960 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/notifyjs/dist/notify.js  
+2026-01-19 22:22:55.960 +07:00 [INF] Sending file. Request path: '/lib/notifyjs/dist/notify.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\notifyjs\dist\notify.js'
+2026-01-19 22:22:55.960 +07:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/additional-methods.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-validation\dist\additional-methods.js'
+2026-01-19 22:22:55.961 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery/dist/jquery.js  
+2026-01-19 22:22:55.961 +07:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery\dist\jquery.js'
+2026-01-19 22:22:55.998 +07:00 [INF] Request finished in 45.164ms 200 text/css
+2026-01-19 22:22:55.998 +07:00 [INF] Request finished in 46.5506ms 200 application/javascript
+2026-01-19 22:22:55.998 +07:00 [INF] Request finished in 52.1417ms 200 text/css
+2026-01-19 22:22:55.999 +07:00 [INF] Request finished in 54.1223ms 200 text/css
+2026-01-19 22:22:56.000 +07:00 [INF] Request finished in 56.2504ms 200 text/css
+2026-01-19 22:22:55.999 +07:00 [INF] Request finished in 42.2086ms 200 text/css
+2026-01-19 22:22:56.000 +07:00 [INF] Request finished in 48.6869ms 200 application/javascript
+2026-01-19 22:22:56.039 +07:00 [INF] Request finished in 87.7145ms 200 application/javascript
+2026-01-19 22:22:56.078 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2026-01-19 22:22:56.078 +07:00 [INF] Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+2026-01-19 22:22:56.080 +07:00 [INF] Request finished in 122.9873ms 200 application/javascript
+2026-01-19 22:22:56.082 +07:00 [INF] Request finished in 120.8656ms 200 application/javascript
+2026-01-19 22:22:56.117 +07:00 [INF] Request finished in 156.0221ms 200 application/javascript
+2026-01-19 22:22:56.117 +07:00 [INF] Request finished in 156.6572ms 200 application/javascript
+2026-01-19 22:22:56.119 +07:00 [INF] Request finished in 40.3353ms 200 font/woff2
+2026-01-19 22:22:56.489 +07:00 [INF] Executed action ShopMart.Controllers.AccountController.Login (ShopMart) in 3115.3123ms
+2026-01-19 22:22:56.489 +07:00 [INF] Request finished in 3130.001ms 200 text/html; charset=utf-8
+2026-01-19 22:22:57.355 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:44336/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33
+2026-01-19 22:22:57.381 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) with arguments (["ShopMart.Models.AccountViewModels.LoginViewModel"]) - ModelState is "Valid"
+2026-01-19 22:22:57.385 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:22:57.438 +07:00 [INF] Executed DbCommand (29ms) [Parameters=[@__normalizedUserName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-19 22:22:57.496 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-19 22:22:57.514 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 22:22:57.520 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 22:22:57.529 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 22:22:57.532 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 22:22:57.533 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 22:22:57.534 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 22:22:57.535 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 22:22:57.536 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 22:22:57.538 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-01-19 22:22:57.538 +07:00 [INF] User logged in.
+2026-01-19 22:22:57.540 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 22:22:57.565 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) in 202.5415ms
+2026-01-19 22:22:57.566 +07:00 [INF] Request finished in 211.4863ms 200 application/json; charset=utf-8
+2026-01-19 22:22:57.575 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/Admin/Home/Index  
+2026-01-19 22:22:57.577 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 22:22:57.578 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 22:22:57.579 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 22:22:57.667 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Home/Index.cshtml.
+2026-01-19 22:22:57.804 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:22:57.851 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]
+2026-01-19 22:22:58.021 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) in 442.47400000000005ms
+2026-01-19 22:22:58.021 +07:00 [INF] Request finished in 446.6765ms 200 text/html; charset=utf-8
+2026-01-19 22:22:58.036 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootstrap-daterangepicker/daterangepicker.css  
+2026-01-19 22:22:58.036 +07:00 [INF] Sending file. Request path: '/lib/bootstrap-daterangepicker/daterangepicker.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css'
+2026-01-19 22:22:58.036 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/ckeditor/skins/moono/editor.css  
+2026-01-19 22:22:58.036 +07:00 [INF] Sending file. Request path: '/lib/ckeditor/skins/moono/editor.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\ckeditor\skins\moono\editor.css'
+2026-01-19 22:22:58.036 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootstrap/dist/js/bootstrap.js  
+2026-01-19 22:22:58.037 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin-side/images/img.jpg  
+2026-01-19 22:22:58.037 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+2026-01-19 22:22:58.037 +07:00 [INF] Sending file. Request path: '/admin-side/images/img.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\admin-side\images\img.jpg'
+2026-01-19 22:22:58.046 +07:00 [INF] Request finished in 9.6966ms 200 text/css
+2026-01-19 22:22:58.046 +07:00 [INF] Request finished in 9.4738ms 200 image/jpeg
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/mustache/mustache.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/moment/moment.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/twbs-pagination/jquery.twbsPagination.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootbox/bootbox.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-sparkline/dist/jquery.sparkline.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/nprogress/nprogress.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/mustache/mustache.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\mustache\mustache.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/moment/moment.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\moment\moment.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/jquery-sparkline/dist/jquery.sparkline.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/nprogress/nprogress.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\nprogress\nprogress.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/ckeditor/ckeditor.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin-side/js/custom.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/Chart.js/dist/Chart.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/admin-side/js/custom.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\admin-side\js\custom.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/ckeditor/ckeditor.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\ckeditor\ckeditor.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/bootbox/bootbox.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootbox\bootbox.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/Chart.js/dist/Chart.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\Chart.js\dist\Chart.js'
+2026-01-19 22:22:58.077 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/fastclick/lib/fastclick.js  
+2026-01-19 22:22:58.077 +07:00 [INF] Sending file. Request path: '/lib/twbs-pagination/jquery.twbsPagination.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\twbs-pagination\jquery.twbsPagination.js'
+2026-01-19 22:22:58.080 +07:00 [INF] Sending file. Request path: '/lib/fastclick/lib/fastclick.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\fastclick\lib\fastclick.js'
+2026-01-19 22:22:58.081 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootstrap-daterangepicker/daterangepicker.js  
+2026-01-19 22:22:58.080 +07:00 [INF] Request finished in 43.8352ms 200 text/css
+2026-01-19 22:22:58.081 +07:00 [INF] Sending file. Request path: '/lib/bootstrap-daterangepicker/daterangepicker.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js'
+2026-01-19 22:22:58.082 +07:00 [INF] Request finished in 45.2105ms 200 application/javascript
+2026-01-19 22:22:58.141 +07:00 [INF] Request finished in 63.4704ms 200 application/javascript
+2026-01-19 22:22:58.142 +07:00 [INF] Request finished in 65.0799ms 200 application/javascript
+2026-01-19 22:22:58.143 +07:00 [INF] Request finished in 65.5035ms 200 application/javascript
+2026-01-19 22:22:58.144 +07:00 [INF] Request finished in 66.6588ms 200 application/javascript
+2026-01-19 22:22:58.145 +07:00 [INF] Request finished in 67.5402ms 200 application/javascript
+2026-01-19 22:22:58.145 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2026-01-19 22:22:58.145 +07:00 [INF] Request finished in 67.5705ms 200 application/javascript
+2026-01-19 22:22:58.145 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2026-01-19 22:22:58.170 +07:00 [INF] Request finished in 92.5051ms 200 application/javascript
+2026-01-19 22:22:58.176 +07:00 [INF] Request finished in 92.1547ms 200 application/javascript
+2026-01-19 22:22:58.176 +07:00 [INF] Request finished in 31.0745ms 200 font/woff2
+2026-01-19 22:22:58.208 +07:00 [INF] Request finished in 131.0951ms 200 application/javascript
+2026-01-19 22:22:58.254 +07:00 [INF] Request finished in 177.3114ms 200 application/javascript
+2026-01-19 22:22:58.278 +07:00 [INF] Request finished in 200.5412ms 200 application/javascript
+2026-01-19 22:23:04.596 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/index  
+2026-01-19 22:23:04.597 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 22:23:04.599 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 22:23:04.600 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 22:23:04.673 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Role/Index.cshtml.
+2026-01-19 22:23:04.737 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:23:04.738 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]
+2026-01-19 22:23:04.795 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.Index (ShopMart) in 196.40390000000002ms
+2026-01-19 22:23:04.795 +07:00 [INF] Request finished in 199.2849ms 200 text/html; charset=utf-8
+2026-01-19 22:23:04.807 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/app/controllers/role/index.js?v=MtJb9JAo2AkzdynRsrS3FeRnJ5A-ioJUc_jaElxwIP0  
+2026-01-19 22:23:04.808 +07:00 [INF] Sending file. Request path: '/app/controllers/role/index.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\app\controllers\role\index.js'
+2026-01-19 22:23:04.811 +07:00 [INF] Request finished in 3.1494ms 200 application/javascript
+2026-01-19 22:23:04.846 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/GetAllPaging?keyword=&page=1&pageSize=10  
+2026-01-19 22:23:04.846 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 22:23:04.847 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 22:23:04.848 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) with arguments (["","1","10"]) - ModelState is "Valid"
+2026-01-19 22:23:04.849 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:23:04.854 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AppRoles] AS [a]
+2026-01-19 22:23:04.859 +07:00 [WRN] Query: '(from AppRole dto in DbSet<AppRole> select new AppRoleViewModel{ { 
+    Id = (Nullable<Guid>)[dto]....' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2026-01-19 22:23:04.867 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[Description]
+FROM [AppRoles] AS [dto]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-19 22:23:04.869 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 22:23:04.873 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) in 25.992ms
+2026-01-19 22:23:04.874 +07:00 [INF] Request finished in 28.1368ms 200 application/json; charset=utf-8
+2026-01-19 22:23:04.879 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/GetAllPaging?keyword=&page=1&pageSize=10  
+2026-01-19 22:23:04.879 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 22:23:04.879 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 22:23:04.879 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) with arguments (["","1","10"]) - ModelState is "Valid"
+2026-01-19 22:23:04.880 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 22:23:04.880 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AppRoles] AS [a]
+2026-01-19 22:23:04.881 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[Description]
+FROM [AppRoles] AS [dto]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-19 22:23:04.881 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 22:23:04.881 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) in 2.132ms
+2026-01-19 22:23:04.882 +07:00 [INF] Request finished in 2.8877ms 200 application/json; charset=utf-8
+2026-01-19 23:40:51.041 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-19 23:40:51.495 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:40:51.679 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 23:40:51.699 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 23:40:51.708 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-01-19 23:40:51.720 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-01-19 23:40:51.724 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-01-19 23:40:51.729 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-01-19 23:40:51.732 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-01-19 23:40:51.735 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-01-19 23:40:51.739 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-01-19 23:40:51.746 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 23:40:51.750 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 23:40:51.753 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-19 23:40:52.187 +07:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:59008/  0
+2026-01-19 23:40:52.187 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/login  
+2026-01-19 23:40:52.187 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/  
+2026-01-19 23:40:52.193 +07:00 [INF] Request finished in 8.1912ms 200 
+2026-01-19 23:40:52.236 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:40:52.236 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:40:52.335 +07:00 [INF] Executed DbCommand (54ms) [Parameters=[@__get_Item_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2026-01-19 23:40:52.335 +07:00 [INF] Executed DbCommand (63ms) [Parameters=[@__get_Item_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2026-01-19 23:40:52.375 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-19 23:40:52.375 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-19 23:40:52.396 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:40:52.396 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:40:52.408 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.408 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.423 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.423 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.425 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.425 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.428 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.428 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.429 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.429 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:40:52.432 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.432 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:40:52.434 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:40:52.434 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:40:52.435 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:40:52.435 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:40:52.580 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:40:52.581 +07:00 [INF] Executing action method ShopMart.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:40:52.581 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:41:31.749 +07:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2026-01-19 23:41:31.749 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Login/Index.cshtml.
+2026-01-19 23:41:31.800 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) in 39222.765ms
+2026-01-19 23:41:31.801 +07:00 [INF] Request finished in 39616.5239ms 200 text/html; charset=utf-8
+2026-01-19 23:41:32.057 +07:00 [INF] Executed action ShopMart.Controllers.HomeController.Index (ShopMart) in 39482.065500000004ms
+2026-01-19 23:41:32.058 +07:00 [INF] Request finished in 39872.9384ms 200 text/html; charset=utf-8
+2026-01-19 23:41:32.073 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/images/banner1.svg  
+2026-01-19 23:41:32.073 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/images/banner2.svg  
+2026-01-19 23:41:32.073 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/css/site.css  
+2026-01-19 23:41:32.076 +07:00 [INF] The file /css/site.css was not modified
+2026-01-19 23:41:32.076 +07:00 [INF] The file /images/banner1.svg was not modified
+2026-01-19 23:41:32.076 +07:00 [INF] The file /images/banner2.svg was not modified
+2026-01-19 23:41:32.077 +07:00 [INF] Request finished in 3.7662ms 304 image/svg+xml
+2026-01-19 23:41:32.077 +07:00 [INF] Request finished in 3.7656ms 304 image/svg+xml
+2026-01-19 23:41:32.077 +07:00 [INF] Request finished in 3.7659ms 304 text/css
+2026-01-19 23:41:32.155 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/images/banner4.svg  
+2026-01-19 23:41:32.155 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/images/banner3.svg  
+2026-01-19 23:41:32.155 +07:00 [INF] The file /images/banner4.svg was not modified
+2026-01-19 23:41:32.155 +07:00 [INF] The file /images/banner3.svg was not modified
+2026-01-19 23:41:32.155 +07:00 [INF] Request finished in 0.2494ms 304 image/svg+xml
+2026-01-19 23:41:32.155 +07:00 [INF] Request finished in 0.5312ms 304 image/svg+xml
+2026-01-19 23:41:32.195 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/js/site.js?v=7mkNbU1tgQL1bUeZe3j2R151hKLhLDKO4BBaR-iqCy0  
+2026-01-19 23:41:32.197 +07:00 [INF] The file /js/site.js was not modified
+2026-01-19 23:41:32.197 +07:00 [INF] Request finished in 3.8861ms 304 application/javascript
+2026-01-19 23:42:11.435 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/login  
+2026-01-19 23:42:11.437 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:11.438 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:42:11.439 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Login/Index.cshtml.
+2026-01-19 23:42:11.439 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) in 1.1066ms
+2026-01-19 23:42:11.439 +07:00 [INF] Request finished in 3.9719ms 200 text/html; charset=utf-8
+2026-01-19 23:42:12.850 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:44336/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33
+2026-01-19 23:42:12.851 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:12.895 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) with arguments (["ShopMart.Models.AccountViewModels.LoginViewModel"]) - ModelState is "Valid"
+2026-01-19 23:42:12.898 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:12.941 +07:00 [INF] Executed DbCommand (31ms) [Parameters=[@__normalizedUserName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-19 23:42:12.979 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-19 23:42:12.984 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:42:12.986 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:42:12.987 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:42:12.989 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:42:12.990 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:42:12.991 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-19 23:42:12.992 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-19 23:42:12.993 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-19 23:42:12.995 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-01-19 23:42:12.995 +07:00 [INF] User logged in.
+2026-01-19 23:42:12.997 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 23:42:13.017 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) in 141.1173ms
+2026-01-19 23:42:13.018 +07:00 [INF] Request finished in 167.7428ms 200 application/json; charset=utf-8
+2026-01-19 23:42:13.027 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/Admin/Home/Index  
+2026-01-19 23:42:13.028 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:13.030 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:13.032 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:42:13.168 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Home/Index.cshtml.
+2026-01-19 23:42:13.337 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:13.376 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-01-19 23:42:13.603 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) in 574.7503ms
+2026-01-19 23:42:13.604 +07:00 [INF] Request finished in 576.4112ms 200 text/html; charset=utf-8
+2026-01-19 23:42:18.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/index  
+2026-01-19 23:42:18.481 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:18.482 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:18.483 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:42:18.595 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Role/Index.cshtml.
+2026-01-19 23:42:18.799 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:18.801 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-01-19 23:42:18.859 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.Index (ShopMart) in 376.3783ms
+2026-01-19 23:42:18.859 +07:00 [INF] Request finished in 378.9542ms 200 text/html; charset=utf-8
+2026-01-19 23:42:18.872 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-treegrid/css/jquery.treegrid.css  
+2026-01-19 23:42:18.873 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-treegrid/js/jquery.treegrid.js  
+2026-01-19 23:42:18.873 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/app/controllers/role/index.js?v=IuU_HYibkGmMEJ9j-_X7o_k9pxHUg4qwTHK-FfluVQs  
+2026-01-19 23:42:18.873 +07:00 [INF] Sending file. Request path: '/lib/jquery-treegrid/js/jquery.treegrid.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-treegrid\js\jquery.treegrid.js'
+2026-01-19 23:42:18.873 +07:00 [INF] Sending file. Request path: '/lib/jquery-treegrid/css/jquery.treegrid.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-treegrid\css\jquery.treegrid.css'
+2026-01-19 23:42:18.873 +07:00 [INF] Sending file. Request path: '/app/controllers/role/index.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\app\controllers\role\index.js'
+2026-01-19 23:42:18.877 +07:00 [INF] Request finished in 4.0732ms 200 application/javascript
+2026-01-19 23:42:18.883 +07:00 [INF] Request finished in 10.6209ms 200 text/css
+2026-01-19 23:42:18.901 +07:00 [INF] Request finished in 28.2803ms 200 application/javascript
+2026-01-19 23:42:18.924 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/GetAllPaging?keyword=&page=1&pageSize=10  
+2026-01-19 23:42:18.924 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:18.927 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:18.928 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) with arguments (["","1","10"]) - ModelState is "Valid"
+2026-01-19 23:42:18.929 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:18.933 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AppRoles] AS [a]
+2026-01-19 23:42:18.938 +07:00 [WRN] Query: '(from AppRole dto in DbSet<AppRole> select new AppRoleViewModel{ { 
+    Id = (Nullable<Guid>)[dto]....' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2026-01-19 23:42:18.947 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[Description]
+FROM [AppRoles] AS [dto]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-19 23:42:18.949 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 23:42:18.956 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) in 29.3319ms
+2026-01-19 23:42:18.957 +07:00 [INF] Request finished in 33.1565ms 200 application/json; charset=utf-8
+2026-01-19 23:42:18.965 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/role/GetAllPaging?keyword=&page=1&pageSize=10  
+2026-01-19 23:42:18.965 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:18.966 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:18.966 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) with arguments (["","1","10"]) - ModelState is "Valid"
+2026-01-19 23:42:18.966 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:18.967 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AppRoles] AS [a]
+2026-01-19 23:42:18.968 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[Description]
+FROM [AppRoles] AS [dto]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-19 23:42:18.968 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 23:42:18.968 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.GetAllPaging (ShopMart) in 2.4389000000000003ms
+2026-01-19 23:42:18.968 +07:00 [INF] Request finished in 3.5894ms 200 application/json; charset=utf-8
+2026-01-19 23:42:24.080 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:44336/Admin/Role/ListAllFunction application/x-www-form-urlencoded; charset=UTF-8 43
+2026-01-19 23:42:24.080 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/Function/GetAll  
+2026-01-19 23:42:24.081 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:24.081 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-19 23:42:24.083 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:24.084 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.RoleController.ListAllFunction (ShopMart) with arguments (["d64d2ba3-e5b5-4567-23e8-08de4244f0b9"]) - ModelState is "Valid"
+2026-01-19 23:42:24.085 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-19 23:42:24.085 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.FunctionController.GetAll (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-19 23:42:24.086 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:24.089 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-01-19 23:42:24.093 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 23:42:24.093 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-19 23:42:24.096 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.FunctionController.GetAll (ShopMart) in 12.0107ms
+2026-01-19 23:42:24.097 +07:00 [INF] Request finished in 16.632ms 200 application/json; charset=utf-8
+2026-01-19 23:42:24.129 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__roleId_1='?', @__roleId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT @__roleId_1 AS [RoleId], [f].[Id] AS [FunctionId], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanCreate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanCreate], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanDelete] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanDelete], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanRead] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanRead], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanUpdate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanUpdate]
+FROM [Functions] AS [f]
+LEFT JOIN [Permissions] AS [p] ON [f].[Id] = [p].[FunctionId]
+WHERE [p].[Id] IS NOT NULL AND ([p].[RoleId] = @__roleId_0)
+2026-01-19 23:42:24.129 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-19 23:42:24.131 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.RoleController.ListAllFunction (ShopMart) in 47.7415ms
+2026-01-19 23:42:24.131 +07:00 [INF] Request finished in 50.5936ms 200 application/json; charset=utf-8
+2026-01-19 23:42:24.226 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/lib/jquery-treegrid/img/collapse.png  
+2026-01-19 23:42:24.226 +07:00 [INF] Sending file. Request path: '/lib/jquery-treegrid/img/collapse.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\lib\jquery-treegrid\img\collapse.png'
+2026-01-19 23:42:24.245 +07:00 [INF] Request finished in 19.5741ms 200 image/png
