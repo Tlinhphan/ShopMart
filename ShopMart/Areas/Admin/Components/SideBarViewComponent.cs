@@ -14,8 +14,9 @@ namespace ShopMart.Areas.Admin.Components
 
     public class SideBarViewComponent : ViewComponent
     {
-        IFunctionService _functionService;
-        public  SideBarViewComponent(IFunctionService functionService)
+        private IFunctionService _functionService;
+
+        public SideBarViewComponent(IFunctionService functionService)
         {
             _functionService = functionService;
         }
@@ -23,19 +24,16 @@ namespace ShopMart.Areas.Admin.Components
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var roles = ((ClaimsPrincipal)User).GetSpecificClaim("Roles");
-
-            List<FunctionViewModel> functions; 
-
-            if (roles.Split(";").Contains(CommonConstants.AdminRole))
+            List<FunctionViewModel> functions;
+            if (roles.Split(";").Contains(CommonConstants.AppRole.AdminRole))
             {
                 functions = await _functionService.GetAll(string.Empty);
             }
-
             else
-
             {
                 //TODO: Get by permission
-                functions = new List<FunctionViewModel>();
+                // sai ngay cho nay
+                functions = new List<FunctionViewModel>();  
             }
             return View(functions);
         }

@@ -26,6 +26,8 @@ using Newtonsoft.Json.Serialization;
 using TeduCoreApp.Data.EF;
 using ShopMart.Helpers;
 using ShopMart.Application.Implementation;
+using Microsoft.AspNetCore.Authorization;
+using ShopMart.Authorization;
 
 namespace ShopMart
 {
@@ -109,10 +111,12 @@ namespace ShopMart
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
-            
+
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
 
-            
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

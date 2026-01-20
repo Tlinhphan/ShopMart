@@ -38,15 +38,13 @@
             $('#modal-add-edit').modal('show');
 
         });
-
-        //grant permission
+        //Grant permission
         $('body').on('click', '.btn-grant', function () {
             $('#hidRoleId').val($(this).data('id'));
             $.when(loadFunctionList())
                 .done(fillPermission($('#hidRoleId').val()));
             $('#modal-grantpermission').modal('show');
-        })
-
+        });
 
         $('body').on('click', '.btn-edit', function (e) {
             e.preventDefault();
@@ -168,8 +166,8 @@
                 }
             });
         });
-
     };
+
     function loadFunctionList(callback) {
         var strUrl = "/admin/Function/GetAll";
         return $.ajax({
@@ -305,7 +303,6 @@
         });
     }
 
-
     function resetFormMaintainance() {
         $('#hidId').val('');
         $('#txtName').val('');
@@ -380,4 +377,5 @@
             }
         });
     }
+
 }
