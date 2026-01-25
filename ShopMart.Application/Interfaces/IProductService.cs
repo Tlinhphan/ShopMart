@@ -23,6 +23,8 @@ namespace ShopMart.Application.Interfaces
 
         ProductViewModel GetById(int Id);
 
+        void ImportExcel(string filePath, int categoryId);
+
         void Save();
     }
 }
