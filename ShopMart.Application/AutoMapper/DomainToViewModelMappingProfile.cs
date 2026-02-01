@@ -23,6 +23,7 @@ namespace ShopMart.Application.AutoMapper
             CreateMap<BillDetail, BillDetailViewModel>().MaxDepth(2);
             CreateMap<Color, ColorViewModel>().MaxDepth(2);
             CreateMap<Size, SizeViewModel>().MaxDepth(2);
+            CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
         }
     }
 }

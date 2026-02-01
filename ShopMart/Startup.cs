@@ -107,10 +107,11 @@ namespace ShopMart
             services.AddTransient<IBillDetailRepository, BillDetailRepository>();
             services.AddTransient<IColorRepository, ColorRepository>();
             services.AddTransient<ISizeRepository, SizeRepository>();
-        
+            services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
 
 
-    
+
+
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddTransient<IFunctionService, FunctionService>();
