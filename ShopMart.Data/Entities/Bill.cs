@@ -16,7 +16,7 @@ namespace ShopMart.Data.Entities
         public Bill() { }
 
         public Bill(string customerName, string customerAddress, string customerMobile, string customerMessage,
-            BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid customerId)
+            BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid? customerId)
         {
             CustomerName = customerName;
             CustomerAddress = customerAddress;
@@ -29,7 +29,7 @@ namespace ShopMart.Data.Entities
         }
 
         public Bill(int id, string customerName, string customerAddress, string customerMobile, string customerMessage,
-           BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid customerId)
+           BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid? customerId)
         {
             Id = id;
             CustomerName = customerName;
@@ -68,10 +68,11 @@ namespace ShopMart.Data.Entities
         public Status Status { set; get; } = Status.Active;
 
        
-        public Guid CustomerId { set; get; }
+        public Guid? CustomerId { set; get; }
 
         [ForeignKey("CustomerId")]
         public virtual AppUser User { set; get; }
+     
 
         public virtual ICollection<BillDetail> BillDetails { set; get; }
     }

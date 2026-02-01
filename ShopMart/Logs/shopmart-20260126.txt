@@ -1,0 +1,467 @@
+2026-01-26 00:48:46.898 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-26 00:48:47.187 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:48:47.293 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-26 00:48:47.305 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-26 00:48:47.313 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-01-26 00:48:47.323 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-01-26 00:48:47.326 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-01-26 00:48:47.329 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-01-26 00:48:47.331 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-01-26 00:48:47.335 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-01-26 00:48:47.338 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-01-26 00:48:47.343 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-26 00:48:47.346 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-26 00:48:47.348 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-01-26 00:48:47.564 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/  
+2026-01-26 00:48:47.578 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:48:47.610 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[@__get_Item_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2026-01-26 00:48:47.640 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-26 00:48:47.655 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-26 00:48:47.660 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:48:47.669 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:48:47.670 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:48:47.671 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:48:47.671 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:48:47.671 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:48:47.672 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-26 00:48:47.672 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:48:47.714 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:48:47.718 +07:00 [INF] Executing action method ShopMart.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:48:49.153 +07:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2026-01-26 00:48:49.561 +07:00 [INF] Executed action ShopMart.Controllers.HomeController.Index (ShopMart) in 1846.9671ms
+2026-01-26 00:48:49.563 +07:00 [INF] Request finished in 1999.9274ms 200 text/html; charset=utf-8
+2026-01-26 00:48:53.260 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/login  
+2026-01-26 00:48:53.261 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:48:53.265 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:48:53.441 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Login/Index.cshtml.
+2026-01-26 00:48:53.454 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) in 190.0795ms
+2026-01-26 00:48:53.455 +07:00 [INF] Request finished in 194.8672ms 200 text/html; charset=utf-8
+2026-01-26 00:49:00.237 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:44336/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33
+2026-01-26 00:49:00.237 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:00.281 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) with arguments (["ShopMart.Models.AccountViewModels.LoginViewModel"]) - ModelState is "Valid"
+2026-01-26 00:49:00.283 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:00.308 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedUserName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-26 00:49:00.336 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-01-26 00:49:00.347 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-26 00:49:00.352 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:49:00.360 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:49:00.361 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:49:00.362 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:49:00.362 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-01-26 00:49:00.363 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-01-26 00:49:00.376 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-01-26 00:49:00.377 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-01-26 00:49:00.377 +07:00 [INF] User logged in.
+2026-01-26 00:49:00.379 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:00.397 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) in 138.67430000000002ms
+2026-01-26 00:49:00.398 +07:00 [INF] Request finished in 160.9716ms 200 application/json; charset=utf-8
+2026-01-26 00:49:00.407 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/Admin/Home/Index  
+2026-01-26 00:49:00.408 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:00.409 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:00.409 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:49:00.526 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Home/Index.cshtml.
+2026-01-26 00:49:00.719 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:00.756 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-01-26 00:49:01.016 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) in 607.1213ms
+2026-01-26 00:49:01.016 +07:00 [INF] Request finished in 608.9354ms 200 text/html; charset=utf-8
+2026-01-26 00:49:05.198 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/product/index  
+2026-01-26 00:49:05.199 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.200 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:05.200 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:49:05.383 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Product/Index.cshtml.
+2026-01-26 00:49:05.624 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:05.677 +07:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-01-26 00:49:05.681 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.Index (ShopMart) in 481.32160000000005ms
+2026-01-26 00:49:05.681 +07:00 [INF] Request finished in 483.3193ms 200 text/html; charset=utf-8
+2026-01-26 00:49:05.697 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/app/controllers/product/index.js  
+2026-01-26 00:49:05.699 +07:00 [INF] The file /app/controllers/product/index.js was not modified
+2026-01-26 00:49:05.700 +07:00 [INF] Request finished in 3.0878ms 304 application/javascript
+2026-01-26 00:49:05.746 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/product/GetAllCategories  
+2026-01-26 00:49:05.746 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.746 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/product/GetAllPaging?categoryId=--Select+category--&keyword=&page=1&pageSize=10  
+2026-01-26 00:49:05.747 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.748 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:05.748 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllCategories (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:49:05.749 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:05.755 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:05.756 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) with arguments (["","","1","10"]) - ModelState is "Invalid"
+2026-01-26 00:49:05.759 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:05.767 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1
+2026-01-26 00:49:05.771 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-01-26 00:49:05.781 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.784 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.785 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.785 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:05.792 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [DateCreated0] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-26 00:49:05.795 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.796 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.797 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.797 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.798 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.798 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.798 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllCategories (ShopMart) in 50.621500000000005ms
+2026-01-26 00:49:05.798 +07:00 [INF] Request finished in 52.6259ms 200 application/json; charset=utf-8
+2026-01-26 00:49:05.798 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.799 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.799 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.799 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.800 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:05.804 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) in 49.095800000000004ms
+2026-01-26 00:49:05.804 +07:00 [INF] Request finished in 57.5468ms 200 application/json; charset=utf-8
+2026-01-26 00:49:05.809 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/admin/product/GetAllPaging?categoryId=&keyword=&page=1&pageSize=10  
+2026-01-26 00:49:05.809 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.809 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:05.810 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) with arguments (["","","1","10"]) - ModelState is "Valid"
+2026-01-26 00:49:05.810 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:05.811 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1
+2026-01-26 00:49:05.811 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/client-side/images/products/product-1.jpg  
+2026-01-26 00:49:05.812 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.812 +07:00 [INF] Request finished in 1.0338ms 404 
+2026-01-26 00:49:05.812 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [DateCreated0] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-01-26 00:49:05.813 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.813 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.814 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.814 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.814 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.814 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.814 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.815 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.815 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.815 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:05.815 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:05.815 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) in 6.1085ms
+2026-01-26 00:49:05.816 +07:00 [INF] Request finished in 7.0975ms 200 application/json; charset=utf-8
+2026-01-26 00:49:05.822 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/client-side/images/products/product-1.jpg  
+2026-01-26 00:49:05.823 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:05.823 +07:00 [INF] Request finished in 0.8263ms 404 
+2026-01-26 00:49:23.335 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/Admin/ProductCategory/GetAll  
+2026-01-26 00:49:23.336 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:23.338 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:23.338 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductCategoryController.GetAll (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:49:23.339 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:23.340 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-01-26 00:49:23.341 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:23.342 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:23.343 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:23.343 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:23.343 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductCategoryController.GetAll (ShopMart) in 5.36ms
+2026-01-26 00:49:23.343 +07:00 [INF] Request finished in 8.2587ms 200 application/json; charset=utf-8
+2026-01-26 00:49:27.554 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:44336/Admin/Product/ExportExcel  0
+2026-01-26 00:49:27.554 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-01-26 00:49:27.555 +07:00 [INF] Authorization was successful for user: admin.
+2026-01-26 00:49:27.555 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.ExportExcel (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-01-26 00:49:27.558 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-01-26 00:49:27.561 +07:00 [WRN] The Include operation for navigation '[x].ProductCategory' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2026-01-26 00:49:27.577 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+2026-01-26 00:49:27.579 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.580 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.580 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.581 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.581 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.582 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.582 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.583 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.583 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.584 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.584 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.585 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.586 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.586 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.587 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.587 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.588 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:27.588 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-01-26 00:49:29.742 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-01-26 00:49:29.742 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.ExportExcel (ShopMart) in 2186.4843ms
+2026-01-26 00:49:29.742 +07:00 [INF] Request finished in 2188.3725ms 200 text/plain; charset=utf-8
+2026-01-26 00:49:29.750 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:44336/export-files/Product_20260126124927.xlsx  
+2026-01-26 00:49:29.751 +07:00 [INF] Sending file. Request path: '/export-files/Product_20260126124927.xlsx'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\export-files\Product_20260126124927.xlsx'
+2026-01-26 00:49:29.753 +07:00 [INF] Request finished in 2.9807ms 200 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
