@@ -26,16 +26,19 @@ namespace ShopMart.Application.Implementation
         IProductTagRepository _productTagRepository;
         IUnitOfWork _unitOfWork;
         IProductQuantityRepository _productQuantityRepository;
+        IProductImageRepository _productImageRepository;
 
         public ProductService(IProductRepository productRepository,
                     ITagRepository tagRepository,
                     IProductQuantityRepository productQuantityRepository,
+                     IProductImageRepository productImageRepository,
                      IUnitOfWork unitOfWork,
                   IProductTagRepository productTagRepository)
         {
             _productRepository = productRepository;
             _tagRepository = tagRepository;
             _productQuantityRepository = productQuantityRepository;
+            _productImageRepository = productImageRepository;
             _productTagRepository = productTagRepository;
             _unitOfWork = unitOfWork;
 
@@ -233,6 +236,27 @@ namespace ShopMart.Application.Implementation
                 product.ProductTags.Add(productTag);
             }
             _productRepository.Update(product);
+
+        }
+
+        public List<ProductImageViewModel> GetImages(int productId)
+        {
+            return _productImageRepository.FindAll(x => x.ProductId == productId)
+                .ProjectTo<ProductImageViewModel>().ToList();
+        }
+
+        public void AddImages(int productId, string[] images)
+        {
+            _productImageRepository.RemoveMultiple(_productImageRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var image in images)
+            {
+                _productImageRepository.Add(new ProductImage()
+                {
+                    Path = image,
+                    ProductId = productId,
+                    Caption = string.Empty
+                });
+            }
 
         }
     }

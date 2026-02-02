@@ -1338,3 +1338,505 @@ WHERE @_outer_Id = [dto].[CategoryId]
 2026-02-02 01:17:53.578 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 2026-02-02 01:17:53.578 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetQuantities (ShopMart) in 58.0707ms
 2026-02-02 01:17:53.579 +07:00 [INF] Request finished in 59.2229ms 200 application/json; charset=utf-8
+2026-02-02 23:38:05.356 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-02 23:38:05.934 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:06.138 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-02-02 23:38:06.149 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-02-02 23:38:06.159 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-02-02 23:38:06.169 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-02-02 23:38:06.172 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-02-02 23:38:06.174 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-02-02 23:38:06.177 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-02-02 23:38:06.179 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-02-02 23:38:06.183 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-02-02 23:38:06.187 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-02-02 23:38:06.189 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-02-02 23:38:06.192 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-02-02 23:38:06.772 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/  
+2026-02-02 23:38:06.985 +07:00 [INF] Authorization failed for user: null.
+2026-02-02 23:38:06.987 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-02-02 23:38:06.989 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-02-02 23:38:06.998 +07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-02 23:38:07.000 +07:00 [INF] Executed action ShopMart.Controllers.HomeController.Index (ShopMart) in 19.9164ms
+2026-02-02 23:38:07.002 +07:00 [INF] Request finished in 231.7098ms 302 
+2026-02-02 23:38:07.036 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/Account/Login?ReturnUrl=%2F  
+2026-02-02 23:38:07.095 +07:00 [INF] Executing action method ShopMart.Controllers.AccountController.Login (ShopMart) with arguments (["/"]) - ModelState is "Valid"
+2026-02-02 23:38:07.101 +07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-02 23:38:09.177 +07:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2026-02-02 23:38:09.809 +07:00 [INF] Executed action ShopMart.Controllers.AccountController.Login (ShopMart) in 2754.2099000000003ms
+2026-02-02 23:38:09.811 +07:00 [INF] Request finished in 2774.9322ms 200 text/html; charset=utf-8
+2026-02-02 23:38:42.778 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/login  
+2026-02-02 23:38:42.782 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:43.199 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Login/Index.cshtml.
+2026-02-02 23:38:43.216 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Index (ShopMart) in 434.7334ms
+2026-02-02 23:38:43.217 +07:00 [INF] Request finished in 438.4363ms 200 text/html; charset=utf-8
+2026-02-02 23:38:48.402 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33
+2026-02-02 23:38:48.434 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) with arguments (["ShopMart.Models.AccountViewModels.LoginViewModel"]) - ModelState is "Valid"
+2026-02-02 23:38:48.438 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:48.528 +07:00 [INF] Executed DbCommand (53ms) [Parameters=[@__normalizedUserName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-02 23:38:48.612 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2026-02-02 23:38:48.641 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-02-02 23:38:48.650 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-02-02 23:38:48.662 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-02-02 23:38:48.665 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-02-02 23:38:48.666 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-02-02 23:38:48.668 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-02-02 23:38:48.669 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2026-02-02 23:38:48.670 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2026-02-02 23:38:48.672 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-02 23:38:48.672 +07:00 [INF] User logged in.
+2026-02-02 23:38:48.675 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:48.695 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.LoginController.Authen (ShopMart) in 283.2902ms
+2026-02-02 23:38:48.696 +07:00 [INF] Request finished in 293.714ms 200 application/json; charset=utf-8
+2026-02-02 23:38:48.702 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/Admin/Home/Index  
+2026-02-02 23:38:48.704 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:48.706 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:48.706 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:48.855 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Home/Index.cshtml.
+2026-02-02 23:38:49.060 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:49.083 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-02-02 23:38:49.304 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.HomeController.Index (ShopMart) in 598.6372ms
+2026-02-02 23:38:49.304 +07:00 [INF] Request finished in 601.9997ms 200 text/html; charset=utf-8
+2026-02-02 23:38:55.424 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/product/index  
+2026-02-02 23:38:55.425 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:55.426 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:55.428 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:55.535 +07:00 [INF] Executing ViewResult, running view at path /Areas/Admin/Views/Product/Index.cshtml.
+2026-02-02 23:38:56.074 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.076 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[URL], [x].[ParentId], [x].[IconCss], [x].[SortOrder], [x].[Status]
+FROM [Functions] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[ParentId]
+2026-02-02 23:38:56.083 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.Index (ShopMart) in 656.12700000000007ms
+2026-02-02 23:38:56.083 +07:00 [INF] Request finished in 658.6767ms 200 text/html; charset=utf-8
+2026-02-02 23:38:56.097 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/app/controllers/product/quantity-management.js  
+2026-02-02 23:38:56.102 +07:00 [INF] The file /app/controllers/product/quantity-management.js was not modified
+2026-02-02 23:38:56.102 +07:00 [INF] Request finished in 5.0191ms 304 application/javascript
+2026-02-02 23:38:56.114 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/app/controllers/product/image-management.js  
+2026-02-02 23:38:56.114 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/app/controllers/product/index.js  
+2026-02-02 23:38:56.114 +07:00 [INF] Sending file. Request path: '/app/controllers/product/image-management.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\app\controllers\product\image-management.js'
+2026-02-02 23:38:56.114 +07:00 [INF] Sending file. Request path: '/app/controllers/product/index.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\app\controllers\product\index.js'
+2026-02-02 23:38:56.147 +07:00 [INF] Request finished in 33.6957ms 200 application/javascript
+2026-02-02 23:38:56.170 +07:00 [INF] Request finished in 56.05ms 200 application/javascript
+2026-02-02 23:38:56.173 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/product/GetAllCategories  
+2026-02-02 23:38:56.173 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/product/GetAllPaging?categoryId=--Select+category--&keyword=&page=1&pageSize=10  
+2026-02-02 23:38:56.173 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.173 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.175 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:56.175 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllCategories (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:56.176 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/Admin/Bill/GetSizes  
+2026-02-02 23:38:56.176 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/Admin/Bill/GetColors  
+2026-02-02 23:38:56.176 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.176 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.177 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.177 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:56.177 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:56.178 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.BillController.GetColors (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:56.178 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.BillController.GetSizes (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:38:56.178 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:56.179 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.179 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.184 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) with arguments (["","","1","10"]) - ModelState is "Invalid"
+2026-02-02 23:38:56.187 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.187 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name]
+FROM [Sizes] AS [dto]
+2026-02-02 23:38:56.190 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:56.193 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1
+2026-02-02 23:38:56.193 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.BillController.GetSizes (ShopMart) in 16.313100000000002ms
+2026-02-02 23:38:56.194 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[Code]
+FROM [Colors] AS [dto]
+2026-02-02 23:38:56.194 +07:00 [INF] Request finished in 18.0826ms 200 application/json; charset=utf-8
+2026-02-02 23:38:56.197 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:56.200 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.BillController.GetColors (ShopMart) in 22.320700000000002ms
+2026-02-02 23:38:56.200 +07:00 [INF] Request finished in 23.7837ms 200 application/json; charset=utf-8
+2026-02-02 23:38:56.202 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-02-02 23:38:56.216 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.219 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.219 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.219 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:56.228 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [DateCreated0] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-02-02 23:38:56.231 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.232 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.232 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.232 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.233 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.233 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.234 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllCategories (ShopMart) in 58.810900000000004ms
+2026-02-02 23:38:56.234 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.234 +07:00 [INF] Request finished in 60.9912ms 200 application/json; charset=utf-8
+2026-02-02 23:38:56.236 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.238 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.239 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.239 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:56.244 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) in 65.5967ms
+2026-02-02 23:38:56.244 +07:00 [INF] Request finished in 70.9689ms 200 application/json; charset=utf-8
+2026-02-02 23:38:56.248 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/product/GetAllPaging?categoryId=&keyword=&page=1&pageSize=10  
+2026-02-02 23:38:56.248 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.248 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:56.248 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) with arguments (["","","1","10"]) - ModelState is "Valid"
+2026-02-02 23:38:56.249 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:56.249 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1
+2026-02-02 23:38:56.250 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [DateCreated0] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-02-02 23:38:56.250 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-1.jpg  
+2026-02-02 23:38:56.250 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.250 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.250 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.251 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.251 +07:00 [INF] Request finished in 0.757ms 404 
+2026-02-02 23:38:56.251 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.253 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.254 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.254 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.254 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.254 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.255 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:38:56.255 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:56.255 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetAllPaging (ShopMart) in 7.0179ms
+2026-02-02 23:38:56.256 +07:00 [INF] Request finished in 7.7984ms 200 application/json; charset=utf-8
+2026-02-02 23:38:56.260 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-1.jpg  
+2026-02-02 23:38:56.260 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:56.260 +07:00 [INF] Request finished in 0.5854ms 404 
+2026-02-02 23:38:58.176 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/Product/GetImages?productId=27  
+2026-02-02 23:38:58.176 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:38:58.177 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:38:58.178 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetImages (ShopMart) with arguments (["27"]) - ModelState is "Valid"
+2026-02-02 23:38:58.179 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:38:58.218 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[ProductId] AS [Id1], CASE
+    WHEN [x].[ProductId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.Product].[Name], [x.Product].[CategoryId], [x.Product].[Image], [x.Product].[Price], [x.Product].[PromotionPrice], [x.Product].[OriginalPrice], [x.Product].[Description], [x.Product].[Content], [x.Product].[HomeFlag], CAST(COALESCE([x.Product].[HotFlag], 0) AS bit) AS [HotFlag], [x.Product].[ViewCount], [x.Product].[Tags], [x.Product].[Unit], CASE
+    WHEN [x.Product].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.Product.ProductCategory].[Id] AS [Id0], [x.Product.ProductCategory].[Name] AS [Name0], [x.Product.ProductCategory].[Description] AS [Description0], [x.Product.ProductCategory].[ParentId], [x.Product.ProductCategory].[HomeOrder], [x.Product.ProductCategory].[Image] AS [Image0], [x.Product.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.Product.ProductCategory].[SeoPageTitle], [x.Product.ProductCategory].[SeoAlias], [x.Product.ProductCategory].[SeoKeywords], [x.Product.ProductCategory].[SeoDescription], [x.Product.ProductCategory].[SortOrder], [x.Product.ProductCategory].[Status], [x.Product.ProductCategory].[DateCreated], [x.Product.ProductCategory].[DateModified], [x.Product].[DateCreated] AS [DateCreated0], [x.Product].[DateModified] AS [DateModified0], [x.Product].[Status] AS [Status0], [x.Product].[SeoPageTitle] AS [SeoPageTitle0], [x.Product].[SeoAlias] AS [SeoAlias0], [x.Product].[SeoKeywords] AS [SeoKeywords0], [x.Product].[SeoDescription] AS [SeoDescription0], [x].[Path], [x].[Caption]
+FROM [ProductImages] AS [x]
+INNER JOIN [Products] AS [x.Product] ON [x].[ProductId] = [x.Product].[Id]
+INNER JOIN [ProductCategories] AS [x.Product.ProductCategory] ON [x.Product].[CategoryId] = [x.Product.ProductCategory].[Id]
+WHERE [x].[ProductId] = @__productId_0
+2026-02-02 23:38:58.219 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:38:58.220 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetImages (ShopMart) in 42.6638ms
+2026-02-02 23:38:58.220 +07:00 [INF] Request finished in 44.3948ms 200 application/json; charset=utf-8
+2026-02-02 23:39:03.626 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/Admin/Upload/UploadImage multipart/form-data; boundary=----WebKitFormBoundaryWrCfUIncUPwLcH33 246602
+2026-02-02 23:39:03.626 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:03.630 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:03.630 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:39:03.731 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:03.731 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) in 101.35040000000001ms
+2026-02-02 23:39:03.732 +07:00 [INF] Request finished in 106.1423ms 200 text/plain; charset=utf-8
+2026-02-02 23:39:03.738 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/uploaded/images/20260202/Screenshot%202025-11-20%20151846.png  
+2026-02-02 23:39:03.738 +07:00 [INF] Sending file. Request path: '/uploaded/images/20260202/Screenshot 2025-11-20 151846.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\uploaded\images\20260202\Screenshot 2025-11-20 151846.png'
+2026-02-02 23:39:03.746 +07:00 [INF] Request finished in 8.8689ms 200 image/png
+2026-02-02 23:39:08.002 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/Admin/Upload/UploadImage multipart/form-data; boundary=----WebKitFormBoundaryczSaSVF7lplNTdQ8 231308
+2026-02-02 23:39:08.003 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:08.003 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:08.003 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:39:08.011 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:08.011 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) in 8.8448000000000011ms
+2026-02-02 23:39:08.013 +07:00 [INF] Request finished in 10.5664ms 200 text/plain; charset=utf-8
+2026-02-02 23:39:08.016 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/uploaded/images/20260202/Screenshot%202025-12-24%20010748.png  
+2026-02-02 23:39:08.016 +07:00 [INF] Sending file. Request path: '/uploaded/images/20260202/Screenshot 2025-12-24 010748.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\uploaded\images\20260202\Screenshot 2025-12-24 010748.png'
+2026-02-02 23:39:08.032 +07:00 [INF] Request finished in 16.0183ms 200 image/png
+2026-02-02 23:39:14.313 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/Admin/Upload/UploadImage multipart/form-data; boundary=----WebKitFormBoundaryw9tAlxgbcF0zvhJ3 94940
+2026-02-02 23:39:14.313 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:14.313 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:14.313 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:39:14.321 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:14.321 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) in 7.9521000000000006ms
+2026-02-02 23:39:14.322 +07:00 [INF] Request finished in 8.9356ms 200 text/plain; charset=utf-8
+2026-02-02 23:39:14.327 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/uploaded/images/20260202/Screenshot%202025-12-02%20013231.png  
+2026-02-02 23:39:14.327 +07:00 [INF] Sending file. Request path: '/uploaded/images/20260202/Screenshot 2025-12-02 013231.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\uploaded\images\20260202\Screenshot 2025-12-02 013231.png'
+2026-02-02 23:39:14.337 +07:00 [INF] Request finished in 10.712ms 200 image/png
+2026-02-02 23:39:20.447 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/admin/Product/SaveImages application/x-www-form-urlencoded; charset=UTF-8 252
+2026-02-02 23:39:20.447 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:20.450 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:20.488 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.SaveImages (ShopMart) with arguments (["27","System.String[]"]) - ModelState is "Valid"
+2026-02-02 23:39:20.489 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:39:20.497 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Caption], [x].[Path], [x].[ProductId]
+FROM [ProductImages] AS [x]
+WHERE [x].[ProductId] = @__productId_0
+2026-02-02 23:39:20.575 +07:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (Size = 250), @p1='?' (Size = 250), @p2='?', @p3='?' (Size = 250), @p4='?' (Size = 250), @p5='?', @p6='?' (Size = 250), @p7='?' (Size = 250), @p8='?'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [ProductImages] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2)) AS i ([Caption], [Path], [ProductId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Caption], [Path], [ProductId])
+VALUES (i.[Caption], i.[Path], i.[ProductId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [ProductImages] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+2026-02-02 23:39:20.580 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:20.581 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.SaveImages (ShopMart) in 131.0754ms
+2026-02-02 23:39:20.581 +07:00 [INF] Request finished in 134.0679ms 200 application/json; charset=utf-8
+2026-02-02 23:39:22.534 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/admin/Product/GetImages?productId=27  
+2026-02-02 23:39:22.534 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:22.534 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:22.534 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.GetImages (ShopMart) with arguments (["27"]) - ModelState is "Valid"
+2026-02-02 23:39:22.535 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:39:22.580 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[ProductId] AS [Id1], CASE
+    WHEN [x].[ProductId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.Product].[Name], [x.Product].[CategoryId], [x.Product].[Image], [x.Product].[Price], [x.Product].[PromotionPrice], [x.Product].[OriginalPrice], [x.Product].[Description], [x.Product].[Content], [x.Product].[HomeFlag], CAST(COALESCE([x.Product].[HotFlag], 0) AS bit) AS [HotFlag], [x.Product].[ViewCount], [x.Product].[Tags], [x.Product].[Unit], CASE
+    WHEN [x.Product].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.Product.ProductCategory].[Id] AS [Id0], [x.Product.ProductCategory].[Name] AS [Name0], [x.Product.ProductCategory].[Description] AS [Description0], [x.Product.ProductCategory].[ParentId], [x.Product.ProductCategory].[HomeOrder], [x.Product.ProductCategory].[Image] AS [Image0], [x.Product.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.Product.ProductCategory].[SeoPageTitle], [x.Product.ProductCategory].[SeoAlias], [x.Product.ProductCategory].[SeoKeywords], [x.Product.ProductCategory].[SeoDescription], [x.Product.ProductCategory].[SortOrder], [x.Product.ProductCategory].[Status], [x.Product.ProductCategory].[DateCreated], [x.Product.ProductCategory].[DateModified], [x.Product].[DateCreated] AS [DateCreated0], [x.Product].[DateModified] AS [DateModified0], [x.Product].[Status] AS [Status0], [x.Product].[SeoPageTitle] AS [SeoPageTitle0], [x.Product].[SeoAlias] AS [SeoAlias0], [x.Product].[SeoKeywords] AS [SeoKeywords0], [x.Product].[SeoDescription] AS [SeoDescription0], [x].[Path], [x].[Caption]
+FROM [ProductImages] AS [x]
+INNER JOIN [Products] AS [x.Product] ON [x].[ProductId] = [x.Product].[Id]
+INNER JOIN [ProductCategories] AS [x.Product.ProductCategory] ON [x.Product].[CategoryId] = [x.Product.ProductCategory].[Id]
+WHERE [x].[ProductId] = @__productId_0
+2026-02-02 23:39:22.586 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:39:22.587 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:39:22.588 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-02-02 23:39:22.588 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:22.591 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.GetImages (ShopMart) in 56.7945ms
+2026-02-02 23:39:22.592 +07:00 [INF] Request finished in 57.7555ms 200 application/json; charset=utf-8
+2026-02-02 23:39:34.927 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/Admin/Upload/UploadImage multipart/form-data; boundary=----WebKitFormBoundaryBN6uVYHsTmXcCPTO 51246
+2026-02-02 23:39:34.928 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:34.928 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:34.928 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-02-02 23:39:34.938 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:34.939 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.UploadController.UploadImage (ShopMart) in 11.0862ms
+2026-02-02 23:39:34.939 +07:00 [INF] Request finished in 11.9923ms 200 text/plain; charset=utf-8
+2026-02-02 23:39:34.945 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/uploaded/images/20260202/Screenshot%202025-12-23%20221911.png  
+2026-02-02 23:39:34.945 +07:00 [INF] Sending file. Request path: '/uploaded/images/20260202/Screenshot 2025-12-23 221911.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\uploaded\images\20260202\Screenshot 2025-12-23 221911.png'
+2026-02-02 23:39:34.948 +07:00 [INF] Request finished in 3.2337ms 200 image/png
+2026-02-02 23:39:35.990 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:59009/admin/Product/SaveImages application/x-www-form-urlencoded; charset=UTF-8 332
+2026-02-02 23:39:35.990 +07:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2026-02-02 23:39:35.991 +07:00 [INF] Authorization was successful for user: admin.
+2026-02-02 23:39:35.991 +07:00 [INF] Executing action method ShopMart.Areas.Admin.Controllers.ProductController.SaveImages (ShopMart) with arguments (["27","System.String[]"]) - ModelState is "Valid"
+2026-02-02 23:39:35.992 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-02-02 23:39:35.994 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Caption], [x].[Path], [x].[ProductId]
+FROM [ProductImages] AS [x]
+WHERE [x].[ProductId] = @__productId_0
+2026-02-02 23:39:36.048 +07:00 [INF] Executed DbCommand (47ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (Size = 250), @p4='?' (Size = 250), @p5='?', @p6='?' (Size = 250), @p7='?' (Size = 250), @p8='?', @p9='?' (Size = 250), @p10='?' (Size = 250), @p11='?', @p12='?' (Size = 250), @p13='?' (Size = 250), @p14='?'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ProductImages]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [ProductImages]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [ProductImages]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DECLARE @inserted3 TABLE ([Id] int, [_Position] [int]);
+MERGE [ProductImages] USING (
+VALUES (@p3, @p4, @p5, 0),
+(@p6, @p7, @p8, 1),
+(@p9, @p10, @p11, 2),
+(@p12, @p13, @p14, 3)) AS i ([Caption], [Path], [ProductId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Caption], [Path], [ProductId])
+VALUES (i.[Caption], i.[Path], i.[ProductId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted3;
+
+SELECT [t].[Id] FROM [ProductImages] t
+INNER JOIN @inserted3 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+2026-02-02 23:39:36.051 +07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2026-02-02 23:39:36.051 +07:00 [INF] Executed action ShopMart.Areas.Admin.Controllers.ProductController.SaveImages (ShopMart) in 60.600300000000004ms
+2026-02-02 23:39:36.051 +07:00 [INF] Request finished in 61.5291ms 200 application/json; charset=utf-8
