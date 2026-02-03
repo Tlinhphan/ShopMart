@@ -413,14 +413,15 @@
                         CreatedDate: shopmart.dateTimeFormatJson(item.DateCreated),
                         Status: shopmart.getStatus(item.Status)
                     });
-                    $('#lblTotalRecords').text(response.RowCount);
-                    if (render != '') {
-                        $('#tbl-content').html(render);
-                    }
-                    wrapPaging(response.RowCount, function () {
-                        loadData();
-                    }, isPageChanged);
+                   
                 });
+                $('#lblTotalRecords').text(response.RowCount);
+                if (render != '') {
+                    $('#tbl-content').html(render);
+                }
+                wrapPaging(response.RowCount, function () {
+                    loadData();
+                }, isPageChanged);
             },
             error: function (status) {
                 console.log(status);
