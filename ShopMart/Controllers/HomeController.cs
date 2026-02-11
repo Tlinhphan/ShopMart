@@ -14,7 +14,7 @@ namespace ShopMart.Controllers
     public class HomeController : Controller
     {
         public IActionResult Index()
-        {
+         {
             var email = User.GetSpecificClaim("Email");
             return View();
         }
