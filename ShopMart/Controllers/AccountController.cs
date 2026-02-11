@@ -18,7 +18,7 @@ using ShopMart.Services;
 namespace ShopMart.Controllers
 {
     [Authorize]
-    [Route("[controller]/[action]")]
+
     public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -43,6 +43,7 @@ namespace ShopMart.Controllers
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("login.html", Name = "Login")]
         public async Task<IActionResult> Login(string returnUrl = null)
         {
             // Clear the existing external cookie to ensure a clean login process
@@ -55,6 +56,7 @@ namespace ShopMart.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("login.html", Name = "Login")]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -207,6 +209,7 @@ namespace ShopMart.Controllers
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("register.html")]
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -216,6 +219,7 @@ namespace ShopMart.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("register.html")]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
