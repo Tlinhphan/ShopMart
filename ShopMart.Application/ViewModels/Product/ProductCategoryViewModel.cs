@@ -7,6 +7,7 @@ namespace ShopMart.Application.ViewModels.Product
 {
    public class ProductCategoryViewModel
     {
+
         public int Id { set; get; }
         public string Name { get; set; }
 
@@ -36,7 +37,7 @@ namespace ShopMart.Application.ViewModels.Product
 
         public DateTime DateModified { get; set; }
 
-        public ICollection<ProductViewModel> Products { get; set; }
+        public List<ProductViewModel> Products { get; set; }
 
 
     }

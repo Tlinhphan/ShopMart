@@ -2,18 +2,16 @@
 using ShopMart.Data.IRepositores;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using Color = ShopMart.Data.Entities.Color;
 
 namespace ShopMart.Data.EF.Repositiores
 {
-      
-        public class ColorRepository : EFRepository<Color, int>, IColorRepository
+  
+        public class BlogTagRepository : EFRepository<BlogTag, int>, IBlogTagRepository
         {
-            public ColorRepository(AppDbContext context) : base(context)
+            public BlogTagRepository(AppDbContext context) : base(context)
             {
             }
         }

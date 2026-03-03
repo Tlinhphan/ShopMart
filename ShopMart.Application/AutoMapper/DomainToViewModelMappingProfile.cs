@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ShopMart.Application.ViewModels.Blog;
+using ShopMart.Application.ViewModels.Common;
 using ShopMart.Application.ViewModels.Product;
 using ShopMart.Application.ViewModels.Sytsem;
 using ShopMart.Data.Entities;
@@ -26,6 +28,12 @@ namespace ShopMart.Application.AutoMapper
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
             CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
+
+            CreateMap<Blog, BlogViewModel>().MaxDepth(2);
+            CreateMap<BlogTag, BlogTagViewModel>().MaxDepth(2);
+            CreateMap<Slide, SlideViewModel>().MaxDepth(2);
+            CreateMap<SystemConfig, SystemConfigViewModel>().MaxDepth(2);
+            CreateMap<Footer, FooterViewModel>().MaxDepth(2);
 
 
         }
