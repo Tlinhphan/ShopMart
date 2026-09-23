@@ -33,14 +33,24 @@ namespace ShopMart.Application.Implementation
 
         public FooterViewModel GetFooter()
         {
-            return Mapper.Map<Footer, FooterViewModel>(_footerRepository.FindSingle(x => x.Id ==
-            CommonConstants.DefaultFooterId));
+            var data = _footerRepository
+                                .FindSingle(x => x.Id == CommonConstants.DefaultFooterId);
+
+            var result = Mapper.Map<Footer, FooterViewModel>(data);
+
+            var footerVm = new FooterViewModel()
+            {
+                Id=data.Id,
+                Content=data.Content
+            };
+
+            return result;
         }
 
         public List<SlideViewModel> GetSlides(string groupAlias)
         {
             return _slideRepository.FindAll(x => x.Status && x.GroupAlias == groupAlias)
-                .ProjectTo<SlideViewModel>().ToList();
+                                    .ProjectTo<SlideViewModel>().ToList();
         }
 
         public SystemConfigViewModel GetSystem(string code)
@@ -50,7 +60,9 @@ namespace ShopMart.Application.Implementation
 
         public SystemConfigViewModel GetSystemConfig(string code)
         {
-            return Mapper.Map<SystemConfig, SystemConfigViewModel>(_systemConfigRepository.FindSingle(x => x.Id == code));
+            var data = _systemConfigRepository.FindSingle(x => x.Id == code);
+
+            return Mapper.Map<SystemConfig, SystemConfigViewModel>(data);
         }
     }
 }

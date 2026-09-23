@@ -23,6 +23,7 @@
                 loadData();
             }
         });
+
         $("#btn-search").on('click', function () {
             loadData();
         });

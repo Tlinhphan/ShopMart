@@ -2,34 +2,38 @@
 @{
     ViewData["Title"] = Model.Title;
     ViewData["MetaKeyword"] = Model.MetaKeyword;
-    ViewData["MetaDescription"] =Model.MetaDescription;
+    ViewData["MetaDescription"] = Model.MetaDescription;
 }
 
 @section Scripts{
     <script src="~/client-side/js/controllers/home/index.js"></script>
 
     <script>
-        var homeOjb = new HomeController();
-        homeOjb.initialize();
+        var homeObj = new HomeController();
+        homeObj.initialize();
     </script>
-    }
+
+
+}
 <!-- Slideshow  -->
 <div class="main-slider" id="home">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-12 banner-left hidden-xs"><img src="/client-side/images/banner-left.jpg" alt="banner"></div>
+            <div class="col-md-3 col-sm-3 col-xs-12 banner-left hidden-xs">
+                <img src="~/client-side/images/banner-left.jpg" alt="banner" />
+            </div>
             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12 jtv-slideshow">
                 <div id="jtv-slideshow">
-                    <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container'>
-                        <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
+                    <div id="rev_slider_4_wrapper"
+                         class="rev_slider_wrapper fullwidthbanner-container">
+                        <div id="rev_slider_4" class="rev_slider fullwidthabanner">
                             <ul>
                                 @foreach (var slide in Model.HomeSlides)
                                 {
-                                    <li data-transition='fade' data-slotamount='7' data-masterspeed='1000' data-thumb=''>
-                                        <img src='@slide.Image' data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="@slide.Name" />
+                                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb="">
+                                        <img src="@slide.Image" data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="banner" />
                                     </li>
-                                }   
-
+                                }
                             </ul>
                             <div class="tp-bannertimer"></div>
                         </div>
@@ -48,10 +52,12 @@
             <div class="col-md-3 top-banner hidden-sm">
                 <div class="jtv-banner3">
                     <div class="jtv-banner3-inner">
-                        <a href="#"><img src="/client-side/images/sub1.jpg" alt="HTML template"></a>
+                        <a href="#">
+                            <img src="~/client-side/images/sub1.jpg" alt="HTML template" />
+                        </a>
                         <div class="hover_content">
                             <div class="hover_data">
-                                <div class="title"> Big Sale </div>
+                                <div class="title">Big Sale</div>
                                 <div class="desc-text">Up to 55% off</div>
                                 <span>Camera, Laptop & Mobile</span>
                                 <p><a href="#" class="shop-now">Get it now!</a></p>
@@ -78,31 +84,57 @@
                                             <div class="product-thumbnail">
                                                 <div class="icon-new-label new-left">New</div>
                                                 <div class="pr-img-area">
-                                                    <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">
+                                                    <a title="@item.Name" href="@item.SeoAlias-p.@(item.Id).html">
                                                         <figure>
-                                                            <img class="first-img" src="@item.Image" alt="@item.Name">
-                                                            <img class="hover-img" src="@item.Image" alt="@item.Name">
+                                                            <img class="first-img" src="@item.Image" alt="@item.Name" />
+                                                            <img class="hover-img" src="@item.Image" alt="@item.Name" />
                                                         </figure>
                                                     </a>
                                                 </div>
                                                 <div class="pr-info-area">
                                                     <div class="pr-button">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                        <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button quick-view">
+                                                            <a href="quick_view.html">
+                                                                <i class="fa fa-search"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">@item.Name </a> </div>
+                                                    <div class="item-title">
+                                                        <a title="@item.Name" href="@item.SeoAlias-p.@(item.Id).html">@item.Name </a>
+                                                    </div>
                                                     <div class="item-content">
-                                                        <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                        <div class="rating">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                        </div>
                                                         <div class="item-price">
-                                                            <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
+                                                            <div class="price-box">
+                                                                <span class="regular-price">
+                                                                    <span class="price">@item.Price.ToString("N0")</span>
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                         <div class="pro-action">
-                                                            <button type="button" class="add-to-cart"><span> Purchase</span> </button>
+                                                            <button type="button" class="add-to-cart">
+                                                                <span> Purchase</span>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -118,22 +150,28 @@
         </div>
     </div>
 </div>
+
 <!-- All products-->
+
 <div class="container">
     <div class="home-tab">
         <div class="tab-title text-left">
             <h2>Best selling</h2>
             <ul class="nav home-nav-tabs home-product-tabs">
-                 @for (var i = 0; i < Model.HomeCategories.Count; i++)
+                @for (int i = 0; i < Model.HomeCategories.Count; i++)
                 {
                     var item = Model.HomeCategories[i];
                     if (i == 0)
                     {
-                        <li class="active"><a href="#@item.SeoAlias" data-toggle="tab" aria-expanded="false">@item.Name</a></li>
+                        <li class="active">
+                            <a href="#@item.SeoAlias" data-toggle="tab" aria-expanded="false">@item.Name</a>
+                        </li>
                     }
                     else
                     {
-                        <li><a href="#@item.SeoAlias" data-toggle="tab" aria-expanded="false">@item.Name</a></li>
+                        <li>
+                            <a href="#@item.SeoAlias" data-toggle="tab" aria-expanded="false">@item.Name</a>
+                        </li>
                     }
                 }
             </ul>
@@ -151,43 +189,75 @@
                 {
                     css = "tab-pane wow fadeInLeft";
                 }
+
                 <div class="@css" id="@category.SeoAlias">
                     <div class="featured-pro">
                         <div class="slider-items-products">
-                            <div id="computer-slider" class="product-flexslider hidden-buttons">
+                            <div id="computer-slider"
+                                 class="product-flexslider hidden-buttons">
                                 <div class="slider-items slider-width-col4">
                                     @foreach (var item in category.Products)
                                     {
                                         <div class="product-item">
                                             <div class="item-inner">
                                                 <div class="product-thumbnail">
-                                                    <div class="icon-new-label new-left">mới</div>
+                                                    <div class="icon-new-label new-left">New</div>
                                                     <div class="pr-img-area">
-                                                        <a title="@item.Name" href="/@item.SeoAlias-p.@(item.Id).html">
+                                                        <a title="@item.Name"
+                                                           href="/@item.SeoAlias-p.@(item.Id).html">
                                                             <figure>
-                                                                <img class="first-img" src="@item.Image" alt="@item.Name">
-                                                                <img class="hover-img" src="@item.Image" alt="@item.Name">
+                                                                <img class="first-img" src="@item.Image" alt="@item.Name" />
+                                                                <img class="hover-img" src="@item.Image" alt="@item.Name" />
                                                             </figure>
                                                         </a>
                                                     </div>
                                                     <div class="pr-info-area">
                                                         <div class="pr-button">
-                                                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                                                            <div class="mt-button add_to_wishlist">
+                                                                <a href="wishlist.html">
+                                                                    <i class="fa fa-heart-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="mt-button add_to_compare">
+                                                                <a href="compare.html">
+                                                                    <i class="fa fa-link"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="mt-button quick-view">
+                                                                <a href="quick_view.html">
+                                                                    <i class="fa fa-search"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="info-inner">
-                                                        <div class="item-title"> <a title="Product title here" href="/@item.SeoAlias-p.@(item.Id).html">@item.Name </a> </div>
+                                                        <div class="item-title">
+                                                            <a title="Product title here"
+                                                               href="single_product.html">
+                                                                Product title here
+                                                            </a>
+                                                        </div>
                                                         <div class="item-content">
-                                                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                            <div class="rating">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                            </div>
                                                             <div class="item-price">
-                                                                <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
+                                                                <div class="price-box">
+                                                                    <span class="regular-price">
+                                                                        <span class="price">$125.00</span>
+                                                                    </span>
+                                                                </div>
                                                             </div>
                                                             <div class="pro-action">
-                                                                <button type="button" class="add-to-cart"><span> Mua ngay</span> </button>
+                                                                <button type="button" class="add-to-cart">
+                                                                    <span> Add to Cart</span>
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,12 +265,14 @@
                                             </div>
                                         </div>
                                     }
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             }
+
         </div>
     </div>
 </div>
@@ -222,132 +294,326 @@
                                 <ul class="products-grid">
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                                    </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
-                                                    </div>
-                                                    <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                    </div>
-                                                </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-16.jpg" />
+                                                </a>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$99.99</span> </span> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
                                                     </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
                                                     </div>
-                                                    <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="products-grid">
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                                    </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
-                                                    </div>
-                                                    <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$99.99</span> </span> </div>
-                                                    </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
-                                                    </div>
-                                                    <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="products-grid">
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                                    </div>
-                                                    <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
-                                                    </div>
-                                                    <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
-                                            <div class="item-info">
-                                                <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
                                                     <div class="item-price">
                                                         <div class="price-box">
-                                                            <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-19.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$99.99</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pr-button-hover">
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="products-grid">
+                                    <li class="item">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-14.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pr-button-hover">
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-12.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$99.99</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pr-button-hover">
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="products-grid">
+                                    <li class="item">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-12.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pr-button-hover">
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="item-inner">
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-6.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box">
+                                                            <p class="special-price">
+                                                                <span class="price-label">Special Price</span>
+                                                                <span class="price"> $456.00 </span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-label">Regular Price:</span>
+                                                                <span class="price"> $567.00 </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pr-button-hover">
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -363,10 +629,12 @@
             <div class="col-md-4 top-banner hidden-sm">
                 <div class="jtv-banner3">
                     <div class="jtv-banner3-inner">
-                        <a href="#"><img src="/client-side/images/sub1a.jpg" alt="HTML template"></a>
+                        <a href="#">
+                            <img src="~/client-side/images/sub1a.jpg" alt="HTML template" />
+                        </a>
                         <div class="hover_content">
                             <div class="hover_data bottom">
-                                <div class="desc-text">Top Brands at discount prices </div>
+                                <div class="desc-text">Top Brands at discount prices</div>
                                 <div class="title">Electronisc Sale</div>
                                 <span>Smartphone & Cell phone</span>
                                 <p><a href="#" class="shop-now">Get it now!</a></p>
@@ -388,20 +656,52 @@
                                 <ul class="products-grid">
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-9.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -409,23 +709,57 @@
                                     </li>
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-2.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
                                                         <div class="price-box">
-                                                            <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
+                                                            <p class="special-price">
+                                                                <span class="price-label">Special Price</span>
+                                                                <span class="price"> $456.00 </span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-label">Regular Price:</span>
+                                                                <span class="price"> $567.00 </span>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -435,20 +769,52 @@
                                 <ul class="products-grid">
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-18.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -456,23 +822,57 @@
                                     </li>
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-11.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
                                                         <div class="price-box">
-                                                            <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
+                                                            <p class="special-price">
+                                                                <span class="price-label">Special Price</span>
+                                                                <span class="price"> $456.00 </span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-label">Regular Price:</span>
+                                                                <span class="price"> $567.00 </span>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -482,20 +882,52 @@
                                 <ul class="products-grid">
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-6.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">$125.00</span>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -503,23 +935,57 @@
                                     </li>
                                     <li class="item">
                                         <div class="item-inner">
-                                            <div class="item-img"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="HTML template" src="/client-side/images/products/product-1.jpg"> </a> </div>
+                                            <div class="item-img">
+                                                <a class="product-image"
+                                                   title="Retis lapen casen"
+                                                   href="product_detail.html">
+                                                    <img alt="HTML template"
+                                                         src="~/client-side/images/products/product-9.jpg" />
+                                                </a>
+                                            </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
-                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
-                                                    <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-title">
+                                                        <a title="Product title here"
+                                                           href="single_product.html">
+                                                            Product title here
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
                                                     <div class="item-price">
                                                         <div class="price-box">
-                                                            <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
+                                                            <p class="special-price">
+                                                                <span class="price-label">Special Price</span>
+                                                                <span class="price"> $456.00 </span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-label">Regular Price:</span>
+                                                                <span class="price"> $567.00 </span>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div class="pro-action">
-                                                        <button type="button" class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
+                                                        <button type="button" class="add-to-cart">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </button>
                                                     </div>
                                                     <div class="pr-button-hover">
-                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
+                                                        <div class="mt-button add_to_wishlist">
+                                                            <a href="wishlist.html">
+                                                                <i class="fa fa-heart-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="mt-button add_to_compare">
+                                                            <a href="compare.html">
+                                                                <i class="fa fa-link"></i>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -534,6 +1000,7 @@
         </div>
     </div>
 </div>
+
 <!-- Blog -->
 <section class="blog-post-wrapper">
     <div class="container">
@@ -541,24 +1008,38 @@
             <h2>Our Latest News</h2>
         </div>
         <div class="slider-items-products">
-            <div id="latest-news-slider" class="product-flexslider hidden-buttons">
+            <div id="latest-news-slider"
+                 class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col6">
                     @foreach (var item in Model.LastestBlogs)
                     {
                         <div class="item">
                             <div class="blog-box">
-                                <a href="blog_single_post.html"> <img class="primary-img" src="@item.Image" alt="@item.Name"></a>
+                                <a href="blog_single_post.html">
+                                    <img class="primary-img"
+                                         src="@item.Image"
+                                         alt="@item.Name" />
+                                </a>
                                 <div class="blog-btm-desc">
                                     <div class="blog-top-desc">
-                                        <div class="blog-date"> @item.DateCreated </div>
-                                        <h4><a href="blog_single_post.html">@item.Name</a></h4>
+                                        <div class="blog-date">@item.DateCreated</div>
+                                        <h4>
+                                            <a href="blog_single_post.html">@item.Name</a>
+                                        </h4>
                                         <div class="jtv-entry-meta">
                                             <i class="fa fa-user-o"></i> <strong>Admin</strong>
-                                            <a href="#"><i class="fa fa-commenting-o"></i> <strong>15 Comments</strong></a>
+                                            <a href="#">
+                                                <i class="fa fa-commenting-o"></i>
+                                                <strong>15 Comments</strong>
+                                            </a>
                                         </div>
                                     </div>
-                                    <p>@item.Description</p>
-                                    <a class="read-more" href="blog_single_post.html"> Read more</a>
+                                    <p>
+                                        @item.Description
+                                    </p>
+                                    <a class="read-more" href="blog_single_post.html">
+                                        Read More
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -568,6 +1049,7 @@
         </div>
     </div>
 </section>
+
 <!-- our clients Slider -->
 @Component.InvokeAsync("Brand")
 <!-- BANNER-AREA-START -->
@@ -578,7 +1060,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
                         <div class="banner-block">
-                            <a href="#"> <img src="/client-side/images/banner-sunglasses.jpg" alt="banner sunglasses"> </a>
+                            <a href="#">
+                                <img src="~/client-side/images/banner-sunglasses.jpg"
+                                     alt="banner sunglasses" />
+                            </a>
                             <div class="text-des-container">
                                 <div class="text-des">
                                     <h2>Galaxy Note 5</h2>
@@ -589,7 +1074,9 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
                         <div class="banner-block">
-                            <a href="#"> <img src="/client-side/images/banner-kids.jpg" alt="banner kids"> </a>
+                            <a href="#">
+                                <img src="~/client-side/images/banner-kids.jpg" alt="banner kids" />
+                            </a>
                             <div class="text-des-container">
                                 <div class="text-des">
                                     <h2>Music & Sound</h2>
@@ -598,7 +1085,9 @@
                             </div>
                         </div>
                         <div class="banner-block">
-                            <a href="#"> <img src="/client-side/images/banner-women.jpg" alt="banner women"> </a>
+                            <a href="#">
+                                <img src="~/client-side/images/banner-women.jpg" alt="banner women" />
+                            </a>
                             <div class="text-des-container">
                                 <div class="text-des">
                                     <h2>Best Quality Music</h2>
@@ -611,7 +1100,9 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4">
                 <div class="banner-block">
-                    <a href="#"> <img src="/client-side/images/banner-arrival.jpg" alt="banner arrival"> </a>
+                    <a href="#">
+                        <img src="~/client-side/images/banner-arrival.jpg" alt="banner arrival" />
+                    </a>
                     <div class="text-des-container">
                         <div class="text-des">
                             <h2>special collection</h2>
@@ -624,4 +1115,3 @@
     </div>
 </section>
 <!-- BANNER-AREA-END -->
-

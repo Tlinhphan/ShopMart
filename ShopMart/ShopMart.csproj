@@ -79,4 +79,9 @@
     <ProjectReference Include="..\ShopMart.Utilities\ShopMart.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\shopmart-template\css\shortcodes\" />
+    <Folder Include="wwwroot\shopmart-template\js\" />
+  </ItemGroup>
+
 </Project>

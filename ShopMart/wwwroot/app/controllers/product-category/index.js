@@ -3,6 +3,7 @@
         loadData();
         registerEvents();
     }
+
     function registerEvents() {
         $('#frmMaintainance').validate({
             errorClass: 'red',
@@ -26,11 +27,15 @@
 
         $("#fileInputImage").on('change', function () {
             var fileUpload = $(this).get(0);
+
             var files = fileUpload.files;
+
             var data = new FormData();
+
             for (var i = 0; i < files.length; i++) {
                 data.append(files[i].name, files[i]);
             }
+
             $.ajax({
                 type: "POST",
                 url: "/Admin/Upload/UploadImage",
@@ -49,8 +54,11 @@
         });
 
         $('body').on('click', '#btnEdit', function (e) {
+
             e.preventDefault();
+
             var that = $('#hidIdM').val();
+
             $.ajax({
                 type: "GET",
                 url: "/Admin/ProductCategory/GetById",
@@ -194,6 +202,7 @@
         $('#ckStatusM').prop('checked', true);
         $('#ckShowHomeM').prop('checked', false);
     }
+
     function initTreeDropDownCategory(selectedId) {
         $.ajax({
             url: "/Admin/ProductCategory/GetAll",
@@ -210,10 +219,13 @@
                         sortOrder: item.SortOrder
                     });
                 });
+
                 var arr = shopmart.unflattern(data);
+
                 $('#ddlCategoryIdM').combotree({
                     data: arr
                 });
+
                 if (selectedId != undefined) {
                     $('#ddlCategoryIdM').combotree('setValue', selectedId);
                 }

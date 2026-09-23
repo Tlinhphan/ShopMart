@@ -1,0 +1,396 @@
+2026-03-11 23:36:22.143 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-11 23:36:22.520 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-03-11 23:36:22.720 +07:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-11 23:36:22.733 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-11 23:36:22.741 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-03-11 23:36:22.751 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-03-11 23:36:22.755 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-03-11 23:36:22.757 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-03-11 23:36:22.759 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-03-11 23:36:22.762 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-03-11 23:36:22.765 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-03-11 23:36:22.772 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-11 23:36:22.774 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-11 23:36:22.777 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-11 23:36:23.302 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/index.html  
+2026-03-11 23:36:23.310 +07:00 [INF] Sending file. Request path: '/shopmart-template/index.html'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\shopmart-template\index.html'
+2026-03-11 23:36:23.375 +07:00 [INF] Request finished in 74.3013ms 200 text/html
+2026-03-11 23:36:23.381 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-default.jpg  
+2026-03-11 23:36:23.381 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-english.jpg  
+2026-03-11 23:36:23.384 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/style.css  
+2026-03-11 23:36:23.462 +07:00 [INF] Request finished in 81.5965ms 404 
+2026-03-11 23:36:23.462 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-german.jpg  
+2026-03-11 23:36:23.462 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-brazil.jpg  
+2026-03-11 23:36:23.462 +07:00 [INF] Request finished in 81.133ms 404 
+2026-03-11 23:36:23.462 +07:00 [INF] Request finished in 78.0306ms 404 
+2026-03-11 23:36:23.463 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/jquery.min.js  
+2026-03-11 23:36:23.463 +07:00 [INF] Request finished in 0.9395ms 404 
+2026-03-11 23:36:23.463 +07:00 [INF] Request finished in 0.2126ms 404 
+2026-03-11 23:36:23.463 +07:00 [INF] Request finished in 1.1279ms 404 
+2026-03-11 23:36:23.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/bootstrap.min.js  
+2026-03-11 23:36:23.464 +07:00 [INF] Request finished in 0.1927ms 404 
+2026-03-11 23:36:23.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/owl.carousel.min.js  
+2026-03-11 23:36:23.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/mobile-menu.js  
+2026-03-11 23:36:23.464 +07:00 [INF] Request finished in 0.2066ms 404 
+2026-03-11 23:36:23.464 +07:00 [INF] Request finished in 0.1551ms 404 
+2026-03-11 23:36:23.465 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/jquery-ui.js  
+2026-03-11 23:36:23.465 +07:00 [INF] Request finished in 0.2016ms 404 
+2026-03-11 23:36:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/main.js  
+2026-03-11 23:36:23.466 +07:00 [INF] Request finished in 0.1665ms 404 
+2026-03-11 23:36:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/countdown.js  
+2026-03-11 23:36:23.466 +07:00 [INF] Request finished in 0.2776ms 404 
+2026-03-11 23:36:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-chile.jpg  
+2026-03-11 23:36:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/revolution-slider.js  
+2026-03-11 23:36:23.466 +07:00 [INF] Request finished in 0.1689ms 404 
+2026-03-11 23:36:23.466 +07:00 [INF] Request finished in 0.2121ms 404 
+2026-03-11 23:36:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-spain.jpg  
+2026-03-11 23:36:23.467 +07:00 [INF] Request finished in 0.2241ms 404 
+2026-03-11 23:36:23.467 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/logo.png  
+2026-03-11 23:36:23.468 +07:00 [INF] Request finished in 0.2064ms 404 
+2026-03-11 23:36:23.468 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-11.jpg  
+2026-03-11 23:36:23.468 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-9.jpg  
+2026-03-11 23:36:23.468 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-10.jpg  
+2026-03-11 23:36:23.468 +07:00 [INF] Request finished in 0.2101ms 404 
+2026-03-11 23:36:23.468 +07:00 [INF] Request finished in 0.2194ms 404 
+2026-03-11 23:36:23.468 +07:00 [INF] Request finished in 0.2182ms 404 
+2026-03-11 23:36:23.468 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img1.jpg  
+2026-03-11 23:36:23.469 +07:00 [INF] Request finished in 0.1817ms 404 
+2026-03-11 23:36:23.469 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img2.jpg  
+2026-03-11 23:36:23.469 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img3.jpg  
+2026-03-11 23:36:23.469 +07:00 [INF] Request finished in 0.1484ms 404 
+2026-03-11 23:36:23.469 +07:00 [INF] Request finished in 0.172ms 404 
+2026-03-11 23:36:23.470 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img4.jpg  
+2026-03-11 23:36:23.470 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img5.jpg  
+2026-03-11 23:36:23.470 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-5.jpg  
+2026-03-11 23:36:23.470 +07:00 [INF] Request finished in 0.1674ms 404 
+2026-03-11 23:36:23.470 +07:00 [INF] Request finished in 0.1969ms 404 
+2026-03-11 23:36:23.470 +07:00 [INF] Request finished in 0.1577ms 404 
+2026-03-11 23:36:23.470 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-6.jpg  
+2026-03-11 23:36:23.470 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-1.jpg  
+2026-03-11 23:36:23.470 +07:00 [INF] Request finished in 0.1107ms 404 
+2026-03-11 23:36:23.470 +07:00 [INF] Request finished in 0.1249ms 404 
+2026-03-11 23:36:23.471 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-2.jpg  
+2026-03-11 23:36:23.471 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-3.jpg  
+2026-03-11 23:36:23.471 +07:00 [INF] Request finished in 0.1734ms 404 
+2026-03-11 23:36:23.471 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-4.jpg  
+2026-03-11 23:36:23.471 +07:00 [INF] Request finished in 0.2678ms 404 
+2026-03-11 23:36:23.471 +07:00 [INF] Request finished in 0.2208ms 404 
+2026-03-11 23:36:23.471 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-left.jpg  
+2026-03-11 23:36:23.472 +07:00 [INF] Request finished in 0.255ms 404 
+2026-03-11 23:36:23.472 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-3.jpg  
+2026-03-11 23:36:23.472 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-1.jpg  
+2026-03-11 23:36:23.472 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-2.jpg  
+2026-03-11 23:36:23.472 +07:00 [INF] Request finished in 0.188ms 404 
+2026-03-11 23:36:23.472 +07:00 [INF] Request finished in 0.1575ms 404 
+2026-03-11 23:36:23.472 +07:00 [INF] Request finished in 0.1829ms 404 
+2026-03-11 23:36:23.473 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/sub1.jpg  
+2026-03-11 23:36:23.473 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-8.jpg  
+2026-03-11 23:36:23.473 +07:00 [INF] Request finished in 0.1457ms 404 
+2026-03-11 23:36:23.473 +07:00 [INF] Request finished in 0.1509ms 404 
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-15.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request finished in 0.1388ms 404 
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-12.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-13.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-14.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-16.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request finished in 0.1209ms 404 
+2026-03-11 23:36:23.474 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-17.jpg  
+2026-03-11 23:36:23.474 +07:00 [INF] Request finished in 0.1573ms 404 
+2026-03-11 23:36:23.475 +07:00 [INF] Request finished in 0.1874ms 404 
+2026-03-11 23:36:23.475 +07:00 [INF] Request finished in 0.142ms 404 
+2026-03-11 23:36:23.475 +07:00 [INF] Request finished in 0.1487ms 404 
+2026-03-11 23:36:23.475 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-18.jpg  
+2026-03-11 23:36:23.475 +07:00 [INF] Request finished in 0.139ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-19.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-20.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.1479ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-25.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-26.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.1498ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-22.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.1658ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-27.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.1683ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.2132ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request finished in 0.1713ms 404 
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-laptop.jpg  
+2026-03-11 23:36:23.476 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-mob.jpg  
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.1138ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.1768ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img2.jpg  
+2026-03-11 23:36:23.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/sub1a.jpg  
+2026-03-11 23:36:23.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img1.jpg  
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.1444ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img3.jpg  
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.2099ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.214ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request finished in 0.1984ms 404 
+2026-03-11 23:36:23.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img4.jpg  
+2026-03-11 23:36:23.478 +07:00 [INF] Request finished in 0.1443ms 404 
+2026-03-11 23:36:23.478 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img5.jpg  
+2026-03-11 23:36:23.478 +07:00 [INF] Request finished in 0.1101ms 404 
+2026-03-11 23:36:23.478 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand1.png  
+2026-03-11 23:36:23.478 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand2.png  
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.1564ms 404 
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.1149ms 404 
+2026-03-11 23:36:23.479 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand3.png  
+2026-03-11 23:36:23.479 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand4.png  
+2026-03-11 23:36:23.479 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand5.png  
+2026-03-11 23:36:23.479 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand6.png  
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.2073ms 404 
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.2162ms 404 
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.2484ms 404 
+2026-03-11 23:36:23.479 +07:00 [INF] Request finished in 0.14ms 404 
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand7.png  
+2026-03-11 23:36:23.480 +07:00 [INF] Request finished in 0.1563ms 404 
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand8.png  
+2026-03-11 23:36:23.480 +07:00 [INF] Request finished in 0.1033ms 404 
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand9.png  
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand10.png  
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-sunglasses.jpg  
+2026-03-11 23:36:23.480 +07:00 [INF] Request finished in 0.1376ms 404 
+2026-03-11 23:36:23.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand11.png  
+2026-03-11 23:36:23.481 +07:00 [INF] Request finished in 0.1532ms 404 
+2026-03-11 23:36:23.481 +07:00 [INF] Request finished in 0.1906ms 404 
+2026-03-11 23:36:23.481 +07:00 [INF] Request finished in 0.2442ms 404 
+2026-03-11 23:36:23.481 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-kids.jpg  
+2026-03-11 23:36:23.481 +07:00 [INF] Request finished in 0.111ms 404 
+2026-03-11 23:36:23.481 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-women.jpg  
+2026-03-11 23:36:23.481 +07:00 [INF] Request finished in 0.1798ms 404 
+2026-03-11 23:36:23.482 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-arrival.jpg  
+2026-03-11 23:36:23.482 +07:00 [INF] Request finished in 0.1574ms 404 
+2026-03-11 23:36:23.482 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img1.jpg  
+2026-03-11 23:36:23.482 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img2.jpg  
+2026-03-11 23:36:23.482 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img3.jpg  
+2026-03-11 23:36:23.482 +07:00 [INF] Request finished in 0.1587ms 404 
+2026-03-11 23:36:23.482 +07:00 [INF] Request finished in 0.233ms 404 
+2026-03-11 23:36:23.482 +07:00 [INF] Request finished in 0.2654ms 404 
+2026-03-11 23:36:23.482 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img4.jpg  
+2026-03-11 23:36:23.482 +07:00 [INF] Request finished in 0.119ms 404 
+2026-03-11 23:36:23.483 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/footer-logo.png  
+2026-03-11 23:36:23.483 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/visa.png  
+2026-03-11 23:36:23.483 +07:00 [INF] Request finished in 0.2032ms 404 
+2026-03-11 23:36:23.483 +07:00 [INF] Request finished in 0.1934ms 404 
+2026-03-11 23:36:23.483 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/paypal.png  
+2026-03-11 23:36:23.484 +07:00 [INF] Request finished in 0.1598ms 404 
+2026-03-11 23:36:23.485 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/master-card.png  
+2026-03-11 23:36:23.485 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/discover.png  
+2026-03-11 23:36:23.485 +07:00 [INF] Request finished in 0.3925ms 404 
+2026-03-11 23:36:23.485 +07:00 [INF] Request finished in 0.393ms 404 
+2026-03-11 23:36:23.549 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/favicon.ico  
+2026-03-11 23:36:23.550 +07:00 [INF] Request finished in 0.4687ms 404 
+2026-03-11 23:36:36.637 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/index.html  
+2026-03-11 23:36:36.639 +07:00 [INF] The file /shopmart-template/index.html was not modified
+2026-03-11 23:36:36.639 +07:00 [INF] Request finished in 2.416ms 304 text/html
+2026-03-11 23:36:36.660 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/style.css  
+2026-03-11 23:36:36.660 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-default.jpg  
+2026-03-11 23:36:36.660 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-english.jpg  
+2026-03-11 23:36:36.660 +07:00 [INF] Request finished in 0.2675ms 404 
+2026-03-11 23:36:36.660 +07:00 [INF] Request finished in 0.288ms 404 
+2026-03-11 23:36:36.660 +07:00 [INF] Request finished in 0.4236ms 404 
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/jquery.min.js  
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/mobile-menu.js  
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-brazil.jpg  
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-german.jpg  
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/owl.carousel.min.js  
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.33ms 404 
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.416ms 404 
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.4853ms 404 
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.5609ms 404 
+2026-03-11 23:36:36.673 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/bootstrap.min.js  
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.4688ms 404 
+2026-03-11 23:36:36.674 +07:00 [INF] Request finished in 0.5361ms 404 
+2026-03-11 23:36:36.675 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/jquery-ui.js  
+2026-03-11 23:36:36.675 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/countdown.js  
+2026-03-11 23:36:36.676 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/main.js  
+2026-03-11 23:36:36.676 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/js/revolution-slider.js  
+2026-03-11 23:36:36.676 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-chile.jpg  
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.2777ms 404 
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.1703ms 404 
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.1953ms 404 
+2026-03-11 23:36:36.676 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-spain.jpg  
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.2705ms 404 
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.2472ms 404 
+2026-03-11 23:36:36.676 +07:00 [INF] Request finished in 0.1382ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/logo.png  
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-9.jpg  
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-10.jpg  
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-11.jpg  
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img1.jpg  
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.1921ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.1725ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img2.jpg  
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.2313ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.2544ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.1881ms 404 
+2026-03-11 23:36:36.678 +07:00 [INF] Request finished in 0.2869ms 404 
+2026-03-11 23:36:36.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img3.jpg  
+2026-03-11 23:36:36.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img4.jpg  
+2026-03-11 23:36:36.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/menu-banner-img5.jpg  
+2026-03-11 23:36:36.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-5.jpg  
+2026-03-11 23:36:36.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-6.jpg  
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.1884ms 404 
+2026-03-11 23:36:36.680 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-1.jpg  
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.1813ms 404 
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.2193ms 404 
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.1599ms 404 
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.2127ms 404 
+2026-03-11 23:36:36.680 +07:00 [INF] Request finished in 0.2133ms 404 
+2026-03-11 23:36:36.681 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-2.jpg  
+2026-03-11 23:36:36.681 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-3.jpg  
+2026-03-11 23:36:36.681 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-4.jpg  
+2026-03-11 23:36:36.682 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-3.jpg  
+2026-03-11 23:36:36.682 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-left.jpg  
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.2728ms 404 
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.2415ms 404 
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.1956ms 404 
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.168ms 404 
+2026-03-11 23:36:36.682 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-1.jpg  
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.3ms 404 
+2026-03-11 23:36:36.682 +07:00 [INF] Request finished in 0.365ms 404 
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/slider/slide-2.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/sub1.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-8.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-15.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-12.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request finished in 0.2166ms 404 
+2026-03-11 23:36:36.683 +07:00 [INF] Request finished in 0.1797ms 404 
+2026-03-11 23:36:36.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-13.jpg  
+2026-03-11 23:36:36.683 +07:00 [INF] Request finished in 0.1656ms 404 
+2026-03-11 23:36:36.683 +07:00 [INF] Request finished in 0.2603ms 404 
+2026-03-11 23:36:36.683 +07:00 [INF] Request finished in 0.3535ms 404 
+2026-03-11 23:36:36.684 +07:00 [INF] Request finished in 0.4235ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-16.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-14.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-17.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.1607ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.161ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.1604ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-18.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-19.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-20.jpg  
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.1917ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.1334ms 404 
+2026-03-11 23:36:36.685 +07:00 [INF] Request finished in 0.1438ms 404 
+2026-03-11 23:36:36.686 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-22.jpg  
+2026-03-11 23:36:36.686 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-25.jpg  
+2026-03-11 23:36:36.686 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-26.jpg  
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.1921ms 404 
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.2203ms 404 
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.2178ms 404 
+2026-03-11 23:36:36.687 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/products/product-27.jpg  
+2026-03-11 23:36:36.687 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-mob.jpg  
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.1707ms 404 
+2026-03-11 23:36:36.687 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-laptop.jpg  
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.2358ms 404 
+2026-03-11 23:36:36.687 +07:00 [INF] Request finished in 0.3923ms 404 
+2026-03-11 23:36:36.688 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/sub1a.jpg  
+2026-03-11 23:36:36.688 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img1.jpg  
+2026-03-11 23:36:36.688 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img2.jpg  
+2026-03-11 23:36:36.688 +07:00 [INF] Request finished in 0.2005ms 404 
+2026-03-11 23:36:36.688 +07:00 [INF] Request finished in 0.1715ms 404 
+2026-03-11 23:36:36.689 +07:00 [INF] Request finished in 0.2039ms 404 
+2026-03-11 23:36:36.689 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img3.jpg  
+2026-03-11 23:36:36.689 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img4.jpg  
+2026-03-11 23:36:36.689 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/blog-img5.jpg  
+2026-03-11 23:36:36.689 +07:00 [INF] Request finished in 0.1523ms 404 
+2026-03-11 23:36:36.689 +07:00 [INF] Request finished in 0.1542ms 404 
+2026-03-11 23:36:36.689 +07:00 [INF] Request finished in 0.1771ms 404 
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand1.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand3.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand2.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand6.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request finished in 0.1707ms 404 
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand5.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request finished in 0.1826ms 404 
+2026-03-11 23:36:36.690 +07:00 [INF] Request finished in 0.2506ms 404 
+2026-03-11 23:36:36.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand4.png  
+2026-03-11 23:36:36.690 +07:00 [INF] Request finished in 0.2002ms 404 
+2026-03-11 23:36:36.690 +07:00 [INF] Request finished in 0.2068ms 404 
+2026-03-11 23:36:36.691 +07:00 [INF] Request finished in 0.3824ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand7.png  
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand8.png  
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand9.png  
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.169ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand10.png  
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-sunglasses.jpg  
+2026-03-11 23:36:36.692 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/brand11.png  
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.1644ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.2397ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.1973ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.1991ms 404 
+2026-03-11 23:36:36.692 +07:00 [INF] Request finished in 0.2079ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-kids.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.2432ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-women.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/banner-arrival.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img1.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.2635ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img3.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.1742ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img2.jpg  
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.1723ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.2223ms 404 
+2026-03-11 23:36:36.694 +07:00 [INF] Request finished in 0.1724ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/testimonials-img4.jpg  
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.2072ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/footer-logo.png  
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/visa.png  
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/paypal.png  
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/discover.png  
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.1877ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/master-card.png  
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.1777ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.2282ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.231ms 404 
+2026-03-11 23:36:36.696 +07:00 [INF] Request finished in 0.2686ms 404 
+2026-03-11 23:36:36.698 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/shopmart-template/images/flag-default.jpg  
+2026-03-11 23:36:36.698 +07:00 [INF] Request finished in 0.2488ms 404 

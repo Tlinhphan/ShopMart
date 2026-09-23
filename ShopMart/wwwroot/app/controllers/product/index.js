@@ -3,7 +3,7 @@
     var imageManagement = new ImageManagement();
     var wholePriceManagement = new WholePriceManagement();
 
-    this.initialize = function () {
+    this.initialize = function nnnn() {
         loadCategories();
         loadData();
         registerEvents();
@@ -139,8 +139,8 @@
                     shopmart.startLoading();
                 },
                 success: function (response) {
-                    window.location.href = response;
                     shopmart.stopLoading();
+                    window.location.href = response;
                 },
                 error: function () {
                     shopmart.notify('Has an error in progress', 'error');
@@ -403,6 +403,7 @@
             dataType: 'json',
             success: function (response) {
                 console.log(response);
+
                 $.each(response.Results, function (i, item) {
                     render += Mustache.render(template, {
                         Id: item.Id,
@@ -413,12 +414,13 @@
                         CreatedDate: shopmart.dateTimeFormatJson(item.DateCreated),
                         Status: shopmart.getStatus(item.Status)
                     });
-                   
                 });
+
                 $('#lblTotalRecords').text(response.RowCount);
                 if (render != '') {
                     $('#tbl-content').html(render);
                 }
+
                 wrapPaging(response.RowCount, function () {
                     loadData();
                 }, isPageChanged);

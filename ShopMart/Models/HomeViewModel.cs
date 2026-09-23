@@ -18,6 +18,5 @@ namespace ShopMart.Models
         public string Title { set; get; }
         public string MetaKeyword { set; get; }
         public string MetaDescription { set; get; }
-       
     }
 }

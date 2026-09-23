@@ -17,8 +17,8 @@ namespace ShopMart.Application.Implementations
     {
         private IProductCategoryRepository _productCategoryRepository;
         private IUnitOfWork _unitOfWork;
-        
-        public ProductCategoryService(IProductCategoryRepository productCategoryRepository,IUnitOfWork unitOfWork)
+
+        public ProductCategoryService(IProductCategoryRepository productCategoryRepository, IUnitOfWork unitOfWork)
         {
             _productCategoryRepository = productCategoryRepository;
             _unitOfWork = unitOfWork;
@@ -51,9 +51,9 @@ namespace ShopMart.Application.Implementations
             else
                 return _productCategoryRepository.FindAll().OrderBy(x => x.ParentId)
                     .ProjectTo<ProductCategoryViewModel>().ToList();
-                    
-                
-           
+
+
+
         }
 
         public List<ProductCategoryViewModel> GetAllByParentId(int parentId)
@@ -71,10 +71,9 @@ namespace ShopMart.Application.Implementations
         public List<ProductCategoryViewModel> GetHomeCategories(int top)
         {
             var query = _productCategoryRepository
-                  .FindAll(x => x.HomeFlag == true, c => c.Products)
-                    .OrderBy(x => x.HomeOrder)
-                    .Take(top).ProjectTo<ProductCategoryViewModel>();
-
+                                .FindAll(x => x.HomeFlag == true, c => c.Products)
+                                .OrderBy(x => x.HomeOrder)
+                                .Take(top).ProjectTo<ProductCategoryViewModel>();
 
             var categories = query.ToList();
             foreach (var category in categories)
@@ -120,12 +119,12 @@ namespace ShopMart.Application.Implementations
 
             //Get all sibling
             var sibling = _productCategoryRepository.FindAll(x => items.ContainsKey(x.Id));
-            foreach(var child in sibling)
+            foreach (var child in sibling)
             {
                 child.SortOrder = items[child.Id];
                 _productCategoryRepository.Update(child);
             }
-           
+
         }
     }
 }

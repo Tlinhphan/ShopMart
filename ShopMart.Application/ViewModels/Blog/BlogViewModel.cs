@@ -29,7 +29,7 @@ namespace ShopMart.Application.ViewModels.Blog
 
         public string Tags { get; set; }
 
-        public  List<BlogTag> BlogTagViewModel{ set; get; }
+        public  List<BlogTagViewModel> BlogTags{ set; get; }
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
         public Status Status { set; get; }

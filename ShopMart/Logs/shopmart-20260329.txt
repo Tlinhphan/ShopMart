@@ -1,0 +1,510 @@
+2026-03-29 23:06:11.601 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-29 23:06:12.176 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-03-29 23:06:12.408 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-29 23:06:12.428 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-29 23:06:12.438 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Functions] AS [f]
+2026-03-29 23:06:12.454 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'
+2026-03-29 23:06:12.457 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Colors] AS [c]
+2026-03-29 23:06:12.460 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]
+2026-03-29 23:06:12.464 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Slides] AS [s]
+2026-03-29 23:06:12.467 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Sizes] AS [s]
+2026-03-29 23:06:12.472 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ProductCategories] AS [p]
+2026-03-29 23:06:12.478 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-29 23:06:12.481 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-29 23:06:12.485 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2026-03-29 23:06:13.450 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/  
+2026-03-29 23:06:13.674 +07:00 [INF] Executing action method ShopMart.Controllers.HomeController.Index (ShopMart) with arguments (null) - ModelState is "Valid"
+2026-03-29 23:06:33.466 +07:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ShopMart.Data.EF 
+2026-03-29 23:06:33.502 +07:00 [WRN] The Include operation for navigation '[c].Products' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2026-03-29 23:06:33.549 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [c].[Id], [c].[Name], [c].[Description], [c].[ParentId], [c].[HomeOrder], [c].[Image], [c].[HomeFlag], [c].[SeoPageTitle], [c].[SeoAlias], [c].[SeoKeywords], [c].[SeoDescription], [c].[SortOrder], [c].[Status], [c].[DateCreated], [c].[DateModified]
+FROM [ProductCategories] AS [c]
+WHERE [c].[HomeFlag] = 1
+ORDER BY [c].[HomeOrder]
+2026-03-29 23:06:33.584 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE ([x].[Status] = 1) AND ([x].[HotFlag] = 1)
+ORDER BY [DateCreated0] DESC
+2026-03-29 23:06:33.594 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.597 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.598 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.616 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [x].[Id] AS [Id1], [x].[Name], [x].[CategoryId] AS [Id0], [x].[Image], [x].[Price], [x].[PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Tags], [x].[Unit], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x.ProductCategory].[DateCreated], [x.ProductCategory].[DateModified], [x.ProductCategory].[Id], [x].[DateCreated] AS [DateCreated0], [x].[DateModified] AS [DateModified0], [x].[Status] AS [Status0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoDescription] AS [SeoDescription0]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [DateCreated0] DESC
+2026-03-29 23:06:33.618 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.618 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.618 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.619 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.619 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:33.627 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [x].[Id], [x].[Name], [x].[Image], [x].[Description], [x].[Content], [x].[HomeFlag], [x].[HotFlag], [x].[ViewCount], [x].[Tags], [x].[DateCreated], [x].[DateModified], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription]
+FROM [Blogs] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+2026-03-29 23:06:33.634 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__groupAlias_0='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[Image], [x].[Url], [x].[DisplayOrder], [x].[Status], [x].[Content], [x].[GroupAlias]
+FROM [Slides] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[GroupAlias] = @__groupAlias_0)
+2026-03-29 23:06:35.756 +07:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2026-03-29 23:06:36.042 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-03-29 23:06:36.043 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.044 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.045 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.238 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-03-29 23:06:36.238 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.238 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.239 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.342 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], [x].[Image], [x].[HomeFlag], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[SortOrder], [x].[Status], [x].[DateCreated], [x].[DateModified]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]
+2026-03-29 23:06:36.342 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.343 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.343 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@_outer_Id='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], CAST(COALESCE([dto].[HotFlag], 0) AS bit) AS [HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[DateCreated], [dto].[DateModified], [dto].[Status], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]
+2026-03-29 23:06:36.543 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-english.jpg  
+2026-03-29 23:06:36.543 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-default.jpg  
+2026-03-29 23:06:36.543 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/style.css  
+2026-03-29 23:06:36.548 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-english.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-english.jpg'
+2026-03-29 23:06:36.548 +07:00 [INF] Sending file. Request path: '/client-side/style.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\style.css'
+2026-03-29 23:06:36.548 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-default.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-default.jpg'
+2026-03-29 23:06:36.552 +07:00 [INF] Executed action ShopMart.Controllers.HomeController.Index (ShopMart) in 22885.391ms
+2026-03-29 23:06:36.559 +07:00 [INF] Request finished in 23111.1869ms 200 text/html; charset=utf-8
+2026-03-29 23:06:36.564 +07:00 [INF] Request finished in 21.4354ms 200 text/css
+2026-03-29 23:06:36.565 +07:00 [INF] Request finished in 21.5316ms 200 image/jpeg
+2026-03-29 23:06:36.565 +07:00 [INF] Request finished in 22.1373ms 200 image/jpeg
+2026-03-29 23:06:36.637 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-brazil.jpg  
+2026-03-29 23:06:36.637 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-german.jpg  
+2026-03-29 23:06:36.637 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-brazil.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-brazil.jpg'
+2026-03-29 23:06:36.637 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-german.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-german.jpg'
+2026-03-29 23:06:36.637 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/bootstrap.min.css  
+2026-03-29 23:06:36.637 +07:00 [INF] Sending file. Request path: '/client-side/css/bootstrap.min.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\bootstrap.min.css'
+2026-03-29 23:06:36.643 +07:00 [INF] Request finished in 6.3634ms 200 image/jpeg
+2026-03-29 23:06:36.644 +07:00 [INF] Request finished in 7.0005ms 200 image/jpeg
+2026-03-29 23:06:36.674 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/font-awesome.min.css  
+2026-03-29 23:06:36.677 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/animate.css  
+2026-03-29 23:06:36.677 +07:00 [INF] Sending file. Request path: '/client-side/css/font-awesome.min.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\font-awesome.min.css'
+2026-03-29 23:06:36.677 +07:00 [INF] Sending file. Request path: '/client-side/css/animate.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\animate.css'
+2026-03-29 23:06:36.678 +07:00 [INF] Request finished in 41.0485ms 200 text/css
+2026-03-29 23:06:36.681 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/simple-line-icons.css  
+2026-03-29 23:06:36.681 +07:00 [INF] Sending file. Request path: '/client-side/css/simple-line-icons.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\simple-line-icons.css'
+2026-03-29 23:06:36.686 +07:00 [INF] Request finished in 8.8476ms 200 text/css
+2026-03-29 23:06:36.689 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/pe-icon-7-stroke.min.css  
+2026-03-29 23:06:36.689 +07:00 [INF] Sending file. Request path: '/client-side/css/pe-icon-7-stroke.min.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\pe-icon-7-stroke.min.css'
+2026-03-29 23:06:36.691 +07:00 [INF] Request finished in 17.2989ms 200 text/css
+2026-03-29 23:06:36.691 +07:00 [INF] Request finished in 10.0798ms 200 text/css
+2026-03-29 23:06:36.723 +07:00 [INF] Request finished in 34.4273ms 200 text/css
+2026-03-29 23:06:36.724 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/owl.transitions.css  
+2026-03-29 23:06:36.724 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/owl.carousel.css  
+2026-03-29 23:06:36.724 +07:00 [INF] Sending file. Request path: '/client-side/css/owl.carousel.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\owl.carousel.css'
+2026-03-29 23:06:36.726 +07:00 [INF] Sending file. Request path: '/client-side/css/owl.transitions.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\owl.transitions.css'
+2026-03-29 23:06:36.727 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/flexslider.css  
+2026-03-29 23:06:36.727 +07:00 [INF] Sending file. Request path: '/client-side/css/flexslider.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\flexslider.css'
+2026-03-29 23:06:36.732 +07:00 [INF] Request finished in 7.6975ms 200 text/css
+2026-03-29 23:06:36.733 +07:00 [INF] Request finished in 9.8511ms 200 text/css
+2026-03-29 23:06:36.766 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/revolution-slider.css  
+2026-03-29 23:06:36.767 +07:00 [INF] Sending file. Request path: '/client-side/css/revolution-slider.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\revolution-slider.css'
+2026-03-29 23:06:36.770 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/jquery-ui.css  
+2026-03-29 23:06:36.771 +07:00 [INF] Sending file. Request path: '/client-side/css/jquery-ui.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\jquery-ui.css'
+2026-03-29 23:06:36.771 +07:00 [INF] Request finished in 44.0014ms 200 text/css
+2026-03-29 23:06:36.775 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/quick_view_popup.css  
+2026-03-29 23:06:36.775 +07:00 [INF] Sending file. Request path: '/client-side/css/quick_view_popup.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\quick_view_popup.css'
+2026-03-29 23:06:36.779 +07:00 [INF] Request finished in 8.3752ms 200 text/css
+2026-03-29 23:06:36.782 +07:00 [INF] Request finished in 6.5546ms 200 text/css
+2026-03-29 23:06:36.782 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/blog.css  
+2026-03-29 23:06:36.782 +07:00 [INF] Request finished in 15.7368ms 200 text/css
+2026-03-29 23:06:36.783 +07:00 [INF] Sending file. Request path: '/client-side/css/blog.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\blog.css'
+2026-03-29 23:06:36.815 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcode.css  
+2026-03-29 23:06:36.815 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcode.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcode.css'
+2026-03-29 23:06:36.820 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcodes/shortcodes.css  
+2026-03-29 23:06:36.821 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcodes/shortcodes.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcodes\shortcodes.css'
+2026-03-29 23:06:36.821 +07:00 [INF] Request finished in 39.5916ms 200 text/css
+2026-03-29 23:06:36.824 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcodes/featured-box.css  
+2026-03-29 23:06:36.824 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcodes/featured-box.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcodes\featured-box.css'
+2026-03-29 23:06:36.828 +07:00 [INF] Request finished in 12.9858ms 200 text/css
+2026-03-29 23:06:36.832 +07:00 [INF] Request finished in 11.5631ms 200 text/css
+2026-03-29 23:06:36.834 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcodes/pricing-table.css  
+2026-03-29 23:06:36.835 +07:00 [INF] Request finished in 10.3818ms 200 text/css
+2026-03-29 23:06:36.835 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcodes/post.css  
+2026-03-29 23:06:36.835 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcodes/pricing-table.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcodes\pricing-table.css'
+2026-03-29 23:06:36.835 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcodes/post.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcodes\post.css'
+2026-03-29 23:06:36.836 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/shortcodes/tooltip.css  
+2026-03-29 23:06:36.836 +07:00 [INF] Sending file. Request path: '/client-side/css/shortcodes/tooltip.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\shortcodes\tooltip.css'
+2026-03-29 23:06:36.841 +07:00 [INF] Request finished in 6.8342ms 200 text/css
+2026-03-29 23:06:36.843 +07:00 [INF] Request finished in 6.4931ms 200 text/css
+2026-03-29 23:06:36.877 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/responsive.css  
+2026-03-29 23:06:36.878 +07:00 [INF] Sending file. Request path: '/client-side/css/responsive.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\responsive.css'
+2026-03-29 23:06:36.879 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/style.css  
+2026-03-29 23:06:36.880 +07:00 [INF] Sending file. Request path: '/client-side/css/style.css'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\css\style.css'
+2026-03-29 23:06:36.881 +07:00 [INF] Request finished in 45.9936ms 200 text/css
+2026-03-29 23:06:36.884 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/jquery.min.js  
+2026-03-29 23:06:36.884 +07:00 [INF] Sending file. Request path: '/client-side/js/jquery.min.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\jquery.min.js'
+2026-03-29 23:06:36.884 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/bootstrap.min.js  
+2026-03-29 23:06:36.884 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/owl.carousel.min.js  
+2026-03-29 23:06:36.884 +07:00 [INF] Sending file. Request path: '/client-side/js/owl.carousel.min.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\owl.carousel.min.js'
+2026-03-29 23:06:36.885 +07:00 [INF] Sending file. Request path: '/client-side/js/bootstrap.min.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\bootstrap.min.js'
+2026-03-29 23:06:36.892 +07:00 [INF] Request finished in 12.5517ms 200 text/css
+2026-03-29 23:06:36.893 +07:00 [INF] Request finished in 15.1666ms 200 text/css
+2026-03-29 23:06:36.932 +07:00 [INF] Request finished in 47.9859ms 200 application/javascript
+2026-03-29 23:06:36.945 +07:00 [INF] Request finished in 60.3521ms 200 application/javascript
+2026-03-29 23:06:37.049 +07:00 [INF] Request finished in 165.7118ms 200 application/javascript
+2026-03-29 23:06:37.085 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/mobile-menu.js  
+2026-03-29 23:06:37.085 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/jquery-ui.js  
+2026-03-29 23:06:37.085 +07:00 [INF] Sending file. Request path: '/client-side/js/mobile-menu.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\mobile-menu.js'
+2026-03-29 23:06:37.085 +07:00 [INF] Sending file. Request path: '/client-side/js/jquery-ui.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\jquery-ui.js'
+2026-03-29 23:06:37.122 +07:00 [INF] Request finished in 36.5071ms 200 application/javascript
+2026-03-29 23:06:37.122 +07:00 [INF] Request finished in 36.9231ms 200 application/javascript
+2026-03-29 23:06:37.160 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/revolution-slider.js  
+2026-03-29 23:06:37.160 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/main.js  
+2026-03-29 23:06:37.160 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/js/countdown.js  
+2026-03-29 23:06:37.160 +07:00 [INF] Sending file. Request path: '/client-side/js/main.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\main.js'
+2026-03-29 23:06:37.160 +07:00 [INF] Sending file. Request path: '/client-side/js/revolution-slider.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\revolution-slider.js'
+2026-03-29 23:06:37.161 +07:00 [INF] Sending file. Request path: '/client-side/js/countdown.js'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\js\countdown.js'
+2026-03-29 23:06:37.180 +07:00 [INF] Request finished in 19.5194ms 200 application/javascript
+2026-03-29 23:06:37.183 +07:00 [INF] Request finished in 22.1699ms 200 application/javascript
+2026-03-29 23:06:37.217 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-spain.jpg  
+2026-03-29 23:06:37.220 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-spain.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-spain.jpg'
+2026-03-29 23:06:37.222 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/flag-chile.jpg  
+2026-03-29 23:06:37.222 +07:00 [INF] Sending file. Request path: '/client-side/images/flag-chile.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\flag-chile.jpg'
+2026-03-29 23:06:37.225 +07:00 [INF] Request finished in 67.0772ms 200 application/javascript
+2026-03-29 23:06:37.229 +07:00 [INF] Request finished in 11.6109ms 200 image/jpeg
+2026-03-29 23:06:37.229 +07:00 [INF] Request finished in 6.3833ms 200 image/jpeg
+2026-03-29 23:06:37.263 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-11.jpg  
+2026-03-29 23:06:37.264 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/logo.png  
+2026-03-29 23:06:37.265 +07:00 [INF] Sending file. Request path: '/client-side/images/logo.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\logo.png'
+2026-03-29 23:06:37.266 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-11.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-11.jpg'
+2026-03-29 23:06:37.267 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-9.jpg  
+2026-03-29 23:06:37.267 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-9.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-9.jpg'
+2026-03-29 23:06:37.272 +07:00 [INF] Request finished in 8.6185ms 200 image/png
+2026-03-29 23:06:37.274 +07:00 [INF] Request finished in 7.3538ms 200 image/jpeg
+2026-03-29 23:06:37.278 +07:00 [INF] Request finished in 14.3341ms 200 image/jpeg
+2026-03-29 23:06:37.447 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0  
+2026-03-29 23:06:37.447 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/fonts/simple-line-icons/Simple-Line-Icons.woff2?v=2.4.0  
+2026-03-29 23:06:37.447 +07:00 [INF] Sending file. Request path: '/client-side/fonts/font-awesome/fontawesome-webfont.woff2'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\fonts\font-awesome\fontawesome-webfont.woff2'
+2026-03-29 23:06:37.448 +07:00 [INF] Sending file. Request path: '/client-side/fonts/simple-line-icons/Simple-Line-Icons.woff2'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\fonts\simple-line-icons\Simple-Line-Icons.woff2'
+2026-03-29 23:06:37.453 +07:00 [INF] Request finished in 5.7786ms 200 font/woff2
+2026-03-29 23:06:37.460 +07:00 [INF] Request finished in 12.6398ms 200 font/woff2
+2026-03-29 23:06:37.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/fonts/pe-icon-7-stroke/Pe-icon-7-stroke.woff?d7yf1v  
+2026-03-29 23:06:37.465 +07:00 [INF] Sending file. Request path: '/client-side/fonts/pe-icon-7-stroke/Pe-icon-7-stroke.woff'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\fonts\pe-icon-7-stroke\Pe-icon-7-stroke.woff'
+2026-03-29 23:06:37.482 +07:00 [INF] Request finished in 17.631ms 200 application/font-woff
+2026-03-29 23:06:37.604 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/bg_text_des.png  
+2026-03-29 23:06:37.605 +07:00 [INF] The file /client-side/images/bg_text_des.png was not modified
+2026-03-29 23:06:37.606 +07:00 [INF] Request finished in 2.2424ms 304 image/png
+2026-03-29 23:06:37.613 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/select-arrow.png  
+2026-03-29 23:06:37.613 +07:00 [INF] Sending file. Request path: '/client-side/images/select-arrow.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\select-arrow.png'
+2026-03-29 23:06:37.623 +07:00 [INF] Request finished in 9.4127ms 200 image/png
+2026-03-29 23:06:37.627 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-10.jpg  
+2026-03-29 23:06:37.628 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-10.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-10.jpg'
+2026-03-29 23:06:37.633 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-5.jpg  
+2026-03-29 23:06:37.633 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-5.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-5.jpg'
+2026-03-29 23:06:37.634 +07:00 [INF] Request finished in 6.4322ms 200 image/jpeg
+2026-03-29 23:06:37.636 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-6.jpg  
+2026-03-29 23:06:37.636 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-6.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-6.jpg'
+2026-03-29 23:06:37.640 +07:00 [INF] Request finished in 7.0567ms 200 image/jpeg
+2026-03-29 23:06:37.642 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-1.jpg  
+2026-03-29 23:06:37.642 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-1.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-1.jpg'
+2026-03-29 23:06:37.643 +07:00 [INF] Request finished in 6.5765ms 200 image/jpeg
+2026-03-29 23:06:37.645 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-2.jpg  
+2026-03-29 23:06:37.645 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-2.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-2.jpg'
+2026-03-29 23:06:37.649 +07:00 [INF] Request finished in 6.7432ms 200 image/jpeg
+2026-03-29 23:06:37.651 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-3.jpg  
+2026-03-29 23:06:37.652 +07:00 [INF] Request finished in 6.8765ms 200 image/jpeg
+2026-03-29 23:06:37.652 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-4.jpg  
+2026-03-29 23:06:37.652 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-4.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-4.jpg'
+2026-03-29 23:06:37.653 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-3.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-3.jpg'
+2026-03-29 23:06:37.659 +07:00 [INF] Request finished in 7.525ms 200 image/jpeg
+2026-03-29 23:06:37.659 +07:00 [INF] Request finished in 7.0685ms 200 image/jpeg
+2026-03-29 23:06:37.785 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-left.jpg  
+2026-03-29 23:06:37.786 +07:00 [INF] Sending file. Request path: '/client-side/images/banner-left.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\banner-left.jpg'
+2026-03-29 23:06:37.786 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/slider/slide-3.jpg  
+2026-03-29 23:06:37.786 +07:00 [INF] Sending file. Request path: '/client-side/images/slider/slide-3.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\slider\slide-3.jpg'
+2026-03-29 23:06:37.787 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/slider/slide-1.jpg  
+2026-03-29 23:06:37.788 +07:00 [INF] The file /client-side/images/slider/slide-1.jpg was not modified
+2026-03-29 23:06:37.790 +07:00 [INF] Request finished in 2.2173ms 304 image/jpeg
+2026-03-29 23:06:37.795 +07:00 [INF] Request finished in 9.4454ms 200 image/jpeg
+2026-03-29 23:06:37.796 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/slider/slide-2.jpg  
+2026-03-29 23:06:37.796 +07:00 [INF] Request finished in 10.1003ms 200 image/jpeg
+2026-03-29 23:06:37.797 +07:00 [INF] The file /client-side/images/slider/slide-2.jpg was not modified
+2026-03-29 23:06:37.797 +07:00 [INF] Request finished in 0.338ms 304 image/jpeg
+2026-03-29 23:06:37.825 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-15.jpg  
+2026-03-29 23:06:37.825 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/sub1.jpg  
+2026-03-29 23:06:37.825 +07:00 [INF] The file /client-side/images/sub1.jpg was not modified
+2026-03-29 23:06:37.826 +07:00 [INF] Request finished in 0.2689ms 304 image/jpeg
+2026-03-29 23:06:37.826 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-15.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-15.jpg'
+2026-03-29 23:06:37.828 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-12.jpg  
+2026-03-29 23:06:37.829 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-12.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-12.jpg'
+2026-03-29 23:06:37.833 +07:00 [INF] Request finished in 7.4585ms 200 image/jpeg
+2026-03-29 23:06:37.865 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-8.jpg  
+2026-03-29 23:06:37.865 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-13.jpg  
+2026-03-29 23:06:37.865 +07:00 [INF] Request finished in 37.0108ms 200 image/jpeg
+2026-03-29 23:06:37.866 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-8.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-8.jpg'
+2026-03-29 23:06:37.867 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-13.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-13.jpg'
+2026-03-29 23:06:37.868 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-14.jpg  
+2026-03-29 23:06:37.868 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-14.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-14.jpg'
+2026-03-29 23:06:37.873 +07:00 [INF] Request finished in 11.0087ms 200 image/jpeg
+2026-03-29 23:06:37.873 +07:00 [INF] Request finished in 8.4457ms 200 image/jpeg
+2026-03-29 23:06:37.904 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-16.jpg  
+2026-03-29 23:06:37.904 +07:00 [INF] Request finished in 36.1259ms 200 image/jpeg
+2026-03-29 23:06:37.904 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-17.jpg  
+2026-03-29 23:06:37.905 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-16.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-16.jpg'
+2026-03-29 23:06:37.906 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-17.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-17.jpg'
+2026-03-29 23:06:37.908 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-18.jpg  
+2026-03-29 23:06:37.908 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-18.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-18.jpg'
+2026-03-29 23:06:37.913 +07:00 [INF] Request finished in 10.2107ms 200 image/jpeg
+2026-03-29 23:06:37.916 +07:00 [INF] Request finished in 8.2336ms 200 image/jpeg
+2026-03-29 23:06:37.916 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-25.jpg  
+2026-03-29 23:06:37.917 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-25.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-25.jpg'
+2026-03-29 23:06:37.918 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/menu-banner-img1.jpg  
+2026-03-29 23:06:37.919 +07:00 [INF] Sending file. Request path: '/client-side/images/menu-banner-img1.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\menu-banner-img1.jpg'
+2026-03-29 23:06:37.923 +07:00 [INF] Request finished in 7.018ms 200 image/jpeg
+2026-03-29 23:06:37.924 +07:00 [INF] Request finished in 5.4697ms 200 image/jpeg
+2026-03-29 23:06:37.955 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/menu-banner-img3.jpg  
+2026-03-29 23:06:37.955 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/menu-banner-img2.jpg  
+2026-03-29 23:06:37.955 +07:00 [INF] Request finished in 50.6536ms 200 image/jpeg
+2026-03-29 23:06:37.955 +07:00 [INF] Sending file. Request path: '/client-side/images/menu-banner-img3.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\menu-banner-img3.jpg'
+2026-03-29 23:06:37.955 +07:00 [INF] Sending file. Request path: '/client-side/images/menu-banner-img2.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\menu-banner-img2.jpg'
+2026-03-29 23:06:37.958 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/menu-banner-img4.jpg  
+2026-03-29 23:06:37.958 +07:00 [INF] Sending file. Request path: '/client-side/images/menu-banner-img4.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\menu-banner-img4.jpg'
+2026-03-29 23:06:37.960 +07:00 [INF] Request finished in 5.6339ms 200 image/jpeg
+2026-03-29 23:06:37.963 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/menu-banner-img5.jpg  
+2026-03-29 23:06:37.963 +07:00 [INF] Request finished in 8.3567ms 200 image/jpeg
+2026-03-29 23:06:37.964 +07:00 [INF] Sending file. Request path: '/client-side/images/menu-banner-img5.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\menu-banner-img5.jpg'
+2026-03-29 23:06:37.966 +07:00 [INF] Request finished in 7.2561ms 200 image/jpeg
+2026-03-29 23:06:37.966 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-19.jpg  
+2026-03-29 23:06:37.967 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-19.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-19.jpg'
+2026-03-29 23:06:37.967 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-20.jpg  
+2026-03-29 23:06:37.968 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-20.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-20.jpg'
+2026-03-29 23:06:37.970 +07:00 [INF] Request finished in 7.4885ms 200 image/jpeg
+2026-03-29 23:06:37.972 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-22.jpg  
+2026-03-29 23:06:37.973 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-22.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-22.jpg'
+2026-03-29 23:06:37.974 +07:00 [INF] Request finished in 8.336ms 200 image/jpeg
+2026-03-29 23:06:37.974 +07:00 [INF] Request finished in 6.3259ms 200 image/jpeg
+2026-03-29 23:06:38.004 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-27.jpg  
+2026-03-29 23:06:38.004 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-27.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-27.jpg'
+2026-03-29 23:06:38.004 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/products/product-26.jpg  
+2026-03-29 23:06:38.005 +07:00 [INF] Request finished in 32.4153ms 200 image/jpeg
+2026-03-29 23:06:38.006 +07:00 [INF] Sending file. Request path: '/client-side/images/products/product-26.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\products\product-26.jpg'
+2026-03-29 23:06:38.013 +07:00 [INF] Request finished in 8.9573ms 200 image/jpeg
+2026-03-29 23:06:38.013 +07:00 [INF] Request finished in 9.4037ms 200 image/jpeg
+2026-03-29 23:06:38.030 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-laptop.jpg  
+2026-03-29 23:06:38.030 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-mob.jpg  
+2026-03-29 23:06:38.030 +07:00 [INF] Sending file. Request path: '/client-side/images/banner-laptop.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\banner-laptop.jpg'
+2026-03-29 23:06:38.030 +07:00 [INF] Sending file. Request path: '/client-side/images/banner-mob.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\banner-mob.jpg'
+2026-03-29 23:06:38.031 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/sub1a.jpg  
+2026-03-29 23:06:38.031 +07:00 [INF] The file /client-side/images/sub1a.jpg was not modified
+2026-03-29 23:06:38.031 +07:00 [INF] Request finished in 0.2349ms 304 image/jpeg
+2026-03-29 23:06:38.034 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/blog-img1.jpg  
+2026-03-29 23:06:38.034 +07:00 [INF] Sending file. Request path: '/client-side/images/blog-img1.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\blog-img1.jpg'
+2026-03-29 23:06:38.037 +07:00 [INF] Request finished in 6.4438ms 200 image/jpeg
+2026-03-29 23:06:38.039 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/blog-img2.jpg  
+2026-03-29 23:06:38.040 +07:00 [INF] Sending file. Request path: '/client-side/images/blog-img2.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\blog-img2.jpg'
+2026-03-29 23:06:38.040 +07:00 [INF] Request finished in 6.6452ms 200 image/jpeg
+2026-03-29 23:06:38.043 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/blog-img3.jpg  
+2026-03-29 23:06:38.043 +07:00 [INF] Sending file. Request path: '/client-side/images/blog-img3.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\blog-img3.jpg'
+2026-03-29 23:06:38.047 +07:00 [INF] Request finished in 7.5821ms 200 image/jpeg
+2026-03-29 23:06:38.049 +07:00 [INF] Request finished in 19.1059ms 200 image/jpeg
+2026-03-29 23:06:38.051 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/blog-img5.jpg  
+2026-03-29 23:06:38.053 +07:00 [INF] Sending file. Request path: '/client-side/images/blog-img5.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\blog-img5.jpg'
+2026-03-29 23:06:38.053 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/blog-img4.jpg  
+2026-03-29 23:06:38.054 +07:00 [INF] Request finished in 10.5366ms 200 image/jpeg
+2026-03-29 23:06:38.055 +07:00 [INF] Sending file. Request path: '/client-side/images/blog-img4.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\blog-img4.jpg'
+2026-03-29 23:06:38.056 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand1.png  
+2026-03-29 23:06:38.056 +07:00 [INF] Sending file. Request path: '/client-side/images/brand1.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand1.png'
+2026-03-29 23:06:38.061 +07:00 [INF] Request finished in 7.7712ms 200 image/jpeg
+2026-03-29 23:06:38.061 +07:00 [INF] Request finished in 9.7668ms 200 image/jpeg
+2026-03-29 23:06:38.094 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand2.png  
+2026-03-29 23:06:38.095 +07:00 [INF] Sending file. Request path: '/client-side/images/brand2.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand2.png'
+2026-03-29 23:06:38.095 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand3.png  
+2026-03-29 23:06:38.095 +07:00 [INF] Request finished in 39.7469ms 200 image/png
+2026-03-29 23:06:38.095 +07:00 [INF] Sending file. Request path: '/client-side/images/brand3.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand3.png'
+2026-03-29 23:06:38.098 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand4.png  
+2026-03-29 23:06:38.098 +07:00 [INF] Sending file. Request path: '/client-side/images/brand4.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand4.png'
+2026-03-29 23:06:38.103 +07:00 [INF] Request finished in 7.7045ms 200 image/png
+2026-03-29 23:06:38.103 +07:00 [INF] Request finished in 9.4847ms 200 image/png
+2026-03-29 23:06:38.140 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand6.png  
+2026-03-29 23:06:38.142 +07:00 [INF] Sending file. Request path: '/client-side/images/brand6.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand6.png'
+2026-03-29 23:06:38.142 +07:00 [INF] Request finished in 44.456ms 200 image/png
+2026-03-29 23:06:38.142 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand5.png  
+2026-03-29 23:06:38.143 +07:00 [INF] Sending file. Request path: '/client-side/images/brand5.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand5.png'
+2026-03-29 23:06:38.144 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand7.png  
+2026-03-29 23:06:38.144 +07:00 [INF] Sending file. Request path: '/client-side/images/brand7.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand7.png'
+2026-03-29 23:06:38.149 +07:00 [INF] Request finished in 8.8422ms 200 image/png
+2026-03-29 23:06:38.149 +07:00 [INF] Request finished in 6.8413ms 200 image/png
+2026-03-29 23:06:38.150 +07:00 [INF] Request finished in 6.276ms 200 image/png
+2026-03-29 23:06:38.177 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand8.png  
+2026-03-29 23:06:38.177 +07:00 [INF] Sending file. Request path: '/client-side/images/brand8.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand8.png'
+2026-03-29 23:06:38.207 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand9.png  
+2026-03-29 23:06:38.208 +07:00 [INF] Sending file. Request path: '/client-side/images/brand9.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand9.png'
+2026-03-29 23:06:38.209 +07:00 [INF] Request finished in 33.316ms 200 image/png
+2026-03-29 23:06:38.209 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand10.png  
+2026-03-29 23:06:38.209 +07:00 [INF] Sending file. Request path: '/client-side/images/brand10.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand10.png'
+2026-03-29 23:06:38.214 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/brand11.png  
+2026-03-29 23:06:38.215 +07:00 [INF] Sending file. Request path: '/client-side/images/brand11.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\brand11.png'
+2026-03-29 23:06:38.215 +07:00 [INF] Request finished in 9.0496ms 200 image/png
+2026-03-29 23:06:38.216 +07:00 [INF] Request finished in 6.6427ms 200 image/png
+2026-03-29 23:06:38.221 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-kids.jpg  
+2026-03-29 23:06:38.221 +07:00 [INF] Request finished in 6.7396ms 200 image/png
+2026-03-29 23:06:38.221 +07:00 [INF] The file /client-side/images/banner-kids.jpg was not modified
+2026-03-29 23:06:38.221 +07:00 [INF] Request finished in 0.3664ms 304 image/jpeg
+2026-03-29 23:06:38.222 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-sunglasses.jpg  
+2026-03-29 23:06:38.248 +07:00 [INF] The file /client-side/images/banner-sunglasses.jpg was not modified
+2026-03-29 23:06:38.248 +07:00 [INF] Request finished in 26.544ms 304 image/jpeg
+2026-03-29 23:06:38.250 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-women.jpg  
+2026-03-29 23:06:38.251 +07:00 [INF] The file /client-side/images/banner-women.jpg was not modified
+2026-03-29 23:06:38.251 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/banner-arrival.jpg  
+2026-03-29 23:06:38.251 +07:00 [INF] Request finished in 1.1ms 304 image/jpeg
+2026-03-29 23:06:38.275 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/testimonials-img3.jpg  
+2026-03-29 23:06:38.276 +07:00 [INF] The file /client-side/images/banner-arrival.jpg was not modified
+2026-03-29 23:06:38.276 +07:00 [INF] Sending file. Request path: '/client-side/images/testimonials-img3.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\testimonials-img3.jpg'
+2026-03-29 23:06:38.278 +07:00 [INF] Request finished in 25.2624ms 304 image/jpeg
+2026-03-29 23:06:38.278 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/testimonials-img1.jpg  
+2026-03-29 23:06:38.279 +07:00 [INF] Sending file. Request path: '/client-side/images/testimonials-img1.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\testimonials-img1.jpg'
+2026-03-29 23:06:38.280 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/testimonials-img2.jpg  
+2026-03-29 23:06:38.280 +07:00 [INF] Sending file. Request path: '/client-side/images/testimonials-img2.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\testimonials-img2.jpg'
+2026-03-29 23:06:38.284 +07:00 [INF] Request finished in 9.1609ms 200 image/jpeg
+2026-03-29 23:06:38.286 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/testimonials-img4.jpg  
+2026-03-29 23:06:38.287 +07:00 [INF] Sending file. Request path: '/client-side/images/testimonials-img4.jpg'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\testimonials-img4.jpg'
+2026-03-29 23:06:38.287 +07:00 [INF] Request finished in 8.9606ms 200 image/jpeg
+2026-03-29 23:06:38.287 +07:00 [INF] Request finished in 6.9687ms 200 image/jpeg
+2026-03-29 23:06:38.315 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/visa.png  
+2026-03-29 23:06:38.318 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/footer-logo.png  
+2026-03-29 23:06:38.318 +07:00 [INF] Sending file. Request path: '/client-side/images/footer-logo.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\footer-logo.png'
+2026-03-29 23:06:38.318 +07:00 [INF] Request finished in 31.9659ms 200 image/jpeg
+2026-03-29 23:06:38.318 +07:00 [INF] Sending file. Request path: '/client-side/images/visa.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\visa.png'
+2026-03-29 23:06:38.320 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/paypal.png  
+2026-03-29 23:06:38.320 +07:00 [INF] Sending file. Request path: '/client-side/images/paypal.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\paypal.png'
+2026-03-29 23:06:38.324 +07:00 [INF] Request finished in 8.6344ms 200 image/png
+2026-03-29 23:06:38.324 +07:00 [INF] Request finished in 6.6697ms 200 image/png
+2026-03-29 23:06:38.349 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/master-card.png  
+2026-03-29 23:06:38.349 +07:00 [INF] Sending file. Request path: '/client-side/images/master-card.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\master-card.png'
+2026-03-29 23:06:38.352 +07:00 [INF] Request finished in 31.7481ms 200 image/png
+2026-03-29 23:06:38.352 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/images/discover.png  
+2026-03-29 23:06:38.353 +07:00 [INF] Sending file. Request path: '/client-side/images/discover.png'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\images\discover.png'
+2026-03-29 23:06:38.357 +07:00 [INF] Request finished in 7.394ms 200 image/png
+2026-03-29 23:06:38.360 +07:00 [INF] Request finished in 8.1019ms 200 image/png
+2026-03-29 23:06:38.365 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/favicon.ico  
+2026-03-29 23:06:38.366 +07:00 [INF] Sending file. Request path: '/client-side/favicon.ico'. Physical path: 'C:\Project\ShopMart-menuadmin\ShopMart-menuadmin\ShopMart\wwwroot\client-side\favicon.ico'
+2026-03-29 23:06:38.373 +07:00 [INF] Request finished in 7.7335ms 200 image/x-icon
+2026-03-29 23:06:47.201 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/blog.html  
+2026-03-29 23:06:47.202 +07:00 [INF] Request finished in 1.9882ms 404 
+2026-03-29 23:06:53.339 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/about_us.html  
+2026-03-29 23:06:53.340 +07:00 [INF] Request finished in 1.344ms 404 
+2026-03-29 23:06:59.154 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/.well-known/appspecific/com.chrome.devtools.json  
+2026-03-29 23:06:59.154 +07:00 [INF] Request finished in 0.3523ms 404 
+2026-03-29 23:06:59.226 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59009/client-side/css/bootstrap.min.css.map  
+2026-03-29 23:06:59.227 +07:00 [INF] Request finished in 0.4819ms 404 

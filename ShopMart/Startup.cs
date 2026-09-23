@@ -40,8 +40,6 @@ namespace ShopMart
             Configuration = configuration;
         }
 
-        
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -73,26 +71,17 @@ namespace ShopMart
                 //User settings
                 options.User.RequireUniqueEmail = true;
             });
-
-
-
             services.AddAutoMapper();
+
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
-
             services.AddSingleton(Mapper.Configuration);
-
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetServices));
-             
             services.AddTransient<IEmailSender, EmailSender>();
-
             services.AddTransient<DbInitializer>();
-
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
-
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
-
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
             services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
@@ -110,16 +99,11 @@ namespace ShopMart
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
-
             services.AddTransient<IBlogRepository, BlogRepository>();
-
             services.AddTransient<IBlogTagRepository, BlogTagRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
             services.AddTransient<ISystemConfigRepository, SystemConfigRepository>();
-
             services.AddTransient<IFooterRepository, FooterRepository>();
-
-
 
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -130,12 +114,7 @@ namespace ShopMart
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IBlogService, BlogService>();
             services.AddTransient<ICommonService, CommonService>();
-
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
-
-
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

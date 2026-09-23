@@ -44,6 +44,8 @@ namespace TeduCoreApp.Data.EF
                     Description = "Customer"
                 });
             }
+
+
             if (!_userManager.Users.Any())
             {
                 await _userManager.CreateAsync(new AppUser()
@@ -56,9 +58,13 @@ namespace TeduCoreApp.Data.EF
                     DateModified = DateTime.Now,
                     Status = Status.Active
                 }, "123654$");
+
                 var user = await _userManager.FindByNameAsync("admin");
+
                 await _userManager.AddToRoleAsync(user, "Admin");
             }
+
+
             if (_context.Functions.Count() == 0)
             {
                 _context.Functions.AddRange(new List<Function>()
@@ -89,7 +95,8 @@ namespace TeduCoreApp.Data.EF
                     new Function() {Id = "ACCESS",Name = "Visitor Report",ParentId = "REPORT",SortOrder = 2,Status = Status.Active,URL = "/admin/report/visitor",IconCss = "fa-bar-chart-o"  },
                     new Function() {Id = "READER",Name = "Reader Report",ParentId = "REPORT",SortOrder = 3,Status = Status.Active,URL = "/admin/report/reader",IconCss = "fa-bar-chart-o"  },
                 });
-            }
+            } 
+
 
             if (_context.Footers.Count(x => x.Id == CommonConstants.DefaultFooterId) == 0)
             {
@@ -100,6 +107,7 @@ namespace TeduCoreApp.Data.EF
                     Content = content
                 });
             }
+
 
             if (_context.Colors.Count() == 0)
             {
@@ -112,6 +120,8 @@ namespace TeduCoreApp.Data.EF
                 };
                 _context.Colors.AddRange(listColor);
             }
+
+
             if (_context.AdvertistmentPages.Count() == 0)
             {
                 List<AdvertistmentPage> pages = new List<AdvertistmentPage>()
@@ -171,6 +181,7 @@ namespace TeduCoreApp.Data.EF
                 _context.Sizes.AddRange(listSize);
             }
 
+
             if (_context.ProductCategories.Count() == 0)
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
@@ -216,6 +227,7 @@ namespace TeduCoreApp.Data.EF
                 _context.ProductCategories.AddRange(listProductCategory);
             }
 
+
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeTitle"))
             {
                 _context.SystemConfigs.Add(new SystemConfig()
@@ -226,6 +238,8 @@ namespace TeduCoreApp.Data.EF
                     Status = Status.Active
                 });
             }
+
+
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaKeyword"))
             {
                 _context.SystemConfigs.Add(new SystemConfig()
@@ -236,6 +250,8 @@ namespace TeduCoreApp.Data.EF
                     Status = Status.Active
                 });
             }
+
+
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaDescription"))
             {
                 _context.SystemConfigs.Add(new SystemConfig()
@@ -246,8 +262,9 @@ namespace TeduCoreApp.Data.EF
                     Status = Status.Active
                 });
             }
-            await _context.SaveChangesAsync();
 
+
+            await _context.SaveChangesAsync();
         }
     }
 }

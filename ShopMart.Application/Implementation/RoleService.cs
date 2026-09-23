@@ -19,8 +19,11 @@ namespace ShopMart.Application.Implementation
    public class RoleService: IRoleService
     {
         private RoleManager<AppRole> _roleManager;
+
         private IFunctionRepository _functionRepository;
+
         private IPermissionRepository _permissionRepository;
+
         private IUnitOfWork _unitOfWork;
 
         public RoleService(RoleManager<AppRole> roleManager, IUnitOfWork unitOfWork,
@@ -45,7 +48,9 @@ namespace ShopMart.Application.Implementation
         public Task<bool> CheckPermission(string functionId, string action, string[] roles)
         {
             var functions = _functionRepository.FindAll();
+
             var permissions = _permissionRepository.FindAll();
+
             var query = from f in functions
                         join p in permissions on f.Id equals p.FunctionId
                         join r in _roleManager.Roles on p.RoleId equals r.Id
@@ -135,10 +140,14 @@ namespace ShopMart.Application.Implementation
         }
 
         public async Task UpdateAsync(AppRoleViewModel roleVm)
+
         {
             var role = await _roleManager.FindByIdAsync(roleVm.Id.ToString());
+
             role.Description = roleVm.Description;
+
             role.Name = roleVm.Name;
+
             await _roleManager.UpdateAsync(role);
         }
     }
