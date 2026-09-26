@@ -3,48 +3,50 @@ using AutoMapper.QueryableExtensions;
 using OfficeOpenXml;
 using ShopMart.Application.Interfaces;
 using ShopMart.Application.ViewModels.Product;
-using ShopMart.Data.Entities;
-using ShopMart.Data.Enums;
-using ShopMart.Data.IRepositores;
 using ShopMart.Infrastructure.Interfaces;
-using ShopMart.Utilities.Constants;
-using ShopMart.Utilities.Dtos;
-using ShopMart.Utilities.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
+using ShopMart.Application.Interfaces;
+using ShopMart.Application.ViewModels.Common;
+using ShopMart.Application.ViewModels.Product;
+using ShopMart.Data.Entities;
+using ShopMart.Data.Enums;
+using ShopMart.Infrastructure.Interfaces;
+using ShopMart.Utilities.Constants;
+using ShopMart.Utilities.Dtos;
+using ShopMart.Utilities.Helpers;
 
 namespace ShopMart.Application.Implementation
 {
     public class ProductService : IProductService
-
     {
-        IProductRepository _productRepository;
-        ITagRepository _tagRepository;
-        IProductTagRepository _productTagRepository;
-        IUnitOfWork _unitOfWork;
-        IProductQuantityRepository _productQuantityRepository;
-        IWholePriceRepository _wholePriceRepository;
-        IProductImageRepository _productImageRepository;
+        private IRepository<Product, int> _productRepository;
+        private IRepository<Tag, string> _tagRepository;
+        private IRepository<ProductTag, int> _productTagRepository;
+        private IRepository<ProductQuantity, int> _productQuantityRepository;
+        private IRepository<ProductImage, int> _productImageRepository;
+        private IRepository<WholePrice, int> _wholePriceRepository;
+        private readonly IMapper _mapper;
+        private IUnitOfWork _unitOfWork;
 
-        public ProductService(IProductRepository productRepository,
-                    ITagRepository tagRepository,
-                    IProductQuantityRepository productQuantityRepository,
-                     IProductImageRepository productImageRepository,
-                       IWholePriceRepository wholePriceRepository,
-                     IUnitOfWork unitOfWork,
-                  IProductTagRepository productTagRepository)
+        public ProductService(IRepository<Product, int> productRepository,
+            IRepository<Tag, string> tagRepository,
+            IRepository<ProductQuantity, int> productQuantityRepository,
+            IRepository<ProductImage, int> productImageRepository,
+            IRepository<WholePrice, int> wholePriceRepository,
+        IUnitOfWork unitOfWork,
+        IRepository<ProductTag, int> productTagRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _tagRepository = tagRepository;
             _productQuantityRepository = productQuantityRepository;
-            _productImageRepository = productImageRepository;
-            _wholePriceRepository = wholePriceRepository;
             _productTagRepository = productTagRepository;
+            _wholePriceRepository = wholePriceRepository;
+            _productImageRepository = productImageRepository;
             _unitOfWork = unitOfWork;
-
+            _mapper = mapper;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -73,13 +75,12 @@ namespace ShopMart.Application.Implementation
                     };
                     productTags.Add(productTag);
                 }
-                var product = Mapper.Map<ProductViewModel, Product>(productVm);
+                var product = _mapper.Map<ProductViewModel, Product>(productVm);
                 foreach (var productTag in productTags)
                 {
                     product.ProductTags.Add(productTag);
                 }
                 _productRepository.Add(product);
-
             }
             return productVm;
         }
@@ -110,34 +111,29 @@ namespace ShopMart.Application.Implementation
         }
 
         public List<ProductViewModel> GetAll()
-
         {
-            return _productRepository.FindAll(x => x.ProductCategory).ProjectTo<ProductViewModel>().ToList();
+
+            return _productRepository.FindAll(x => x.ProductCategory)
+               .ProjectTo<ProductViewModel>()
+               .ToList();
         }
 
         public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
-
-
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
-
             if (!string.IsNullOrEmpty(keyword))
-
                 query = query.Where(x => x.Name.Contains(keyword));
-
-
             if (categoryId.HasValue)
-
                 query = query.Where(x => x.CategoryId == categoryId.Value);
-
 
             int totalRow = query.Count();
 
             query = query.OrderByDescending(x => x.DateCreated)
-             .Skip((page - 1) * pageSize)
-             .Take(pageSize);
+                .Skip((page - 1) * pageSize).Take(pageSize);
 
-            var data = query.ProjectTo<ProductViewModel>().ToList();
+            var data = query
+                       .ProjectTo<ProductViewModel>(_mapper.ConfigurationProvider)
+                       .ToList();
 
             var paginationSet = new PagedResult<ProductViewModel>()
             {
@@ -145,20 +141,21 @@ namespace ShopMart.Application.Implementation
                 CurrentPage = page,
                 RowCount = totalRow,
                 PageSize = pageSize
-
             };
-
             return paginationSet;
         }
 
         public ProductViewModel GetById(int id)
         {
-            return Mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
+            return _mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
         }
 
         public List<ProductQuantityViewModel> GetQuantities(int productId)
         {
-            return _productQuantityRepository.FindAll(x => x.ProductId == productId).ProjectTo<ProductQuantityViewModel>().ToList();
+
+            return _productQuantityRepository.FindAll(x => x.ProductId == productId)
+               .ProjectTo<ProductQuantityViewModel>()
+               .ToList();
         }
 
         public void ImportExcel(string filePath, int categoryId)
@@ -233,19 +230,20 @@ namespace ShopMart.Application.Implementation
                 }
             }
 
-            var product = Mapper.Map<ProductViewModel, Product>(productVm);
+            var product = _mapper.Map<ProductViewModel, Product>(productVm);
             foreach (var productTag in productTags)
             {
                 product.ProductTags.Add(productTag);
             }
             _productRepository.Update(product);
-
         }
 
         public List<ProductImageViewModel> GetImages(int productId)
         {
+
             return _productImageRepository.FindAll(x => x.ProductId == productId)
-                .ProjectTo<ProductImageViewModel>().ToList();
+            .ProjectTo<ProductImageViewModel>()
+            .ToList();
         }
 
         public void AddImages(int productId, string[] images)
@@ -260,7 +258,6 @@ namespace ShopMart.Application.Implementation
                     Caption = string.Empty
                 });
             }
-
         }
 
         public void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices)
@@ -280,21 +277,76 @@ namespace ShopMart.Application.Implementation
 
         public List<WholePriceViewModel> GetWholePrices(int productId)
         {
-            return _wholePriceRepository.FindAll(x => x.ProductId == productId).ProjectTo<WholePriceViewModel>().ToList();
-        }
-        public List<ProductViewModel> GetHotProduct(int top)
-        {
-            return _productRepository.FindAll(x => x.Status == Status.Active && x.HotFlag == true)
-                .OrderByDescending(x => x.DateCreated)
-                .Take(top)
-                .ProjectTo<ProductViewModel>()
-                .ToList();
+
+            return _wholePriceRepository.FindAll(x => x.ProductId == productId)
+            .ProjectTo<WholePriceViewModel>()
+            .ToList();
         }
 
         public List<ProductViewModel> GetLastest(int top)
         {
-            return _productRepository.FindAll(x => x.Status == Status.Active).OrderByDescending(x => x.DateCreated)
-                 .Take(top).ProjectTo<ProductViewModel>().ToList();
+
+            return _productRepository.FindAll(x => x.Status == Status.Active)
+             .OrderByDescending(x => x.DateCreated)
+             .ProjectTo<ProductViewModel>()
+             .ToList();
+        }
+
+        public List<ProductViewModel> GetHotProduct(int top)
+        {
+
+            return _productRepository.FindAll(x => x.Status == Status.Active && x.HotFlag == true)
+              .OrderByDescending(x => x.DateCreated)
+              .Take(top)
+              .ProjectTo<ProductViewModel>()
+              .ToList();
+        }
+
+        public List<ProductViewModel> GetRelatedProducts(int id, int top)
+        {
+            var product = _productRepository.FindById(id);
+
+            return _productRepository.FindAll(x => x.Status == Status.Active
+               && x.Id != id && x.CategoryId == product.CategoryId)
+           .OrderByDescending(x => x.DateCreated)
+           .Take(top)
+           .ProjectTo<ProductViewModel>()
+           .ToList();
+        }
+
+        public List<ProductViewModel> GetUpsellProducts(int top)
+        {
+
+            return _productRepository.FindAll(x => x.PromotionPrice != null)
+             .OrderByDescending(x => x.DateModified)
+             .Take(top)
+             .ProjectTo<ProductViewModel>()
+             .ToList();
+        }
+
+        public List<TagViewModel> GetProductTags(int productId)
+        {
+            var tags = _tagRepository.FindAll();
+            var productTags = _productTagRepository.FindAll();
+
+            var query = from t in tags
+                        join pt in productTags
+                        on t.Id equals pt.TagId
+                        where pt.ProductId == productId
+                        select new TagViewModel()
+                        {
+                            Id = t.Id,
+                            Name = t.Name
+                        };
+            return query.ToList();
+        }
+
+        public bool CheckAvailability(int productId, int size, int color)
+        {
+            var quantity = _productQuantityRepository.FindSingle(x => x.ColorId == color && x.SizeId == size && x.ProductId == productId);
+            if (quantity == null)
+                return false;
+            return quantity.Quantity > 0;
         }
     }
 }

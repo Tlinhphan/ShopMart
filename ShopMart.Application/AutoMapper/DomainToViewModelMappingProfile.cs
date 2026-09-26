@@ -29,6 +29,7 @@ namespace ShopMart.Application.AutoMapper
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
             CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
 
+            CreateMap<Product, ProductViewModel>();
             CreateMap<Blog, BlogViewModel>().MaxDepth(2);
             CreateMap<BlogTag, BlogTagViewModel>().MaxDepth(2);
             CreateMap<Slide, SlideViewModel>().MaxDepth(2);

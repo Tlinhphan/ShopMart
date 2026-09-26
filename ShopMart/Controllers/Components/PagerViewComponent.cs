@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShopMart.Controllers.Components
 {
-    public class PagerViewConponet : ViewComponent
+    public class PagerViewComponent : ViewComponent
     {
         public Task<IViewComponentResult> InvokeAsync(PagedResultBase result)
         {

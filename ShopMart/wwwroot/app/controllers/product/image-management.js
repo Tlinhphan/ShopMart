@@ -9,6 +9,7 @@
     }
 
     function registerEvents() {
+        debugger;
         $('body').on('click', '.btn-images', function (e) {
             e.preventDefault();
             var that = $(this).data('id');

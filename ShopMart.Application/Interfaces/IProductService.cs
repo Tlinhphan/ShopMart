@@ -1,11 +1,12 @@
 ﻿using ShopMart.Application.ViewModels.Product;
-using ShopMart.Application.ViewModels.Sytsem;
-using ShopMart.Data.Entities;
-using ShopMart.Utilities.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
+using ShopMart.Application.ViewModels.Common;
+using ShopMart.Application.ViewModels.Product;
+using ShopMart.Utilities.Dtos;
+
+
 
 namespace ShopMart.Application.Interfaces
 {
@@ -21,9 +22,10 @@ namespace ShopMart.Application.Interfaces
 
         void Delete(int id);
 
-        ProductViewModel GetById(int Id);
+        ProductViewModel GetById(int id);
 
         void ImportExcel(string filePath, int categoryId);
+
 
         void Save();
 
@@ -42,5 +44,12 @@ namespace ShopMart.Application.Interfaces
         List<ProductViewModel> GetLastest(int top);
 
         List<ProductViewModel> GetHotProduct(int top);
+        List<ProductViewModel> GetRelatedProducts(int id, int top);
+
+        List<ProductViewModel> GetUpsellProducts(int top);
+
+        List<TagViewModel> GetProductTags(int productId);
+
+        bool CheckAvailability(int productId, int size, int color);
     }
 }
