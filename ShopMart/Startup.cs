@@ -76,14 +76,18 @@ namespace ShopMart
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetServices));
+
             services.AddTransient<IEmailSender, EmailSender>();
+
             services.AddTransient<DbInitializer>();
+
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
+
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
-            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
-            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
+
 
             //Repository
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
@@ -99,10 +103,14 @@ namespace ShopMart
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
+
+
             services.AddTransient<IBlogRepository, BlogRepository>();
+
             services.AddTransient<IBlogTagRepository, BlogTagRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
             services.AddTransient<ISystemConfigRepository, SystemConfigRepository>();
+
             services.AddTransient<IFooterRepository, FooterRepository>();
 
             //Service
@@ -114,6 +122,7 @@ namespace ShopMart
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IBlogService, BlogService>();
             services.AddTransient<ICommonService, CommonService>();
+
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
         }
 
