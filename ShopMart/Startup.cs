@@ -28,6 +28,7 @@ using ShopMart.Helpers;
 using ShopMart.Application.Implementation;
 using Microsoft.AspNetCore.Authorization;
 using ShopMart.Authorization;
+using PaulMiami.AspNetCore.Mvc.Recaptcha;
 
 namespace ShopMart
 {
@@ -71,6 +72,13 @@ namespace ShopMart
                 //User settings
                 options.User.RequireUniqueEmail = true;
             });
+
+            services.AddRecaptcha(new RecaptchaOptions()
+            {
+                SiteKey = Configuration["Recaptcha:SiteKey"],
+                SecretKey = Configuration["Recaptcha:SecretKey"]
+            });
+
             services.AddAutoMapper();
 
             // Add application services.
