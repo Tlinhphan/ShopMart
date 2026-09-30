@@ -1,16 +1,14 @@
 ﻿using ShopMart.Application.ViewModels.Product;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using ShopMart.Application.ViewModels.Common;
-using ShopMart.Application.ViewModels.Product;
 using ShopMart.Utilities.Dtos;
 
 
 
 namespace ShopMart.Application.Interfaces
 {
-   public interface IProductService :IDisposable
+    public interface IProductService :IDisposable
     {
         List<ProductViewModel> GetAll();
 
@@ -51,5 +49,6 @@ namespace ShopMart.Application.Interfaces
         List<TagViewModel> GetProductTags(int productId);
 
         bool CheckAvailability(int productId, int size, int color);
+
     }
 }

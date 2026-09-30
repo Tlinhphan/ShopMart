@@ -8,6 +8,8 @@ namespace ShopMart.Utilities.Constants
     {
         public const string DefaultFooterId = "DefaultFooterId";
 
+        public const string CartSession = "CartSession";
+
         public const string ProductTag = "Product";
 
         public const string BlogTag = "Blog";

@@ -29,6 +29,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.1.0" />
     <PackageReference Include="EPPlus.Core" Version="1.5.4" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
@@ -81,6 +82,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\client-app\controllers\cart\" />
     <Folder Include="wwwroot\shopmart-template\css\shortcodes\" />
     <Folder Include="wwwroot\shopmart-template\js\" />
   </ItemGroup>
