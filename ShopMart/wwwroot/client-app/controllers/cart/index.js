@@ -25,7 +25,7 @@
                 },
                 success: function () {
                     shopmart.notify('Removing product is successful.', 'success');
-                    //loadHeaderCart();
+                    loadHeaderCart();
                     loadData();
                 }
             });
@@ -45,7 +45,7 @@
                     },
                     success: function () {
                         shopmart.notify('Update quantity is successful', 'success');
-                        //loadHeaderCart();
+                        loadHeaderCart();
                         loadData();
                     }
                 });
@@ -74,7 +74,7 @@
                     },
                     success: function () {
                         shopmart.notify('Update quantity is successful', 'success');
-                        //loadHeaderCart();
+                        loadHeaderCart();
                         loadData();
                     }
                 });
@@ -102,7 +102,7 @@
                     },
                     success: function () {
                         shopmart.notify('Update quantity is successful', 'success');
-                        //loadHeaderCart();
+                        loadHeaderCart();
                         loadData();
                     }
                 });
@@ -118,7 +118,7 @@
                 type: 'post',
                 success: function () {
                     shopmart.notify('Clear cart is successful', 'success');
-                    // loadHeaderCart();
+                    loadHeaderCart();
                     loadData();
                 }
             });
@@ -174,11 +174,11 @@
         sizes += "</select>";
         return sizes;
     }
-    //function loadHeaderCart() {
-    //    $("#headerCart").load("/AjaxContent/HeaderCart");
-    //}
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
+    }
     function loadData() {
-        debugger;
+     
         $.ajax({
             url: '/Cart/GetCart',
             type: 'GET',

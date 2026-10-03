@@ -20,9 +20,13 @@
                     size : sizeId
                 },
                 success: function () {
-                    alert(1);
+                    shopmart.notify('Product was added successful', 'success');
+               
                 }
             });
         });
+    }
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
     }
 }
