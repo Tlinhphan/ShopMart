@@ -82,7 +82,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\client-app\controllers\cart\" />
     <Folder Include="wwwroot\shopmart-template\css\shortcodes\" />
     <Folder Include="wwwroot\shopmart-template\js\" />
   </ItemGroup>

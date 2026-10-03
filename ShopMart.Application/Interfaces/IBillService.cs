@@ -9,9 +9,9 @@ namespace ShopMart.Application.Interfaces
 {
    public interface IBillService
     {
-        void Create(IBillService billVm);
+        void Create(BillViewModel billVm);
 
-        void Update(IBillService billVm);
+        void Update(BillViewModel billVm);
 
         PagedResult<BillViewModel> GetAllPaging(string startDate, string endDate, string keyword,
             int pageIndex, int pageSize);
@@ -30,8 +30,11 @@ namespace ShopMart.Application.Interfaces
 
         List<SizeViewModel> GetSizes();
 
+        ColorViewModel GetColor(int id);
+
+        SizeViewModel GetSize(int id);
+
         void Save();
-        void Create(BillViewModel billVm);
-        void Update(BillViewModel billVm);
+ 
     }
 }

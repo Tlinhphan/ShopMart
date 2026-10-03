@@ -17,7 +17,7 @@
 
     <!-- Favicons Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="~/client-side/favicon.ico" />
-
+    <link href="~/lib/notifyjs/dist/styles/metro/notify-metro.css" rel="stylesheet" />
 
     <!-- CSS Style -->
 
@@ -93,6 +93,18 @@
     <!-- Slider Js -->
     <script type="text/javascript" src="~/client-side/js/revolution-slider.js"></script>
 
-    @RenderSection("Scripts")
+    <!-- Slider Js -->
+
+    <script type="text/javascript" src="~/client-side/js/revolution-slider.js"></script>
+    <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
+    <script src="~/lib/mustache/mustache.js"></script>
+    <script src="~/client-app/shared/shopmart.js"></script>
+    <script src="~/client-app/controllers/base/index.js"></script>
+    <script>
+        var baseObj = new BaseController();
+        baseObj.initialize();
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

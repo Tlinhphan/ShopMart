@@ -330,5 +330,6 @@ namespace ShopMart.Application.Implementation
             return quantity.Quantity > 0;
         }
 
+       
     }
 }

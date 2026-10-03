@@ -16,7 +16,8 @@ namespace ShopMart.Controllers
         IBillService _billService;
         IProductCategoryService _productCategoryService;
         IConfiguration _configuration;
-        public ProductController(IProductService productService, IConfiguration configuration,IBillService billService,
+        public ProductController(IProductService productService, IConfiguration configuration,
+            IBillService billService,
             IProductCategoryService productCategoryService)
         {
             _productService = productService;
@@ -24,11 +25,11 @@ namespace ShopMart.Controllers
             _configuration = configuration;
             _billService = billService;
         }
-
         [Route("products.html")]
         public IActionResult Index()
         {
-            return View();
+            var categories = _productCategoryService.GetAll();
+            return View(categories);
         }
 
         [Route("{alias}-c.{id}.html")]
@@ -46,6 +47,7 @@ namespace ShopMart.Controllers
 
             return View(catalog);
         }
+
 
         [Route("search.html")]
         public IActionResult Search(string keyword, int? pageSize, string sortBy, int page = 1)
@@ -84,6 +86,7 @@ namespace ShopMart.Controllers
                 Text = x.Name,
                 Value = x.Id.ToString()
             }).ToList();
+
             return View(model);
         }
 

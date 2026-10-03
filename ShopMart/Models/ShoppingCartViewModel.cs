@@ -14,9 +14,9 @@ namespace ShopMart.Models
 
         public decimal Price { set; get; }
 
-        public int ColorId { get; set; }
+        public ColorViewModel Color { get; set; }
 
-        public int SizeId { get; set; }
+        public SizeViewModel Size { get; set; }
        
     }
 }

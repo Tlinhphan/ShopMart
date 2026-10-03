@@ -50,5 +50,7 @@ namespace ShopMart.Application.Interfaces
 
         bool CheckAvailability(int productId, int size, int color);
 
+       
+
     }
 }

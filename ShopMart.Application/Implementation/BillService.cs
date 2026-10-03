@@ -177,14 +177,15 @@ namespace ShopMart.Application.Implementation
             _orderDetailRepository.Remove(detail);
         }
 
-        public void Create(IBillService billVm)
+
+        public ColorViewModel GetColor(int id)
         {
-            throw new NotImplementedException();
+            return Mapper.Map<Color, ColorViewModel>(_colorRepository.FindById(id));
         }
 
-        public void Update(IBillService billVm)
+        public SizeViewModel GetSize(int id)
         {
-            throw new NotImplementedException();
+            return Mapper.Map<Size, SizeViewModel>(_sizeRepository.FindById(id));
         }
     }
 }
