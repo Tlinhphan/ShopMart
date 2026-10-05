@@ -19,7 +19,7 @@
                 success: function (response) {
                     shopmart.notify('The product was added to cart', 'success');
                     loadHeaderCart();
-                    loadMyCart();
+                  
                 }
             });
         });

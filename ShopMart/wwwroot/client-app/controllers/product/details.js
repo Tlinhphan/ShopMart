@@ -4,12 +4,14 @@
     }
 
     function registerEvents() {
+        debugger;
         $('#btnAddToCart').on('click', function (e) {
             e.preventDefault();
             var id = parseInt($(this).data('id'));
-            var colorId = parseInt($(this).data('ddlColorId'));
-            var sizeId = parseInt($(this).data('ddlSizeId'));
+            var colorId = parseInt($('#ddlColorId').val());
+            var sizeId = parseInt($('#ddlSizeId').val());
             $.ajax({
+                
                 url: '/Cart/AddToCart',
                 type: 'post',
                 dataType: 'json',
@@ -17,11 +19,11 @@
                     productId: id,
                     quantity: parseInt($('#txtQuantity').val()),
                     color: colorId,
-                    size : sizeId
+                    size: sizeId
                 },
                 success: function () {
                     shopmart.notify('Product was added successful', 'success');
-               
+                    loadHeaderCart();
                 }
             });
         });

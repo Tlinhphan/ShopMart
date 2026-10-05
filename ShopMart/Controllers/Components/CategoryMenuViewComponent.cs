@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace ShopMart.Controllers.Components
 {
-    public class CategoryMenuViewComponent : ViewComponent
-    {
-        private IProductCategoryService _productCategoryService;
-
-        public CategoryMenuViewComponent(IProductCategoryService productCategoryService)
+   
+        public class CategoryMenuViewComponent : ViewComponent
         {
-            _productCategoryService = productCategoryService;
+            private IProductCategoryService _productCategoryService;
+            public CategoryMenuViewComponent(IProductCategoryService productCategoryService)
+            {
+                _productCategoryService = productCategoryService;
+            }
+            public async Task<IViewComponentResult> InvokeAsync()
+            {
+                return View(_productCategoryService.GetAll());
+            }
         }
-        public async Task<IViewComponentResult> InvokeAsync()
-        {
-            var model = _productCategoryService.GetAll();
-            return View(model);
-        }
-    }
+    
 }

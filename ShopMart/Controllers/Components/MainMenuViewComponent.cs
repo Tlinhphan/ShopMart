@@ -15,10 +15,10 @@ namespace ShopMart.Controllers.Components
         {
             _productCategoryService = productCategoryService;
         }
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var model = _productCategoryService.GetAll();
-            return View(model);
+            return View(_productCategoryService.GetAll());
         }
     }
 }

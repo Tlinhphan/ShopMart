@@ -11,8 +11,10 @@
             });
 
         registerEvents();
-    }
        
+
+    }
+
     function registerEvents() {
         $('body').on('click', '.btn-delete', function (e) {
             e.preventDefault();
@@ -24,14 +26,13 @@
                     productId: id
                 },
                 success: function () {
-                    shopmart.notify('Removing product is successful.', 'success');
+                    tedu.notify('Removing product is successful.', 'success');
                     loadHeaderCart();
                     loadData();
                 }
             });
         });
         $('body').on('keyup', '.txtQuantity', function (e) {
-            debugger;
             e.preventDefault();
             var id = $(this).data('id');
             var q = $(this).val();
@@ -50,7 +51,7 @@
                     }
                 });
             } else {
-                shopmart.notify('Your quantity is invalid', 'error');
+                tedu.notify('Your quantity is invalid', 'error');
             }
 
         });
@@ -118,8 +119,7 @@
                 type: 'post',
                 success: function () {
                     shopmart.notify('Clear cart is successful', 'success');
-                    loadHeaderCart();
-                    loadData();
+                     
                 }
             });
         });
@@ -151,8 +151,10 @@
             }
         });
     }
+
     function getColorOptions(selectedId) {
-        var colors = "<select class='form-control ddlColorId'>";
+
+        var colors = "<select class='form-control ddlColorId'><option value='0'></option>";
         $.each(cachedObj.colors, function (i, color) {
             if (selectedId === color.Id)
                 colors += '<option value="' + color.Id + '" selected="select">' + color.Name + '</option>';
@@ -161,10 +163,11 @@
         });
         colors += "</select>";
         return colors;
+
     }
 
     function getSizeOptions(selectedId) {
-        var sizes = "<select class='form-control ddlSizeId'>";
+        var sizes = "<select class='form-control ddlSizeId'> <option value='0'></option>";
         $.each(cachedObj.sizes, function (i, size) {
             if (selectedId === size.Id)
                 sizes += '<option value="' + size.Id + '" selected="select">' + size.Name + '</option>';
@@ -174,11 +177,15 @@
         sizes += "</select>";
         return sizes;
     }
+
+
+
     function loadHeaderCart() {
-        $("#headerCart").load("/AjaxContent/HeaderCart");
+        $("#headerCart").load("/AjaxContent/HeaderCart")
     }
+    
+
     function loadData() {
-     
         $.ajax({
             url: '/Cart/GetCart',
             type: 'GET',

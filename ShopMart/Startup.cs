@@ -52,8 +52,6 @@ namespace ShopMart
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
-            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
             //Configure Identity
             services.Configure<IdentityOptions>(options =>
@@ -95,6 +93,7 @@ namespace ShopMart
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetServices));
 
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IViewRenderService, ViewRenderService>();
 
             services.AddTransient<DbInitializer>();
 
@@ -102,6 +101,9 @@ namespace ShopMart
 
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
+
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
             //Repository
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();

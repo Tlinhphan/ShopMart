@@ -18,8 +18,7 @@ namespace ShopMart.Controllers.Components
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var model = _productCategoryService.GetAll();
-            return View(model);
+            return View(_productCategoryService.GetAll());
         }
     }
 }

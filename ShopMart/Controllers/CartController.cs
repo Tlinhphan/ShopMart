@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopMart.Application.Interfaces;
+using ShopMart.Application.ViewModels.Product;
+using ShopMart.Data.Enums;
 using ShopMart.Extensions;
 using ShopMart.Models;
+using ShopMart.Services;
 using ShopMart.Utilities.Constants;
 
 namespace ShopMart.Controllers
@@ -15,11 +19,18 @@ namespace ShopMart.Controllers
     {
         IProductService _productService;
         IBillService _billService;
+        IViewRenderService _viewRenderService;
+       
+        IEmailSender _emailSender;
         public CartController(IProductService productService,
+            IViewRenderService viewRenderService, 
+            IEmailSender emailSender,
             IBillService billService)
         {
             _productService = productService;
             _billService = billService;
+            _viewRenderService = viewRenderService;
+            _emailSender = emailSender;
         }
         [Route("cart.html", Name = "Cart")]
         public IActionResult Index()
@@ -28,15 +39,87 @@ namespace ShopMart.Controllers
         }
 
         [Route("checkout.html", Name = "Checkout")]
+        [HttpGet]
         public IActionResult Checkout()
         {
-            return View();
+            var model = new CheckoutViewModel();
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+            if (session.Any(x => x.Color == null || x.Size == null))
+            {
+                return Redirect("/cart.html");
+            }
+
+            model.Carts = session;
+            return View(model);
+        }
+
+        [Route("checkout.html", Name = "Checkout")]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Checkout(CheckoutViewModel model)
+        {
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+
+            if (ModelState.IsValid)
+            {
+                if (session != null)
+                {
+                    var details = new List<BillDetailViewModel>();
+                    foreach (var item in session)
+                    {
+                        details.Add(new BillDetailViewModel()
+                        {
+                            Product = item.Product,
+                            Price = item.Price,
+                            ColorId = item.Color.Id,
+                            SizeId = item.Size.Id,
+                            Quantity = item.Quantity,
+                            ProductId = item.Product.Id
+                        });
+                    }
+                    var billViewModel = new BillViewModel()
+                    {
+                        CustomerMobile = model.CustomerMobile,
+                        BillStatus = BillStatus.New,
+                        CustomerAddress = model.CustomerAddress,
+                        CustomerName = model.CustomerName,
+                        CustomerMessage = model.CustomerMessage,
+                        BillDetails = details
+                    };
+                    if (User.Identity.IsAuthenticated == true)
+                    {
+                        billViewModel.CustomerId = Guid.Parse(User.GetSpecificClaim("UserId"));
+                    }
+                    _billService.Create(billViewModel);
+                    try
+                    {
+
+                        _billService.Save();
+
+                        //var content = await _viewRenderService.RenderToStringAsync("Cart/_BillMail", billViewModel);
+                        //Send mail
+                        //await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "New bill from Panda Shop", content);
+                        ViewData["Success"] = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewData["Success"] = false;
+                        ModelState.AddModelError("", ex.Message);
+                    }
+
+                }
+            }
+            model.Carts = session;
+            return View(model);
         }
 
         #region AJAX Request
+        /// <summary>
+        /// Get list item
+        /// </summary>
+        /// <returns></returns>
         public IActionResult GetCart()
-         {
-            
+        {
             var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
             if (session == null)
                 session = new List<ShoppingCartViewModel>();
@@ -47,7 +130,6 @@ namespace ShopMart.Controllers
         /// Remove all products in cart
         /// </summary>
         /// <returns></returns>
-
         public IActionResult ClearCart()
         {
             HttpContext.Session.Remove(CommonConstants.CartSession);
@@ -60,7 +142,6 @@ namespace ShopMart.Controllers
         /// <param name="productId"></param>
         /// <param name="quantity"></param>
         /// <returns></returns>
-
         [HttpPost]
         public IActionResult AddToCart(int productId, int quantity, int color, int size)
         {
@@ -123,6 +204,7 @@ namespace ShopMart.Controllers
             }
             return new OkObjectResult(productId);
         }
+
         /// <summary>
         /// Remove a product
         /// </summary>
@@ -158,7 +240,7 @@ namespace ShopMart.Controllers
         /// <param name="productId"></param>
         /// <param name="quantity"></param>
         /// <returns></returns>
-        public IActionResult UpdateCart(int productId, int quantity , int color, int size)
+        public IActionResult UpdateCart(int productId, int quantity, int color, int size)
         {
             var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
             if (session != null)
@@ -170,9 +252,9 @@ namespace ShopMart.Controllers
                     {
                         var product = _productService.GetById(productId);
                         item.Product = product;
-                        item.Quantity = quantity;
-                        item.Color =_billService.GetColor(color);
                         item.Size = _billService.GetSize(size);
+                        item.Color = _billService.GetColor(color);
+                        item.Quantity = quantity;
                         item.Price = product.PromotionPrice ?? product.Price;
                         hasChanged = true;
                     }
@@ -185,6 +267,7 @@ namespace ShopMart.Controllers
             }
             return new EmptyResult();
         }
+
         [HttpGet]
         public IActionResult GetColors()
         {
@@ -198,7 +281,6 @@ namespace ShopMart.Controllers
             var sizes = _billService.GetSizes();
             return new OkObjectResult(sizes);
         }
-
         #endregion
     }
 }
