@@ -34,6 +34,9 @@ namespace ShopMart.Application.AutoMapper
             CreateMap<SystemConfig, SystemConfigViewModel>().MaxDepth(2);
             CreateMap<Footer, FooterViewModel>().MaxDepth(2);
 
+            CreateMap<Feedback, FeedbackViewModel>().MaxDepth(2);
+            CreateMap<Contact, ContactViewModel>().MaxDepth(2);
+
 
         }
     }

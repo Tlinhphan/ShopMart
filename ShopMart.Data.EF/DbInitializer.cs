@@ -63,7 +63,21 @@ namespace TeduCoreApp.Data.EF
 
                 await _userManager.AddToRoleAsync(user, "Admin");
             }
-
+            if (!_context.Contacts.Any())
+            {
+                _context.Contacts.Add(new Contact()
+                {
+                    Id = CommonConstants.DefaultContactId,
+                    Address = "GM4C+XHQ, Thủy Diên, Phú Hồ, Huế, Việt Nam",
+                    Email = "phanlinhthuy953@gmail.com",
+                    Name = "TlinhPhan Shop",
+                    Phone = "0823 333 222",
+                    Status = Status.Active,
+                    Website = "http://tlinhphanshop.com",
+                    Lat = 16.5063003,
+                    Lng = 107.6695660
+                });
+            }
 
             if (_context.Functions.Count() == 0)
             {

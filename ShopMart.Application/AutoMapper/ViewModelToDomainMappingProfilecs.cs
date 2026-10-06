@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShopMart.Application.ViewModels.Common;
 using ShopMart.Application.ViewModels.Product;
 using ShopMart.Application.ViewModels.Sytsem;
 using ShopMart.Data.Entities;
@@ -38,6 +39,13 @@ namespace ShopMart.Application.AutoMapper
             CreateMap<BillDetailViewModel, BillDetail>()
               .ConstructUsing(c => new BillDetail(c.Id, c.BillId, c.ProductId,
               c.Quantity, c.Price, c.ColorId, c.SizeId));
+
+            CreateMap<ContactViewModel, Contact>()
+              .ConstructUsing(c => new Contact(c.Id, c.Name, c.Phone, c.Email, c.Website, c.Address, c.Other, c.Lng, c.Lat, c.Status));
+
+            CreateMap<FeedbackViewModel, Feedback>()
+                .ConstructUsing(c => new Feedback(c.Id, c.Name, c.Email, c.Message, c.Status));
+
 
         }
     }
