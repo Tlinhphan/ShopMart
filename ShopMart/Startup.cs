@@ -66,6 +66,8 @@ namespace ShopMart
 
             services.AddMemoryCache();
 
+            services.AddMinResponse();
+
             //Configure Identity
             services.Configure<IdentityOptions>(options =>
             {
@@ -192,7 +194,7 @@ namespace ShopMart
             }
             app.UseImageResizer();
             app.UseStaticFiles();
-
+            app.UseMinResponse();
             app.UseAuthentication();
             app.UseSession();
             app.UseMvc(routes =>
