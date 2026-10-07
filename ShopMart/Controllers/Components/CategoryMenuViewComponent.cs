@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using ShopMart.Application.Interfaces;
+using ShopMart.Application.ViewModels.Product;
+using ShopMart.Infrastructure.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +10,26 @@ using System.Threading.Tasks;
 
 namespace ShopMart.Controllers.Components
 {
-   
-        public class CategoryMenuViewComponent : ViewComponent
+
+    public class CategoryMenuViewComponent : ViewComponent
+    {
+        private IProductCategoryService _productCategoryService;
+        private IMemoryCache _memoryCache;
+        public CategoryMenuViewComponent(IProductCategoryService productCategoryService,
+           IMemoryCache memoryCache)
         {
-            private IProductCategoryService _productCategoryService;
-            public CategoryMenuViewComponent(IProductCategoryService productCategoryService)
-            {
-                _productCategoryService = productCategoryService;
-            }
-            public async Task<IViewComponentResult> InvokeAsync()
-            {
-                return View(_productCategoryService.GetAll());
-            }
+            _productCategoryService = productCategoryService;
+            _memoryCache = memoryCache;
         }
-    
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var categories = _memoryCache.GetOrCreate(CacheKeys.ProductCategories, entry => {
+                entry.SlidingExpiration = TimeSpan.FromHours(2);
+                return _productCategoryService.GetAll();
+            });
+
+            return View(categories);
+        }
+    }
+
 }

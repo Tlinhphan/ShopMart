@@ -32,6 +32,7 @@ namespace ShopMart.Controllers
             _productCategorySer= productCategorySer;
         }
 
+        [ResponseCache(CacheProfileName = "Default")]
         public IActionResult Index()
         {
             ViewData["BodyClass"] = "cms-index-index cms-home-page";

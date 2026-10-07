@@ -30,6 +30,7 @@ using Microsoft.AspNetCore.Authorization;
 using ShopMart.Authorization;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
 using ShopMart.Extensions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ShopMart
 {
@@ -62,6 +63,8 @@ namespace ShopMart
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+
+            services.AddMemoryCache();
 
             //Configure Identity
             services.Configure<IdentityOptions>(options =>
@@ -110,7 +113,23 @@ namespace ShopMart
 
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
-            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+            services.AddMvc(options =>
+            {
+                options.CacheProfiles.Add("Default",
+                    new CacheProfile()
+                    {
+                        Duration = 60
+                    });
+                options.CacheProfiles.Add("Never",
+                    new CacheProfile()
+                    {
+                        Location = ResponseCacheLocation.None,
+                        NoStore = true
+                    });
+            })
+
+
+                .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
 
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
