@@ -29,11 +29,21 @@ using ShopMart.Application.Implementation;
 using Microsoft.AspNetCore.Authorization;
 using ShopMart.Authorization;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
+using ShopMart.Extensions;
 
 namespace ShopMart
 {
     public class Startup
     {
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
         public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
@@ -82,8 +92,9 @@ namespace ShopMart
                 options.IdleTimeout = TimeSpan.FromHours(2);
                 options.Cookie.HttpOnly = true;
             });
-
+           
             services.AddAutoMapper();
+            services.AddImageResizer();
 
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
@@ -160,7 +171,7 @@ namespace ShopMart
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+            app.UseImageResizer();
             app.UseStaticFiles();
 
             app.UseAuthentication();
