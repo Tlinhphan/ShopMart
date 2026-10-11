@@ -1,0 +1,16 @@
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Data.EF.deps.json
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Data.EF.dll
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Data.EF.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Data.dll
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.dll
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Utilities.dll
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Data.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\bin\Debug\netcoreapp2.0\ShopMart.Utilities.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.csprojAssemblyReference.cache
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.csproj.CoreCompileInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.AssemblyInfoInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.AssemblyInfo.cs
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.csproj.CopyComplete
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.dll
+C:\Project\Shop\ShopMart\ShopMart.Data.EF\obj\Debug\netcoreapp2.0\ShopMart.Data.EF.pdb

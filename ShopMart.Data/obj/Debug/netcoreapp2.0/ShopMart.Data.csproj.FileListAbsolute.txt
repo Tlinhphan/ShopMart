@@ -1,0 +1,12 @@
+C:\Project\Shop\ShopMart\ShopMart.Data\bin\Debug\netcoreapp2.0\ShopMart.Data.deps.json
+C:\Project\Shop\ShopMart\ShopMart.Data\bin\Debug\netcoreapp2.0\ShopMart.Data.dll
+C:\Project\Shop\ShopMart\ShopMart.Data\bin\Debug\netcoreapp2.0\ShopMart.Data.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data\bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.dll
+C:\Project\Shop\ShopMart\ShopMart.Data\bin\Debug\netcoreapp2.0\ShopMart.Infrastructure.pdb
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.csprojAssemblyReference.cache
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.csproj.CoreCompileInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.AssemblyInfoInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.AssemblyInfo.cs
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.csproj.CopyComplete
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.dll
+C:\Project\Shop\ShopMart\ShopMart.Data\obj\Debug\netcoreapp2.0\ShopMart.Data.pdb
