@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShopMart.Application.ViewModels.Blog;
 using ShopMart.Application.ViewModels.Common;
 using ShopMart.Application.ViewModels.Product;
 using ShopMart.Application.ViewModels.Sytsem;
@@ -45,6 +46,9 @@ namespace ShopMart.Application.AutoMapper
 
             CreateMap<FeedbackViewModel, Feedback>()
                 .ConstructUsing(c => new Feedback(c.Id, c.Name, c.Email, c.Message, c.Status));
+
+            CreateMap<PageViewModel, Page>()
+              .ConstructUsing(c => new Page(c.Id, c.Name, c.Alias, c.Content, c.Status));
 
 
         }

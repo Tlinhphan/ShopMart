@@ -12,7 +12,7 @@
             ignore: [],
             lang: 'en',
             rules: {
-                userName: {
+                Email: {
                     required:true
                 },
 
@@ -39,7 +39,7 @@
         $.ajax({
             type: "POST",
             data: {
-                UserName: user,
+                Email: user,
                 Password: pass,
             },
 

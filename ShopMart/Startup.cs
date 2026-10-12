@@ -153,6 +153,7 @@ namespace ShopMart
             services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<IFeedbackRepository, FeedbackRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
+            services.AddTransient<IPageRepository, PageRepository>();
 
 
             services.AddTransient<IBlogRepository, BlogRepository>();
@@ -174,6 +175,7 @@ namespace ShopMart
             services.AddTransient<IContactService, ContactService>();
             services.AddTransient<IFeedbackService, FeedbackService>();
             services.AddTransient<ICommonService, CommonService>();
+            services.AddTransient<IPageService, PageService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
         }
