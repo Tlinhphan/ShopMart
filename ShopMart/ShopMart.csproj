@@ -79,6 +79,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShopMart.Application.Dapper2\ShopMart.Application.Dapper.csproj" />
     <ProjectReference Include="..\ShopMart.Application\ShopMart.Application.csproj" />
     <ProjectReference Include="..\ShopMart.Data.EF\ShopMart.Data.EF.csproj" />
     <ProjectReference Include="..\ShopMart.Data\ShopMart.Data.csproj" />

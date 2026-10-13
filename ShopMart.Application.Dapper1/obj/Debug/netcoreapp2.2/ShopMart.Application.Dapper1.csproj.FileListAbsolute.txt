@@ -1,0 +1,4 @@
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper1.csprojAssemblyReference.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper1.csproj.CoreCompileInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper1.AssemblyInfoInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper1.AssemblyInfo.cs

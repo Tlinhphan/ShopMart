@@ -1,0 +1,9 @@
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\bin\Debug\netcoreapp2.2\ShopMart.Application.Dapper.deps.json
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\bin\Debug\netcoreapp2.2\ShopMart.Application.Dapper.dll
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.csproj.CoreCompileInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.AssemblyInfoInputs.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.AssemblyInfo.cs
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.csprojAssemblyReference.cache
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\bin\Debug\netcoreapp2.2\ShopMart.Application.Dapper.pdb
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.dll
+C:\Project\Shop\ShopMart\ShopMart.Application.Dapper1\obj\Debug\netcoreapp2.2\ShopMart.Application.Dapper.pdb

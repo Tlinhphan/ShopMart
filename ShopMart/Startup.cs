@@ -31,6 +31,9 @@ using ShopMart.Authorization;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
 using ShopMart.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using ShopMart.Areas.Admin.Controllers;
+using ShopMart.Application.Dapper.Interface;
+using ShopMart.Application.Dapper.Implementation;
 
 namespace ShopMart
 {
@@ -176,6 +179,7 @@ namespace ShopMart
             services.AddTransient<IFeedbackService, FeedbackService>();
             services.AddTransient<ICommonService, CommonService>();
             services.AddTransient<IPageService, PageService>();
+            services.AddTransient<IReportService, ReportService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
         }

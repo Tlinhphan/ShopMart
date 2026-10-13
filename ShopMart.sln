@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastructure", "4-Infrastructure", "{4DED093C-7343-4AF9-9A96-2F8BD97FC220}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMart.Application.Dapper", "ShopMart.Application.Dapper2\ShopMart.Application.Dapper.csproj", "{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{66475074-12C3-4342-82C3-8F506BCE7CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66475074-12C3-4342-82C3-8F506BCE7CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66475074-12C3-4342-82C3-8F506BCE7CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{8214AA61-96DE-42B6-AC3D-6C59FE2A5785} = {5FB07925-A704-4B5B-87B8-D82DAACC1FFF}
 		{0F85EF39-DA83-4C89-95FC-925E493DE41B} = {5FB07925-A704-4B5B-87B8-D82DAACC1FFF}
 		{66475074-12C3-4342-82C3-8F506BCE7CB9} = {18CF3503-5558-4552-A4FD-6F5A123408C4}
+		{D83F914A-19D9-4D83-B3ED-0ABD6D2011D7} = {18CF3503-5558-4552-A4FD-6F5A123408C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA5912EE-446F-45DE-B459-D20A32E2E6DE}
