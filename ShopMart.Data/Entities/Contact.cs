@@ -52,5 +52,6 @@ namespace ShopMart.Data.Entities
         public double? Lng { set; get; }
 
         public Status Status { set; get; }
+        public string Url { get; set; }
     }
 }
