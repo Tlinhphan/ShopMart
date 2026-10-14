@@ -184,17 +184,29 @@
     <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="~/lib/ckeditor/ckeditor.js"></script>
-   
-   
+
+
     <!-- bootstrap-daterangepicker -->
     <script src="~/lib/moment/moment.js"></script>
     <script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="~/lib/notifyjs/dist/notify.js"></script>
     <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
     <script src="~/lib/bootbox/bootbox.js"></script>
-    <script src="~/app/shared/shopmart.js"></script>
+  
     <!-- Custom Theme Scripts -->
-    <script src="~/admin-side/js/custom.js"></script>
+
+    <script src="~/admin-side/js/custom.min.js"></script>
+
+
+    <environment names="Development">
+        <script src="~/app/shared/shopmart.js"></script>
+
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/bundled/site-admin.min.js"></script>
+       
+    </environment>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

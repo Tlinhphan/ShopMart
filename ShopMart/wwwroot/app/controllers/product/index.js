@@ -94,7 +94,7 @@
         });
 
         $('#btnSave').on('click', function (e) {
-            saveProduct();
+            saveProduct(e);
 
         });
 
