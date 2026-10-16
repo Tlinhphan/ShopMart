@@ -42,6 +42,17 @@ namespace ShopMart.WebApi
                .AddEntityFrameworkStores<AppDbContext>()
                .AddDefaultTokenProviders();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular", builder =>
+                {
+                    builder
+                        .WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+            services.AddAutoMapper(typeof(Startup));
             //Configure Identity
             services.Configure<IdentityOptions>(options =>
             {
@@ -79,16 +90,10 @@ namespace ShopMart.WebApi
                 };
             });
 
-            services.AddCors(o => o.AddPolicy("ShopMartCorsPolicy", builder =>
-            {
-                builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();
-            }));
-            services.AddAutoMapper();
+            
 
 
-            services.AddSingleton(Mapper.Configuration);
+            
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
 
@@ -148,7 +153,7 @@ namespace ShopMart.WebApi
             }
 
             app.UseStaticFiles();
-            app.UseCors("ShopMartCorsPolicy");
+            app.UseCors("AllowAngular");
             app.UseAuthentication();
             app.UseSwagger();
 
@@ -159,7 +164,7 @@ namespace ShopMart.WebApi
                     "ShopMart API v1"
                 );
             });
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

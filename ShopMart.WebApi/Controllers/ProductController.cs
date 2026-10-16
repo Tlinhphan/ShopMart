@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ShopMart.Application.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace ShopMart.WebApi.Controllers
 {
+    [Authorize]
     public class ProductController : ApiController
     {
+
         IProductCategoryService _productCategoryService;
         public ProductController(IProductCategoryService productCategoryService)
         {
