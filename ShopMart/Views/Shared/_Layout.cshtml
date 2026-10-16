@@ -1,4 +1,9 @@
-﻿
+﻿@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +100,7 @@
 
     <!-- Slider Js -->
 
-   
+
     <script type="text/javascript" src="~/client-side/js/revolution-slider.js"></script>
 
     <script src="~/lib/notifyjs/dist/notify.js"></script>
@@ -103,6 +108,8 @@
     <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
 
     <script src="~/lib/mustache/mustache.js"></script>
+
+    <script src="~/client-app/shared/localize/esources.@(requestCulture.RequestCulture.Culture.Name).js"></script>
 
     <script src="~/client-app/shared/shopmart.js"></script>
 

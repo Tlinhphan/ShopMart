@@ -57,33 +57,35 @@ namespace ShopMart.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("login")]
-        public async Task<IActionResult> Login([FromBody] LoginViewModel model)
+        [ValidateAntiForgeryToken]
+        [Route("login.html", Name = "Login")]
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
-
-            if (!ModelState.IsValid)
+            ViewData["ReturnUrl"] = returnUrl;
+            if (ModelState.IsValid)
             {
-                return new BadRequestObjectResult(model);
-            }
-                var result = await _signInManager.FindByNameAsync(model.UserName);
-                if (user !=null)
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                if (result.Succeeded)
                 {
-                    var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password,false, true);
-                if(!result.Successded)
-                {
-                    return new BadRequestObjectResult(result.ToString());
-                }
+                    _logger.LogInformation("User logged in.");
+                    return RedirectToLocal(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
                 {
                     return RedirectToAction(nameof(LoginWith2fa), new { returnUrl, model.RememberMe });
                 }
-            var roles = await _userManager.GetRolesAsync(user);
-            var claims = new[]
-            {
-
-            }
-                
+                if (result.IsLockedOut)
+                {
+                    _logger.LogWarning("User account locked out.");
+                    return RedirectToAction(nameof(Lockout));
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
             }
 
             // If we got this far, something failed, redisplay form
