@@ -17,7 +17,7 @@
                     size: 0
                 },
                 success: function (response) {
-                    shopmart.notify('The product was added to cart', 'success');
+                    shopmart.notify(["AddCartOK"], 'success');
                     loadHeaderCart();
                   
                 }
@@ -34,7 +34,7 @@
                     productId: id
                 },
                 success: function (response) {
-                    shopmart.notify('The product was removed', 'success');
+                    shopmart.notify(["RemoveCartOK"], 'success');
                     loadHeaderCart();
                   
                 }
